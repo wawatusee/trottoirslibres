@@ -20,23 +20,22 @@
         <div class="form-group">
             <label for="type-encombrement">Type d'encombrement :</label>
             <select id="type-encombrement" name="type-encombrement">
-                <option value="">Sélectionner le type d'encombrement</option>
                 <!-- Ajouter ici les options de type d'encombrement -->
-                <option value="Potelet">Potelet</option>
-                <option value="Panneau de signalisation">Panneau de signalisation</option>
-                <option value="Armoire technique">Armoire technique</option>
-                <option value="Terrasse">Terrasse</option>
-                <option value="Vélo/trottinette">Vélo/trottinette</option>
-                <option value="Véhicule motorisé">Véhicule motorisé</option>
-                <option value="Panneau publicitaire temporaire">Panneau publicitaire temporaire</option>
-                <option value="Panneau publicitaire permanent">Panneau publicitaire permanent</option>
-                <option value="Barrière">Barrière</option>
-                <option value="Poubelle mal placée">Poubelle mal placée</option>
-                <option value="Sac poubelle">Sac poubelle</option>
-                <option value="Borne ou câble de recharge pour véhicule électrique">Borne ou câble de recharge pour véhicule électrique</option>
-                <option value="Lampadaire">Lampadaire</option>
-                <option value="Dropzone mal placée">Dropzone mal placée</option>
-                <option value="Dropzone mal placée">Panneau d’information</option>
+                    <option value="Potelet">Potelet</option>
+					<option value="Panneau de signalisation">Panneau de signalisation</option>
+					<option value="Armoire technique">Armoire technique</option>
+					<option value="Terrasse">Terrasse</option>
+					<option value="Vélo/trottinette">Vélo/trottinette</option>
+					<option value="Véhicule motorisé">Véhicule motorisé</option>
+					<option value="Panneau publicitaire temporaire">Panneau publicitaire temporaire</option>
+					<option value="Panneau publicitaire permanent">Panneau publicitaire permanent</option>
+					<option value="Barrière">Barrière</option>
+					<option value="Poubelle mal placée">Poubelle mal placée</option>
+					<option value="Sac poubelle">Sac poubelle</option>
+					<option value="Borne ou câble de recharge pour véhicule électrique">Borne ou câble de recharge pour véhicule électrique</option>
+					<option value="Lampadaire">Lampadaire</option>
+					<option value="Dropzone mal placée">Dropzone mal placée</option>
+					<option value="Dropzone mal placée">Panneau d’information</option>
             </select>
         </div>
         <div class="form-group">
@@ -56,5 +55,6 @@
         <button type="submit">Envoyer</button>
     </form>
 </div>
+<script src="js/formdatas.js"></script>
 </body>
 </html>
