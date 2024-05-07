@@ -6,17 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trottoirs-libres</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/location.js"></script>
+    <script src="js/input-address.js" type="module" defer></script>
 </head>
 <body>
 <div class="container">
     <h2>Formulaire de Signalement</h2>
     <form action="#" method="post">
-        <div class="form-group">
-            <input-address name="abcde">
-            <input type="text" name="adresse" id="adresse-id" placeholder="Ex. Avenue des Arts 21, 1000 Bruxelles">
-        </input-address>
-        <script src="js/location.js"></script>
+        <div class="form-group" disabled>
+            <label for="adresse">Rue</label>
+            <input-address><input type="text" name="adresse" id="adresse-id" placeholder="(utiliser la position actuelle)" autocomplete="off"></input-address>
+            <label for="numero">Numéro</label>
+            <input type="text" name="numero"  autocomplete="off" data-address="number">
+            <label>Code Postal</label>
+            <input type="text" autocomplete="off" data-address="post-code">
+            <label>Commune</label>
+            <input type="text" autocomplete="off" data-address="municipality">
         </div>
+        <!--<script src="js/location.js"></script>-->
         <div class="form-group">
             <label for="type-encombrement">Type d'encombrement :</label>
             <select id="type-encombrement" name="type-encombrement">
