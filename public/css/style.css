@@ -17,6 +17,23 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+  /*Fonts*/
+@font-face{
+  font-family:'myFirstFont';
+  src:
+  url("./fonts/GT-Eesti-Display-Regular.ttf"),
+  url("./fonts/GT-Eesti-Display-Regular.otf"),
+  url("./fonts/GT-Eesti-Display-Regular.wof");
+}
+/*Use this font with this line => font-family: myFirstFont;*/
+@font-face{
+  font-family:"myTitleFont";
+  src:
+  url("./fonts/GT-Eesti-Display-Ultra-Bold.ttf"),
+  url("./fonts/GT-Eesti-Display-Ultra-Bold.otf"),
+  url("./fonts/GT-Eesti-Display-Ultra-Bold.wof");
+}
+/*Use this font with this line => font-family: myTitleFont;*/
   .form {
     padding: 2rem;
   }

@@ -12,6 +12,7 @@
 <body>
 <div class="container">
     <h2>Formulaire de Signalement</h2>
+    <p>Donnez-nous l’adresse de l’obstacle sur le trottoir</p>
     <form action="#" method="post">
         <div class="form-group" disabled>
             <label for="adresse">Rue</label>
@@ -23,30 +24,56 @@
             <label>Commune</label>
             <input type="text" autocomplete="off" data-address="municipality">
         </div>
-        <!--<script src="js/location.js"></script>-->
-        <div class="form-group">
-            <label for="type-encombrement">Type d'encombrement :</label>
-            <select id="type-encombrement" name="type-encombrement">
-                <!-- Ajouter ici les options de type d'encombrement -->
-                    <option value="Potelet">Potelet</option>
-					<option value="Panneau de signalisation">Panneau de signalisation</option>
-					<option value="Armoire technique">Armoire technique</option>
-					<option value="Terrasse">Terrasse</option>
-					<option value="Vélo/trottinette">Vélo/trottinette</option>
-					<option value="Véhicule motorisé">Véhicule motorisé</option>
-					<option value="Panneau publicitaire temporaire">Panneau publicitaire temporaire</option>
-					<option value="Panneau publicitaire permanent">Panneau publicitaire permanent</option>
-					<option value="Barrière">Barrière</option>
-					<option value="Poubelle mal placée">Poubelle mal placée</option>
-					<option value="Sac poubelle">Sac poubelle</option>
-					<option value="Borne ou câble de recharge pour véhicule électrique">Borne ou câble de recharge pour véhicule électrique</option>
-					<option value="Lampadaire">Lampadaire</option>
-					<option value="Dropzone mal placée">Dropzone mal placée</option>
-					<option value="Dropzone mal placée">Panneau d’information</option>
-            </select>
+
+
+        <!--Type d'encombrement-->
+        <div class="form-group" id="type-encombrement-liste">
+        <p>Donnez-nous des informations sur l’obstacle en question</p>
+        <input type="checkbox" id="potelet" name="type-encombrement[]" value="Potelet">
+        <label for="potelet">Potelet</label>
+
+        <input type="checkbox" id="panneau-signalisation" name="type-encombrement[]" value="Panneau de signalisation">
+        <label for="panneau-signalisation">Panneau de signalisation</label>
+
+        <input type="checkbox" id="velo-trottinette" name="type-encombrement[]" value="Vélo/trottinette">
+        <label for="velo-trottinette">Vélo/trottinette</label>
+
+        <input type="checkbox" id="vehicule-motorise" name="type-encombrement[]" value="Véhicule motorisé">
+        <label for="vehicule-motorise">Véhicule motorisé</label>
+
+        <input type="checkbox" id="pub-temporaire" name="type-encombrement[]" value="Panneau publicitaire temporaire">
+        <label for="pub-temporaire">Panneau publicitaire temporaire</label>
+
+        <input type="checkbox" id="pub-permanent" name="type-encombrement[]" value="Panneau publicitaire permanent">
+        <label for="pub-permanent">Panneau publicitaire permanent</label>
+
+        <input type="checkbox" id="barriere" name="type-encombrement[]" value="Barrière">
+        <label for="barriere">Barrière</label>
+
+        <input type="checkbox" id="poubelle" name="type-encombrement[]" value="Poubelle mal placée">
+        <label for="poubelle">Poubelle mal placée</label>
+
+        <input type="checkbox" id="sac-poubelle" name="type-encombrement[]" value="Sac poubelle">
+        <label for="sac-poubelle">Sac poubelle</label>
+
+        <input type="checkbox" id="borne-cable" name="type-encombrement[]" value="Borne ou câble de recharge pour véhicule électrique">
+        <label for="borne-cable">Borne ou câble de recharge pour véhicule électrique</label>
+
+        <input type="checkbox" id="lampadaire" name="type-encombrement[]" value="Lampadaire">
+        <label for="lampadaire">Lampadaire</label>
+
+        <input type="checkbox" id="dropzone" name="type-encombrement[]" value="Dropzone mal placée">
+        <label for="dropzone">Dropzone mal placée</label>
+
+        <input type="checkbox" id="panneau-info" name="type-encombrement[]" value="Panneau d’information">
+        <label for="panneau-info">Panneau d’information</label>
+        
         </div>
+
+    <script src="js/type-encombrement-liste.js"></script>
+<!--fin modif-->
         <div class="form-group">
-            <label for="coordonnees">Coordonnées du piéton :</label>
+            <label for="coordonnees">Vos coordonnées :</label>
             <input type="text" id="nom" name="nom" placeholder="Nom">
             <input type="text" id="prenom" name="prenom" placeholder="Prénom">
             <input type="email" id="email" name="email" placeholder="E-mail">
@@ -54,14 +81,22 @@
                 <input type="checkbox" id="autorisation" name="autorisation">
                 <label for="autorisation">J'accepte de conserver mes coordonnées dans votre base de données</label>
             </div>
+            <div class="form-group">
+                <label>J’accepte de recevoir la newsletter de Walk :</label><br>
+                <input type="radio" id="recevoir-newsletter-oui" name="recevoir-newsletter" value="Oui">
+                <label for="recevoir-newsletter-oui">Oui</label><br>
+                <input type="radio" id="recevoir-newsletter-non" name="recevoir-newsletter" value="Non">
+                <label for="recevoir-newsletter-non">Non</label>
+            </div>
         </div>
         <div class="form-group">
-            <label for="photo">Photo de l'incivilité :</label>
+            <label for="photo">photo(s) de l’obstacle :</label>
             <input type="file" id="photo" name="photo">
         </div>
         <button type="submit">Envoyer</button>
-    </form>
-</div>
+        </form>
+        </div>
+    </div>
 <script src="js/formdatas.js"></script>
 </body>
 </html>
