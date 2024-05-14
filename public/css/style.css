@@ -5,18 +5,12 @@
     color: rgb(51, 49, 49);
     box-sizing: border-box;
   }
+  /*Couleurs*/
+  
   body {
     background-color: whitesmoke;
   }
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 1rem;
-    height: 100vh;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+
   /*Fonts*/
 @font-face{
   font-family:'myFirstFont';
@@ -34,17 +28,23 @@
   url("./fonts/GT-Eesti-Display-Ultra-Bold.wof");
 }
 /*Use this font with this line => font-family: myTitleFont;*/
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
   .form {
     padding: 2rem;
   }
   h1 {
     margin-bottom: 2rem;
   }
-  
   form {
     max-width: 500px;
   }
-  
   p * {
     display: block;
   }
@@ -65,14 +65,6 @@
     border: 1px solid #ccc;
     border-radius: 0;
   }
-  /* input:focus {
-    background-color: lightcoral;
-    border: none;
-    border-color: transparent;
-    border-radius: 0;
-    outline: 0;
-  } */
-  
   .option {
     padding: 3px 20px;
     font-weight: 400;
@@ -93,12 +85,6 @@
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-  /* color: #fff;
-  text-decoration: none;
-  background-color: #337ab7;
-  outline: 0;
-  
-  */
   .select {
     cursor: pointer;
     position: absolute;
