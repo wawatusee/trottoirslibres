@@ -52,6 +52,7 @@ export async function getAddresseFromParts(
 }
 
 export async function getAddressFromLocation(location, language = "fr") {
+	//Créer une condition pour alterner d'un fournisseur à l'autre selon disponibilité
 	const { x, y } = locationToPoint(location);
 	const object = {
 		language,
@@ -106,16 +107,3 @@ function latitudeToY(lat) {
 
 	return (Math.log(Math.tan(((lat + 90) * Math.PI) / 360)) * 180) / Math.PI;
 }
-
-// function MercatorToLatLon(mercX, mercY) {
-// 	var rMajor = 6378137; //Equatorial Radius, WGS84
-// 	var shift = Math.PI * rMajor;
-// 	var lon = (mercX / shift) * 180.0;
-// 	var lat = (mercY / shift) * 180.0;
-// 	lat =
-// 		(180 / Math.PI) *
-// 		(2 * Math.atan(Math.exp((lat * Math.PI) / 180.0)) - Math.PI / 2.0);
-
-// 	return { Lon: lon, Lat: lat };
-// }
-// export { getAddressFromLocation, getAddressesFromText };

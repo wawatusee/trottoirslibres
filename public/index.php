@@ -12,9 +12,10 @@
 <body>
 <div class="container">
     <h2>Formulaire de Signalement</h2>
-    <p>Donnez-nous l’adresse de l’obstacle sur le trottoir</p>
+    
     <form action="#" method="post">
-        <div class="form-group" disabled>
+        <div class="form-group" id="address" disabled>
+        <p class="consigne">Donnez-nous l’adresse de l’obstacle sur le trottoir</p>
             <label for="adresse">Rue</label>
             <input-address><input type="text" name="adresse" id="adresse-id" placeholder="(utiliser la position actuelle)" autocomplete="off"></input-address><br>
             <label for="numero">Numéro</label>
@@ -23,12 +24,11 @@
             <input type="text" autocomplete="off" data-address="post-code">
             <label>Commune</label>
             <input type="text" autocomplete="off" data-address="municipality">
+            <input type="hidden" data-adress="adnc" >
         </div>
-
-
         <!--Type d'encombrement-->
         <div class="form-group" id="type-encombrement-liste">
-        <p>Donnez-nous des informations sur l’obstacle en question</p>
+        <p class="consigne">Donnez-nous des informations sur l’obstacle en question</p>
         <input type="checkbox" id="potelet" name="type-encombrement[]" value="Potelet">
         <label for="potelet">Potelet</label>
 
@@ -72,24 +72,19 @@
 
     <script src="js/type-encombrement-liste.js"></script>
 <!--fin modif-->
-        <div class="form-group">
-            <label for="coordonnees">Vos coordonnées :</label>
-            <div class="form-group">
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" placeholder="Nom" autocomplete="name">
-        </div>
+        <div class="form-group" id="contact-information">
+        <p class="consigne">Vos coordonnées :</p>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Nom" autocomplete="name">
 
-        <div class="form-group">
-            <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Prénom" autocomplete="given-name">
-        </div>
+            <label for="first-name">Prénom :</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Prénom" autocomplete="given-name">
 
-        <div class="form-group">
             <label for="email">E-mail :</label>
             <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="email">
         </div>
 
-            <div class="checkbox-group">
+            <div class="form-group">
                 <input type="checkbox" id="autorisation" name="autorisation">
                 <label for="autorisation">J'accepte de conserver mes coordonnées dans votre base de données</label>
             </div>
