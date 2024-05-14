@@ -1,3 +1,4 @@
+// coucou veille branche
 import {
 	getAddressesFromText,
 	getAddressFromLocation,
@@ -14,8 +15,8 @@ import {
  * Renvoit une adresse à partir d'une coordonnée
  *
  */
-const CSS=
-`:host {
+const CSS =
+	`:host {
 	position: relative;
 	display: inline-block;
 }
@@ -136,6 +137,7 @@ class InputAddress extends HTMLElement {
 		this.elementInput = this.querySelector("#adresse-id");
 		this.elementNumber = document.querySelector('[data-address="number"]');
 		this.elementPostCode = document.querySelector('[data-address="post-code"]');
+		this.elementAdnc = document.querySelector('[data-address="adnc"]');
 		this.elementMunicipality = document.querySelector(
 			'[data-address="municipality"]'
 		);
@@ -170,6 +172,12 @@ class InputAddress extends HTMLElement {
 			}
 		});
 
+		this.elementNumber.addEventListener("keydown", (e) => {
+			e.target.style.background = "";
+			e.target.classList.remove('error');
+		}
+		)
+
 		this.elementNumber.addEventListener("change", () =>
 			this.validationAdress()
 		);
@@ -186,6 +194,7 @@ class InputAddress extends HTMLElement {
 		this.elementMunicipality.value = "";
 		this.elementPostCode.disabled = false;
 		this.elementMunicipality.disabled = false;
+		this.elementAdnc.value = "";
 		this.elementInput.focus();
 	}
 	updateAdress(address) {
@@ -195,6 +204,7 @@ class InputAddress extends HTMLElement {
 		this.elementNumber.value = address.number ?? "";
 		this.elementPostCode.value = address.postCode ?? "";
 		this.elementMunicipality.value = address.municipality ?? "";
+		this.elementAdnc.value = address.adNc ?? "";
 		this.elementPostCode.disabled = true;
 		this.elementMunicipality.disabled = true;
 		if (this.elementNumber.value === "") this.elementNumber.focus();
@@ -241,8 +251,12 @@ class InputAddress extends HTMLElement {
 			if (result[0].adNc) {
 				this.elementPostCode.value = result[0].postCode;
 				this.elementMunicipality.value = result[0].municipality;
+				this.elementAdnc.value = result[0].adNc
 			} else {
+				this.elementNumber.focus()
+				this.elementNumber.select()
 				this.elementNumber.style.background = "red";
+				this.elementNumber.classList.add('error');
 			}
 		}
 	}

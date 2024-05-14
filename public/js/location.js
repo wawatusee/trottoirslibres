@@ -11,10 +11,16 @@ async function callApiWithObject(endPoint, object) {
 
 	const url = `https://geoservices.irisnet.be/localization/Rest/Localize/${endPoint}?json=`;
 	const request = url + encodeURIComponent(JSON.stringify(object));
-	const response = await fetch(request);
-	const result = await response.json();
 
-	console.log(result.result);
+	let result
+	try {
+		const response = await fetch(request);
+		result = await response.json();
+	} catch (e) {
+		console.log('API non disponible irisnet.be...')
+		return
+	}
+
 	if (Array.isArray(result.result)) {
 		return result.result.map((r) => parser(r));
 	} else {
