@@ -24,7 +24,7 @@
             <input type="text" autocomplete="off" data-address="post-code">
             <label>Commune</label>
             <input type="text" autocomplete="off" data-address="municipality">
-            <input type="hidden" data-adress="adnc" >
+            <input type="hidden" data-address="adnc" >
         </div>
         <!--Type d'encombrement-->
         <div class="form-group" id="type-encombrement-liste">
