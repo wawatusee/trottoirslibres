@@ -16,7 +16,7 @@
     <form action="#" method="post">
         <div class="form-group" disabled>
             <label for="adresse">Rue</label>
-            <input-address><input type="text" name="adresse" id="adresse-id" placeholder="(utiliser la position actuelle)" autocomplete="off"></input-address>
+            <input-address><input type="text" name="adresse" id="adresse-id" placeholder="(utiliser la position actuelle)" autocomplete="off"></input-address><br>
             <label for="numero">Numéro</label>
             <input type="text" name="numero"  autocomplete="off" data-address="number">
             <label>Code Postal</label>
@@ -74,9 +74,21 @@
 <!--fin modif-->
         <div class="form-group">
             <label for="coordonnees">Vos coordonnées :</label>
-            <input type="text" id="nom" name="nom" placeholder="Nom">
-            <input type="text" id="prenom" name="prenom" placeholder="Prénom">
-            <input type="email" id="email" name="email" placeholder="E-mail">
+            <div class="form-group">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" placeholder="Nom" autocomplete="name">
+        </div>
+
+        <div class="form-group">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Prénom" autocomplete="given-name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail :</label>
+            <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="email">
+        </div>
+
             <div class="checkbox-group">
                 <input type="checkbox" id="autorisation" name="autorisation">
                 <label for="autorisation">J'accepte de conserver mes coordonnées dans votre base de données</label>
