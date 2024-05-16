@@ -86,7 +86,7 @@
                 <label for="autorisation">J'accepte de conserver mes coordonnées dans votre base de données</label>
             </div>
 <!--Autorisation réception newsletter-->
-            <div class="form-group">
+            <div class="form-group" id="autorisation-newsletter">
                 <label>J’accepte de recevoir la newsletter de Walk :</label><br>
                 <input type="radio" id="recevoir-newsletter-oui" name="recevoir-newsletter" value="Oui">
                 <label for="recevoir-newsletter-oui">Oui</label><br>
@@ -94,7 +94,7 @@
                 <label for="recevoir-newsletter-non">Non</label>
             </div>
 <!--Récupération images-->
-            <div class="form-group">
+            <div class="form-group" id="refs-imgs">
                 <label for="photo">photo(s) de l’obstacle :</label>
                 <input type="file" id="photo" name="photo">
             </div>

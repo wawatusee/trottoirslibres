@@ -67,7 +67,3 @@ h3{
 label{
   margin-right: 2em;
 }
-input[type="checkbox"] {
-  background-color: var(--secondary-citron);
-}
-
