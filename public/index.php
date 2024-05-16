@@ -3,11 +3,10 @@ $lang="fr";
  require_once ("../src/model/lexiqueModel.php");
 $Lexique=new LexiqueModel("../json/refs.json");
 $lexique_datas=$Lexique->get_lexique();
-var_dump($lexique_datas->refs->address->fr);
 require_once("../src/view/lexiqueView.php");
 $LexiqueView=new LexiqueView($lexique_datas,$lang);
 $address=$LexiqueView->getSectionLexique("address");
-echo $address;
+var_dump($address) ;
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -8,7 +8,7 @@
     }
     public function getSectionLexique($sectionName){
         $lang=$this->lang;
-        $mySectionLexique=$this->lexique_array->$sectionName;
+        $mySectionLexique=$this->lexique_array->refs->$sectionName->$lang;
         return $mySectionLexique;
     }
 }
