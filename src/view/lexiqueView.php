@@ -1,14 +1,17 @@
-<?php Class LexiqueView{
+<?php 
+class LexiqueView {
+    private $data;
     private $lang;
-    private $lexique_array;
-    public function __construct($lexique_datas, $lang)
-    {
-        $this->lexique_array=$lexique_datas;
-        $this->lang=$lang;
+
+    public function __construct($data, $lang) {
+        $this->data = $data;
+        $this->lang = $lang;
     }
-    public function getSectionLexique($sectionName){
-        $lang=$this->lang;
-        $mySectionLexique=$this->lexique_array->refs->$sectionName->$lang;
-        return $mySectionLexique;
+
+    public function getSectionLexique($section) {
+        if (isset($this->data['refs'][$section])) {
+            return (object) $this->data['refs'][$section];
+        }
+        return null;
     }
 }

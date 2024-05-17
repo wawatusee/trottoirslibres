@@ -5,8 +5,12 @@ $Lexique=new LexiqueModel("../json/refs.json");
 $lexique_datas=$Lexique->get_lexique();
 require_once("../src/view/lexiqueView.php");
 $LexiqueView=new LexiqueView($lexique_datas,$lang);
-$address=$LexiqueView->getSectionLexique("address");
-var_dump($address) ;
+$addressView=$LexiqueView->getSectionLexique("address");
+if ($addressView !== null && isset($addressView->$lang["consigne"])) {
+    $adressConsigne = $addressView->$lang["consigne"];
+} else {
+    echo "La section 'address' ou la propriété 'consigne' est manquante ou null.";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +28,7 @@ var_dump($address) ;
  <!--Adresse-->
     <form action="#" method="post">
             <div class="form-group" id="address" disabled>
-                <p class="consigne">Donnez-nous l’adresse de l’obstacle sur le trottoir</p>
+                <p class="consigne"><?=$adressConsigne?></p>
                 <label for="adresse">Rue</label>
                 <input-address><input type="text" name="adresse" id="adresse-id" placeholder="(utiliser la position actuelle)" autocomplete="off"></input-address><br>
                 <label for="numero">Numéro</label>
