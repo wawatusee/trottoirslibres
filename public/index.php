@@ -31,7 +31,13 @@ $adressStreetLabelsMunicipality=$adressStreetLabels["municipality"];
 //Type d'encombrements
 $typeOfEncombrementView=$LexiqueView->getSectionLexique("encombrements")->$lang;
 $consigneEncombrements=$typeOfEncombrementView["consigne"];
+$objetsEncombrements=$typeOfEncombrementView["values-labels"];
+
+var_dump($objetsEncombrements);
+$htmlContentObstacles= $LexiqueView->getObstaclesView($objetsEncombrements);
+echo $htmlContentObstacles;
 /*Fin refs Lexique pour multilingue */?>
+
 
 <!DOCTYPE html>
 <html lang=<?=$lang?>>
@@ -79,44 +85,7 @@ $consigneEncombrements=$typeOfEncombrementView["consigne"];
  <!--Type d'encombrement-->
             <div class="form-group" id="type-encombrement-liste">
                 <p class="consigne"><?=$consigneEncombrements?></p>
-                <input type="checkbox" id="potelet" name="type-encombrement[]" value="Potelet">
-                <label for="potelet">Potelet</label>
-
-                <input type="checkbox" id="panneau-signalisation" name="type-encombrement[]" value="Panneau de signalisation">
-                <label for="panneau-signalisation">Panneau de signalisation</label>
-
-                <input type="checkbox" id="velo-trottinette" name="type-encombrement[]" value="Vélo/trottinette">
-                <label for="velo-trottinette">Vélo/trottinette</label>
-
-                <input type="checkbox" id="vehicule-motorise" name="type-encombrement[]" value="Véhicule motorisé">
-                <label for="vehicule-motorise">Véhicule motorisé</label>
-
-                <input type="checkbox" id="pub-temporaire" name="type-encombrement[]" value="Panneau publicitaire temporaire">
-                <label for="pub-temporaire">Panneau publicitaire temporaire</label>
-
-                <input type="checkbox" id="pub-permanent" name="type-encombrement[]" value="Panneau publicitaire permanent">
-                <label for="pub-permanent">Panneau publicitaire permanent</label>
-
-                <input type="checkbox" id="barriere" name="type-encombrement[]" value="Barrière">
-                <label for="barriere">Barrière</label>
-
-                <input type="checkbox" id="poubelle" name="type-encombrement[]" value="Poubelle mal placée">
-                <label for="poubelle">Poubelle mal placée</label>
-
-                <input type="checkbox" id="sac-poubelle" name="type-encombrement[]" value="Sac poubelle">
-                <label for="sac-poubelle">Sac poubelle</label>
-
-                <input type="checkbox" id="borne-cable" name="type-encombrement[]" value="Borne ou câble de recharge pour véhicule électrique">
-                <label for="borne-cable">Borne ou câble de recharge pour véhicule électrique</label>
-
-                <input type="checkbox" id="lampadaire" name="type-encombrement[]" value="Lampadaire">
-                <label for="lampadaire">Lampadaire</label>
-
-                <input type="checkbox" id="dropzone" name="type-encombrement[]" value="Dropzone mal placée">
-                <label for="dropzone">Dropzone mal placée</label>
-
-                <input type="checkbox" id="panneau-info" name="type-encombrement[]" value="Panneau d’information">
-                <label for="panneau-info">Panneau d’information</label>
+                <?=$htmlContentObstacles?>
             </div>
 <script src="js/type-encombrement-liste.js"></script>
  <!--Fin type d'encombrement-->
