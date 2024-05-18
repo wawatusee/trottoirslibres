@@ -19,9 +19,9 @@
                     "municipality": "Gemeente"
                     }
                 }
-            }
-        },
-        "type-encombrement-liste":{
+            },
+        
+        "encombrements":{
             "fr":{
                 "consigne":"Donnez-nous des informations sur l’obstacle en question",
                 "values-labels":["Potelet","Panneau de signalisation / d’information","Armoire technique","Terrasse","Vélo/trottinette","Véhicule motorisé","Panneau publicitaire","Barrière","Poubelle mal placée","Sac poubelle","Borne ou câble de recharge pour véhicule électrique","Lampadaire","Dropzone mal placée"]
@@ -73,5 +73,5 @@
                 "consigne":"Foto('s) van het obstakel:"
             }
         }
-
     }
+}

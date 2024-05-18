@@ -1,19 +1,40 @@
-<?php
-$lang="fr";
+<?php //Gestion de langue
+// Tableau des langues disponibles
+$langues_disponibles = array(
+    'fr' => 'Français',
+    'nl' => 'Néerlandais'
+);
+// Vérifier si la variable 'lang' est définie dans l'URL
+if (isset($_GET['lang']) && array_key_exists($_GET['lang'], $langues_disponibles)) {
+    $lang = $_GET['lang'];
+} else {
+    // Si la variable 'lang' n'est pas définie ou n'est pas valide, définir une langue par défaut (par exemple, le français)
+    $lang = 'fr';
+}
+//Fin de gestion de langue?>
+<?php /*Refs Lexique pour multilingue */
  require_once ("../src/model/lexiqueModel.php");
 $Lexique=new LexiqueModel("../json/refs.json");
 $lexique_datas=$Lexique->get_lexique();
 require_once("../src/view/lexiqueView.php");
 $LexiqueView=new LexiqueView($lexique_datas,$lang);
+//adresse
 $addressView=$LexiqueView->getSectionLexique("address");
-if ($addressView !== null && isset($addressView->$lang["consigne"])) {
-    $adressConsigne = $addressView->$lang["consigne"];
-} else {
-    echo "La section 'address' ou la propriété 'consigne' est manquante ou null.";
-}
-?>
+$adressConsigne = $addressView->$lang["consigne"];
+$adressStreetLabels = $addressView->$lang["values-labels"];
+//var_dump($adressStreetLabels);
+$adressStreetLabelsStreet=$adressStreetLabels["street"];
+$adressStreetLabelsNumber=$adressStreetLabels["number"];
+$adressStreetLabelsPostcode=$adressStreetLabels["postcode"];
+$adressStreetLabelsMunicipality=$adressStreetLabels["municipality"];
+//Fin adresse
+//Type d'encombrements
+$typeOfEncombrementView=$LexiqueView->getSectionLexique("encombrements")->$lang;
+$consigneEncombrements=$typeOfEncombrementView["consigne"];
+/*Fin refs Lexique pour multilingue */?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang=<?=$lang?>>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,25 +44,41 @@ if ($addressView !== null && isset($addressView->$lang["consigne"])) {
     <script src="js/input-address.js" type="module" defer></script>
 </head>
 <body>
+<div class="menulangues">
+        <?php //Liste déroulante des langues
+        echo '<form method="get">';
+        echo '<select name="lang" id="lang" onchange="this.form.submit()">';
+        foreach ($langues_disponibles as $code_langue => $nom_langue) {
+            echo '<option value="' . $code_langue . '"';
+            if ($lang === $code_langue) {
+                echo ' selected';
+            }
+            echo '>' . $code_langue . '</option>';
+        }
+        echo '</select>';
+        echo '</form>';
+        //Fin liste déroulante des langues?>
+</div>
 <div class="container">
     <h2>Formulaire de Signalement</h2>
  <!--Adresse-->
     <form action="#" method="post">
             <div class="form-group" id="address" disabled>
                 <p class="consigne"><?=$adressConsigne?></p>
-                <label for="adresse">Rue</label>
+                <label for="adresse"><?=$adressStreetLabelsStreet?></label>
                 <input-address><input type="text" name="adresse" id="adresse-id" placeholder="(utiliser la position actuelle)" autocomplete="off"></input-address><br>
-                <label for="numero">Numéro</label>
+                <label for="numero"><?=$adressStreetLabelsNumber?></label>
                 <input type="text" name="numero"  autocomplete="off" data-address="number">
-                <label>Code Postal</label>
+                <label><?=$adressStreetLabelsPostcode?></label>
                 <input type="text" autocomplete="off" data-address="post-code">
-                <label>Commune</label>
+                <label><?=$adressStreetLabelsMunicipality?></label>
                 <input type="text" autocomplete="off" data-address="municipality">
                 <input type="hidden" data-address="adnc" >
             </div>
+ <!--Fin adresse-->
  <!--Type d'encombrement-->
             <div class="form-group" id="type-encombrement-liste">
-                <p class="consigne">Donnez-nous des informations sur l’obstacle en question</p>
+                <p class="consigne"><?=$consigneEncombrements?></p>
                 <input type="checkbox" id="potelet" name="type-encombrement[]" value="Potelet">
                 <label for="potelet">Potelet</label>
 
@@ -82,7 +119,8 @@ if ($addressView !== null && isset($addressView->$lang["consigne"])) {
                 <label for="panneau-info">Panneau d’information</label>
             </div>
 <script src="js/type-encombrement-liste.js"></script>
-    <!--contact information-->
+ <!--Fin type d'encombrement-->
+<!--contact information-->
             <div class="form-group" id="contact-information">
                 <p class="consigne">Vos coordonnées :</p>
                 <label for="name">Nom :</label>
@@ -94,11 +132,13 @@ if ($addressView !== null && isset($addressView->$lang["consigne"])) {
                 <label for="email">E-mail :</label>
                 <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="email">
             </div>
+<!--Fin contact information-->
 <!--Autorisation conservation coordonnées-->
             <div class="form-group">
                 <input type="checkbox" id="autorisation" name="autorisation">
                 <label for="autorisation">J'accepte de conserver mes coordonnées dans votre base de données</label>
             </div>
+<!--Fin autorisation conservation coordonnées-->
 <!--Autorisation réception newsletter-->
             <div class="form-group" id="autorisation-newsletter">
                 <label>J’accepte de recevoir la newsletter de Walk :</label><br>
@@ -107,11 +147,13 @@ if ($addressView !== null && isset($addressView->$lang["consigne"])) {
                 <input type="radio" id="recevoir-newsletter-non" name="recevoir-newsletter" value="Non">
                 <label for="recevoir-newsletter-non">Non</label>
             </div>
+<!--Fin autorisation réception newsletter-->
 <!--Récupération images-->
             <div class="form-group" id="refs-imgs">
                 <label for="photo">photo(s) de l’obstacle :</label>
                 <input type="file" id="photo" name="photo">
             </div>
+<!--Fin récupération images-->
             <button type="submit">Envoyer</button>
         </form>
     </div>

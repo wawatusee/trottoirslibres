@@ -1,3 +1,32 @@
+/*Liste déroulante Langues*/
+/* Style pour la liste déroulante */
+
+select#lang {
+  padding: 4px;
+  border: none;
+  font-size: 1em;
+  background-color:var(--main-dark-color); /* Fond blanc */
+  color: var(--main-clear-color); /* Couleur du texte */
+
+}
+
+/* Style pour les options de la liste déroulante */
+select#lang option {
+  background-color: #fff; /* Fond blanc */
+  color: #333; /* Couleur du texte */
+}
+
+/* Style pour le bouton de soumission (peut être personnalisé selon vos besoins) */
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color:var(secondary-indigo);
+  color: var(--secondary-citron);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/*Fin liste déroulante langues*/
 .container {
     color: var(--main-clear-color);
     max-width: 600px;
