@@ -63,7 +63,6 @@ $acceptNewsletterLabel=$acceptationNewsletter["values-labels"];
 //Images
 $imagesForm=$LexiqueView->getSectionLexique("refs-imgs")->$lang;
 $imgsLabel=$imagesForm["values-labels"];
-$browseButton=$imagesForm["button"];
 
 //Fin images
 /*Fin refs Lexique pour multilingue */?>

@@ -7,7 +7,7 @@
         "address":{
             "fr":{
                 "consigne":"Donnez-nous l’adresse de l’obstacle sur le trottoir",
-                "adress-place-holder":"(Utilisez la position actuelle)",
+                "address-place-holder":"(Utilisez la position actuelle)",
                 "values-labels":{
                 "street":"rue",
                 "number":"numéro",
