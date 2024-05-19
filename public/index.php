@@ -13,11 +13,16 @@ if (isset($_GET['lang']) && array_key_exists($_GET['lang'], $langues_disponibles
 }
 //Fin de gestion de langue?>
 <?php /*Refs Lexique pour multilingue */
+/*Mise en place*/
  require_once ("../src/model/lexiqueModel.php");
 $Lexique=new LexiqueModel("../json/refs.json");
 $lexique_datas=$Lexique->get_lexique();
 require_once("../src/view/lexiqueView.php");
 $LexiqueView=new LexiqueView($lexique_datas,$lang);
+/*Fin mise en place*/
+//Titre
+$titre=$LexiqueView->getSectionLexique("title")->$lang;
+//Fin titre
 //adresse
 $addressView=$LexiqueView->getSectionLexique("address");
 $adressConsigne = $addressView->$lang["consigne"];
@@ -38,8 +43,14 @@ $htmlContentObstacles= $LexiqueView->getObstaclesView($objetsEncombrements);
 //Fin type d'encombrements
 //Contact information
 $contactInformation=$LexiqueView->getSectionLexique("contact-information")->$lang;
-var_dump($contactInformation);
+//var_dump($contactInformation);
 $contactInformationConsigne=$contactInformation["consigne"];
+$contactInformationDetails=$contactInformation["values-labels"];
+$contactInformationName=$contactInformationDetails["name"];
+$contactInformationFirstName=$contactInformationDetails["first-name"];
+$contactInformationMail=$contactInformationDetails["email"];
+//var_dump($contactInformationMail);
+//Contact information
 /*Fin refs Lexique pour multilingue */?>
 <!DOCTYPE html>
 <html lang=<?=$lang?>>
@@ -68,7 +79,7 @@ $contactInformationConsigne=$contactInformation["consigne"];
         //Fin liste déroulante des langues?>
 </div>
 <div class="container">
-    <h2>Formulaire de Signalement</h2>
+    <h2><?=$titre?></h2>
  <!--Adresse-->
     <form action="#" method="post">
             <div class="form-group" id="address" disabled>
@@ -94,11 +105,11 @@ $contactInformationConsigne=$contactInformation["consigne"];
 <!--contact information-->
             <div class="form-group" id="contact-information">
                 <p class="consigne"><?=$contactInformationConsigne?></p>
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" placeholder="Nom" autocomplete="name">
+                <label for="name"><?=$contactInformationName?> :</label>
+                <input type="text" id="name" name="name" placeholder="<?=$contactInformationName?>" autocomplete="name">
 
-                <label for="first-name">Prénom :</label>
-                <input type="text" id="first-name" name="first-name" placeholder="Prénom" autocomplete="given-name">
+                <label for="first-name"><?=$contactInformationFirstName?>:</label>
+                <input type="text" id="first-name" name="first-name" placeholder="<?=$contactInformationFirstName?>" autocomplete="given-name">
 
                 <label for="email">E-mail :</label>
                 <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="email">

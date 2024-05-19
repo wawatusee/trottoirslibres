@@ -1,5 +1,9 @@
 {
     "refs":{
+        "title":{
+            "fr":"Formulaire de Signalement",
+            "nl":"Rapportageformulier"
+        },
         "address":{
             "fr":{
                 "consigne":"Donnez-nous l’adresse de l’obstacle sur le trottoir",
