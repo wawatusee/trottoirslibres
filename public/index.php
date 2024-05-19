@@ -32,13 +32,15 @@ $adressStreetLabelsMunicipality=$adressStreetLabels["municipality"];
 $typeOfEncombrementView=$LexiqueView->getSectionLexique("encombrements")->$lang;
 $consigneEncombrements=$typeOfEncombrementView["consigne"];
 $objetsEncombrements=$typeOfEncombrementView["values-labels"];
-
-var_dump($objetsEncombrements);
+//var_dump($objetsEncombrements);
 $htmlContentObstacles= $LexiqueView->getObstaclesView($objetsEncombrements);
-echo $htmlContentObstacles;
+//echo $htmlContentObstacles;
+//Fin type d'encombrements
+//Contact information
+$contactInformation=$LexiqueView->getSectionLexique("contact-information")->$lang;
+var_dump($contactInformation);
+$contactInformationConsigne=$contactInformation["consigne"];
 /*Fin refs Lexique pour multilingue */?>
-
-
 <!DOCTYPE html>
 <html lang=<?=$lang?>>
 <head>
@@ -91,7 +93,7 @@ echo $htmlContentObstacles;
  <!--Fin type d'encombrement-->
 <!--contact information-->
             <div class="form-group" id="contact-information">
-                <p class="consigne">Vos coordonnées :</p>
+                <p class="consigne"><?=$contactInformationConsigne?></p>
                 <label for="name">Nom :</label>
                 <input type="text" id="name" name="name" placeholder="Nom" autocomplete="name">
 
