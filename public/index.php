@@ -50,7 +50,15 @@ $contactInformationName=$contactInformationDetails["name"];
 $contactInformationFirstName=$contactInformationDetails["first-name"];
 $contactInformationMail=$contactInformationDetails["email"];
 //var_dump($contactInformationMail);
-//Contact information
+//Fin contact information
+//Autorisation conservation coordonnées
+$autorisationKeepContactInformation=$LexiqueView->getSectionLexique("autorisation-contact")->$lang;
+$autorContactLabel=$autorisationKeepContactInformation["values-labels"];
+//Fin utorisation conservation coordonnées
+//Acceptation newsletter
+$acceptationNewsletter=$LexiqueView->getSectionLexique("autorisation-newsletter")->$lang;
+$acceptNewsletterLabel=$acceptationNewsletter["values-labels"];
+//Fin acceptation newsletter
 /*Fin refs Lexique pour multilingue */?>
 <!DOCTYPE html>
 <html lang=<?=$lang?>>
@@ -111,23 +119,20 @@ $contactInformationMail=$contactInformationDetails["email"];
                 <label for="first-name"><?=$contactInformationFirstName?>:</label>
                 <input type="text" id="first-name" name="first-name" placeholder="<?=$contactInformationFirstName?>" autocomplete="given-name">
 
-                <label for="email">E-mail :</label>
-                <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="email">
+                <label for="email"><?=$contactInformationMail?> :</label>
+                <input type="email" id="email" name="email" placeholder="<?=$contactInformationMail?>" autocomplete="email">
             </div>
 <!--Fin contact information-->
 <!--Autorisation conservation coordonnées-->
             <div class="form-group">
                 <input type="checkbox" id="autorisation" name="autorisation">
-                <label for="autorisation">J'accepte de conserver mes coordonnées dans votre base de données</label>
+                <label for="autorisation"><?=$autorContactLabel?></label>
             </div>
 <!--Fin autorisation conservation coordonnées-->
 <!--Autorisation réception newsletter-->
             <div class="form-group" id="autorisation-newsletter">
-                <label>J’accepte de recevoir la newsletter de Walk :</label><br>
-                <input type="radio" id="recevoir-newsletter-oui" name="recevoir-newsletter" value="Oui">
-                <label for="recevoir-newsletter-oui">Oui</label><br>
-                <input type="radio" id="recevoir-newsletter-non" name="recevoir-newsletter" value="Non">
-                <label for="recevoir-newsletter-non">Non</label>
+                <input type="checkbox" id="autorisation" name="recevoir-newsletter">
+                <label for="recevoir-newsletter"><?=$acceptNewsletterLabel?></label>
             </div>
 <!--Fin autorisation réception newsletter-->
 <!--Récupération images-->

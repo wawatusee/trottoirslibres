@@ -55,26 +55,26 @@
         },
         "autorisation-contact":{
         "fr":{
-            "consigne":"J'accepte de conserver mes coordonnées dans votre base de données"
+            "values-labels":"J'accepte de conserver mes coordonnées dans votre base de données"
             },
         "nl":{
-            "consigne":"Ik stem ermee in dat mijn gegevens worden opgeslagen in uw database."
+            "values-labels":"Ik stem ermee in dat mijn gegevens worden opgeslagen in uw database."
             }
         },
         "autorisation-newsletter":{
         "fr":{
-            "consigne":"J’accepte de recevoir la newsletter de Walk :"
+            "values-labels":"J’accepte de recevoir la newsletter de Walk :"
             },
         "nl":{
-            "consigne":"Ik stem ermee in om de nieuwsbrief van Walk te ontvangen:"
+            "values-labels":"Ik stem ermee in om de nieuwsbrief van Walk te ontvangen:"
             }
         },
         "refs-imgs":{
             "fr":{
-                "consigne":"Photo(s) de l’obstacle :"
+                "values-labels":"Photo(s) de l’obstacle :"
             },
             "nl":{
-                "consigne":"Foto('s) van het obstakel:"
+                "values-labels":"Foto('s) van het obstakel:"
             }
         }
     }
