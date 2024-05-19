@@ -7,6 +7,7 @@
         "address":{
             "fr":{
                 "consigne":"Donnez-nous l’adresse de l’obstacle sur le trottoir",
+                "adress-place-holder":"(Utilisez la position actuelle)",
                 "values-labels":{
                 "street":"rue",
                 "number":"numéro",
@@ -16,6 +17,7 @@
             },
             "nl":{  
                 "consigne":"Geef ons het adres van het obstakel op de stoep",
+                "address-place-holder":"(Gebruik de huidige positie)",
                 "values-labels":{
                     "street":"Straat",
                     "number":"numéro",

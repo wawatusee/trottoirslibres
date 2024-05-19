@@ -25,6 +25,7 @@ $titre=$LexiqueView->getSectionLexique("title")->$lang;
 //Fin titre
 //adresse
 $addressView=$LexiqueView->getSectionLexique("address");
+$addressPlaceHolder=$addressView->$lang["address-place-holder"];
 $adressConsigne = $addressView->$lang["consigne"];
 $adressStreetLabels = $addressView->$lang["values-labels"];
 //var_dump($adressStreetLabels);
@@ -59,6 +60,12 @@ $autorContactLabel=$autorisationKeepContactInformation["values-labels"];
 $acceptationNewsletter=$LexiqueView->getSectionLexique("autorisation-newsletter")->$lang;
 $acceptNewsletterLabel=$acceptationNewsletter["values-labels"];
 //Fin acceptation newsletter
+//Images
+$imagesForm=$LexiqueView->getSectionLexique("refs-imgs")->$lang;
+$imgsLabel=$imagesForm["values-labels"];
+$browseButton=$imagesForm["button"];
+
+//Fin images
 /*Fin refs Lexique pour multilingue */?>
 <!DOCTYPE html>
 <html lang=<?=$lang?>>
@@ -93,7 +100,7 @@ $acceptNewsletterLabel=$acceptationNewsletter["values-labels"];
             <div class="form-group" id="address" disabled>
                 <p class="consigne"><?=$adressConsigne?></p>
                 <label for="adresse"><?=$adressStreetLabelsStreet?></label>
-                <input-address><input type="text" name="adresse" id="adresse-id" placeholder="(utiliser la position actuelle)" autocomplete="off"></input-address><br>
+                <input-address><input type="text" name="adresse" id="adresse-id" placeholder="<?=$addressPlaceHolder?>" autocomplete="off"></input-address><br>
                 <label for="numero"><?=$adressStreetLabelsNumber?></label>
                 <input type="text" name="numero"  autocomplete="off" data-address="number">
                 <label><?=$adressStreetLabelsPostcode?></label>
@@ -137,7 +144,7 @@ $acceptNewsletterLabel=$acceptationNewsletter["values-labels"];
 <!--Fin autorisation réception newsletter-->
 <!--Récupération images-->
             <div class="form-group" id="refs-imgs">
-                <label for="photo">photo(s) de l’obstacle :</label>
+                <label for="photo"><?=$imgsLabel?> :</label>
                 <input type="file" id="photo" name="photo">
             </div>
 <!--Fin récupération images-->
