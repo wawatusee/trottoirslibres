@@ -1,108 +1,154 @@
-</html>
+<?php //Gestion de langue
+// Tableau des langues disponibles
+$langues_disponibles = array(
+    'fr' => 'Français',
+    'nl' => 'Néerlandais'
+);
+// Vérifier si la variable 'lang' est définie dans l'URL
+if (isset($_GET['lang']) && array_key_exists($_GET['lang'], $langues_disponibles)) {
+    $lang = $_GET['lang'];
+} else {
+    // Si la variable 'lang' n'est pas définie ou n'est pas valide, définir une langue par défaut (par exemple, le français)
+    $lang = 'fr';
+}
+//Fin de gestion de langue?>
+<?php /*Refs Lexique pour multilingue */
+/*Mise en place*/
+ require_once ("../src/model/lexiqueModel.php");
+$Lexique=new LexiqueModel("../json/refs.json");
+$lexique_datas=$Lexique->get_lexique();
+require_once("../src/view/lexiqueView.php");
+$LexiqueView=new LexiqueView($lexique_datas,$lang);
+/*Fin mise en place*/
+//Titre
+$titre=$LexiqueView->getSectionLexique("title")->$lang;
+//Fin titre
+//adresse
+$addressView=$LexiqueView->getSectionLexique("address");
+$addressPlaceHolder=$addressView->$lang["address-place-holder"];
+$adressConsigne = $addressView->$lang["consigne"];
+$adressStreetLabels = $addressView->$lang["values-labels"];
+//var_dump($adressStreetLabels);
+$adressStreetLabelsStreet=$adressStreetLabels["street"];
+$adressStreetLabelsNumber=$adressStreetLabels["number"];
+$adressStreetLabelsPostcode=$adressStreetLabels["postcode"];
+$adressStreetLabelsMunicipality=$adressStreetLabels["municipality"];
+//Fin adresse
+//Type d'encombrements
+$typeOfEncombrementView=$LexiqueView->getSectionLexique("encombrements")->$lang;
+$consigneEncombrements=$typeOfEncombrementView["consigne"];
+$objetsEncombrements=$typeOfEncombrementView["values-labels"];
+//var_dump($objetsEncombrements);
+$htmlContentObstacles= $LexiqueView->getObstaclesView($objetsEncombrements);
+//echo $htmlContentObstacles;
+//Fin type d'encombrements
+//Contact information
+$contactInformation=$LexiqueView->getSectionLexique("contact-information")->$lang;
+//var_dump($contactInformation);
+$contactInformationConsigne=$contactInformation["consigne"];
+$contactInformationDetails=$contactInformation["values-labels"];
+$contactInformationName=$contactInformationDetails["name"];
+$contactInformationFirstName=$contactInformationDetails["first-name"];
+$contactInformationMail=$contactInformationDetails["email"];
+//var_dump($contactInformationMail);
+//Fin contact information
+//Autorisation conservation coordonnées
+$autorisationKeepContactInformation=$LexiqueView->getSectionLexique("autorisation-contact")->$lang;
+$autorContactLabel=$autorisationKeepContactInformation["values-labels"];
+//Fin utorisation conservation coordonnées
+//Acceptation newsletter
+$acceptationNewsletter=$LexiqueView->getSectionLexique("autorisation-newsletter")->$lang;
+$acceptNewsletterLabel=$acceptationNewsletter["values-labels"];
+//Fin acceptation newsletter
+//Images
+$imagesForm=$LexiqueView->getSectionLexique("refs-imgs")->$lang;
+$imgsLabel=$imagesForm["values-labels"];
+
+//Fin images
+/*Fin refs Lexique pour multilingue */?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang=<?=$lang?>>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trottoirs-libres</title>
     <link rel="stylesheet" href="css/style.css">
-    <!--<script src="js/location.js"></script>-->
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/input-address.js" type="module" defer></script>
 </head>
 <body>
+<div class="menulangues">
+        <?php //Liste déroulante des langues
+        echo '<form method="get">';
+        echo '<select name="lang" id="lang" onchange="this.form.submit()">';
+        foreach ($langues_disponibles as $code_langue => $nom_langue) {
+            echo '<option value="' . $code_langue . '"';
+            if ($lang === $code_langue) {
+                echo ' selected';
+            }
+            echo '>' . $code_langue . '</option>';
+        }
+        echo '</select>';
+        echo '</form>';
+        //Fin liste déroulante des langues?>
+</div>
 <div class="container">
-    <h2>Formulaire de Signalement</h2>
-    
+    <h2><?=$titre?></h2>
+ <!--Adresse-->
     <form action="#" method="post">
-        <div class="form-group" id="address" disabled>
-        <p class="consigne">Donnez-nous l’adresse de l’obstacle sur le trottoir</p>
-            <label for="adresse">Rue</label>
-            <input-address><input type="text" name="adresse" id="adresse-id" placeholder="(utiliser la position actuelle)" autocomplete="off"></input-address><br>
-            <label for="numero">Numéro</label>
-            <input type="text" name="numero"  autocomplete="off" data-address="number">
-            <label>Code Postal</label>
-            <input type="text" autocomplete="off" data-address="post-code">
-            <label>Commune</label>
-            <input type="text" autocomplete="off" data-address="municipality">
-            <input type="hidden" data-adress="adnc" >
-        </div>
-        <!--Type d'encombrement-->
-        <div class="form-group" id="type-encombrement-liste">
-        <p class="consigne">Donnez-nous des informations sur l’obstacle en question</p>
-        <input type="checkbox" id="potelet" name="type-encombrement[]" value="Potelet">
-        <label for="potelet">Potelet</label>
+            <div class="form-group" id="address" disabled>
+                <p class="consigne"><?=$adressConsigne?></p>
+                <label for="adresse"><?=$adressStreetLabelsStreet?></label>
+                <input-address><input type="text" name="adresse" id="adresse-id" placeholder="<?=$addressPlaceHolder?>" autocomplete="off"></input-address><br>
+                <label for="numero"><?=$adressStreetLabelsNumber?></label>
+                <input type="text" name="numero"  autocomplete="off" data-address="number">
+                <label><?=$adressStreetLabelsPostcode?></label>
+                <input type="text" autocomplete="off" data-address="post-code">
+                <label><?=$adressStreetLabelsMunicipality?></label>
+                <input type="text" autocomplete="off" data-address="municipality">
+                <input type="hidden" data-address="adnc" >
+            </div>
+ <!--Fin adresse-->
+ <!--Type d'encombrement-->
+            <div class="form-group" id="type-encombrement-liste">
+                <p class="consigne"><?=$consigneEncombrements?></p>
+                <?=$htmlContentObstacles?>
+            </div>
+<script src="js/type-encombrement-liste.js"></script>
+ <!--Fin type d'encombrement-->
+<!--contact information-->
+            <div class="form-group" id="contact-information">
+                <p class="consigne"><?=$contactInformationConsigne?></p>
+                <label for="name"><?=$contactInformationName?> :</label>
+                <input type="text" id="name" name="name" placeholder="<?=$contactInformationName?>" autocomplete="name">
 
-        <input type="checkbox" id="panneau-signalisation" name="type-encombrement[]" value="Panneau de signalisation">
-        <label for="panneau-signalisation">Panneau de signalisation</label>
+                <label for="first-name"><?=$contactInformationFirstName?>:</label>
+                <input type="text" id="first-name" name="first-name" placeholder="<?=$contactInformationFirstName?>" autocomplete="given-name">
 
-        <input type="checkbox" id="velo-trottinette" name="type-encombrement[]" value="Vélo/trottinette">
-        <label for="velo-trottinette">Vélo/trottinette</label>
-
-        <input type="checkbox" id="vehicule-motorise" name="type-encombrement[]" value="Véhicule motorisé">
-        <label for="vehicule-motorise">Véhicule motorisé</label>
-
-        <input type="checkbox" id="pub-temporaire" name="type-encombrement[]" value="Panneau publicitaire temporaire">
-        <label for="pub-temporaire">Panneau publicitaire temporaire</label>
-
-        <input type="checkbox" id="pub-permanent" name="type-encombrement[]" value="Panneau publicitaire permanent">
-        <label for="pub-permanent">Panneau publicitaire permanent</label>
-
-        <input type="checkbox" id="barriere" name="type-encombrement[]" value="Barrière">
-        <label for="barriere">Barrière</label>
-
-        <input type="checkbox" id="poubelle" name="type-encombrement[]" value="Poubelle mal placée">
-        <label for="poubelle">Poubelle mal placée</label>
-
-        <input type="checkbox" id="sac-poubelle" name="type-encombrement[]" value="Sac poubelle">
-        <label for="sac-poubelle">Sac poubelle</label>
-
-        <input type="checkbox" id="borne-cable" name="type-encombrement[]" value="Borne ou câble de recharge pour véhicule électrique">
-        <label for="borne-cable">Borne ou câble de recharge pour véhicule électrique</label>
-
-        <input type="checkbox" id="lampadaire" name="type-encombrement[]" value="Lampadaire">
-        <label for="lampadaire">Lampadaire</label>
-
-        <input type="checkbox" id="dropzone" name="type-encombrement[]" value="Dropzone mal placée">
-        <label for="dropzone">Dropzone mal placée</label>
-
-        <input type="checkbox" id="panneau-info" name="type-encombrement[]" value="Panneau d’information">
-        <label for="panneau-info">Panneau d’information</label>
-        
-        </div>
-
-    <script src="js/type-encombrement-liste.js"></script>
-<!--fin modif-->
-        <div class="form-group" id="contact-information">
-        <p class="consigne">Vos coordonnées :</p>
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" placeholder="Nom" autocomplete="name">
-
-            <label for="first-name">Prénom :</label>
-            <input type="text" id="first-name" name="first-name" placeholder="Prénom" autocomplete="given-name">
-
-            <label for="email">E-mail :</label>
-            <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="email">
-        </div>
-
+                <label for="email"><?=$contactInformationMail?> :</label>
+                <input type="email" id="email" name="email" placeholder="<?=$contactInformationMail?>" autocomplete="email">
+            </div>
+<!--Fin contact information-->
+<!--Autorisation conservation coordonnées-->
             <div class="form-group">
                 <input type="checkbox" id="autorisation" name="autorisation">
-                <label for="autorisation">J'accepte de conserver mes coordonnées dans votre base de données</label>
+                <label for="autorisation"><?=$autorContactLabel?></label>
             </div>
-            <div class="form-group">
-                <label>J’accepte de recevoir la newsletter de Walk :</label><br>
-                <input type="radio" id="recevoir-newsletter-oui" name="recevoir-newsletter" value="Oui">
-                <label for="recevoir-newsletter-oui">Oui</label><br>
-                <input type="radio" id="recevoir-newsletter-non" name="recevoir-newsletter" value="Non">
-                <label for="recevoir-newsletter-non">Non</label>
+<!--Fin autorisation conservation coordonnées-->
+<!--Autorisation réception newsletter-->
+            <div class="form-group" id="autorisation-newsletter">
+                <input type="checkbox" id="autorisation" name="recevoir-newsletter">
+                <label for="recevoir-newsletter"><?=$acceptNewsletterLabel?></label>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="photo">photo(s) de l’obstacle :</label>
-            <input type="file" id="photo" name="photo">
-        </div>
-        <button type="submit">Envoyer</button>
+<!--Fin autorisation réception newsletter-->
+<!--Récupération images-->
+            <div class="form-group" id="refs-imgs">
+                <label for="photo"><?=$imgsLabel?> :</label>
+                <input type="file" id="photo" name="photo">
+            </div>
+<!--Fin récupération images-->
+            <button type="submit">Envoyer</button>
         </form>
-        </div>
     </div>
 <script src="js/formdatas.js"></script>
 </body>

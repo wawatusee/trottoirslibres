@@ -1,23 +1,28 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(51, 49, 49);
     box-sizing: border-box;
   }
-  body {
-    background-color: whitesmoke;
-  }
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 1rem;
-    height: 100vh;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  /*Fonts*/
+section{
+  max-width: 94vw;
+  margin: auto;
+}
+/*Communs disposition values*/
+:root{
+--standartspace:0.9em;
+--content-padding:5px;
+}
+/*Communs Colors images*/
+:root{
+  --main-dark-color:#333;
+  --main-clear-color:#f5F5F5;
+  --first-color:#e65639;
+  --secondary-indigo:#2B254C;
+  --secondary-citron:#FFE475;
+  --grey-clear-color:#a8a9ad;
+  --rs-bckgrnd-img:url("../img/deco/logo-rs_30px.png");
+}
+/*Fonts*/
 @font-face{
   font-family:'myFirstFont';
   src:
@@ -34,82 +39,31 @@
   url("./fonts/GT-Eesti-Display-Ultra-Bold.wof");
 }
 /*Use this font with this line => font-family: myTitleFont;*/
-  .form {
-    padding: 2rem;
-  }
-  h1 {
-    margin-bottom: 2rem;
-  }
-  
-  form {
-    max-width: 500px;
-  }
-  
-  p * {
-    display: block;
-  }
-  .element {
-    /* width: 50%; */
-    margin-top: 2rem;
-    position: relative;
-  }
-  input[type="text"] {
-    width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 0;
-  }
-  /* input:focus {
-    background-color: lightcoral;
-    border: none;
-    border-color: transparent;
-    border-radius: 0;
-    outline: 0;
-  } */
-  
-  .option {
-    padding: 3px 20px;
-    font-weight: 400;
-    color: #333;
-  }
-  .option:hover {
-    background-color: #801337;
-    color: white;
-  }
-  .input-group-addon {
-    padding: 6px 12px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1;
-    color: #555;
-    text-align: center;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  /* color: #fff;
-  text-decoration: none;
-  background-color: #337ab7;
-  outline: 0;
-  
-  */
-  .select {
-    cursor: pointer;
-    position: absolute;
-    width: 100%;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  }
+body{
+  font-family: "myFirstFont";
+  color: var(--main-clear-color);
+  background-color:var(--secondary-indigo);
+}
+h1 {
+  margin-bottom: 2rem;
+}
+h2{
+  color: var(--first-color);
+  font-family: "myTitleFont";
+  text-align: left;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h2{
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+h3{
+  font-size: 1.2em;
+  font-weight: lighter;
+}
+label{
+  margin-right: 2em;
+}

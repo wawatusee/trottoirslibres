@@ -1,0 +1,83 @@
+{
+    "refs":{
+        "title":{
+            "fr":"Formulaire de Signalement",
+            "nl":"Rapportageformulier"
+        },
+        "address":{
+            "fr":{
+                "consigne":"Donnez-nous l’adresse de l’obstacle sur le trottoir",
+                "address-place-holder":"(Utilisez la position actuelle)",
+                "values-labels":{
+                "street":"rue",
+                "number":"numéro",
+                "postcode":"Code postal",
+                "municipality": "commune"
+                }
+            },
+            "nl":{  
+                "consigne":"Geef ons het adres van het obstakel op de stoep",
+                "address-place-holder":"(Gebruik de huidige positie)",
+                "values-labels":{
+                    "street":"Straat",
+                    "number":"numéro",
+                    "postcode":"Postcode",
+                    "municipality": "Gemeente"
+                    }
+                }
+            },
+        
+        "encombrements":{
+            "fr":{
+                "consigne":"Donnez-nous des informations sur l’obstacle en question",
+                "values-labels":["Potelet","Panneau de signalisation / d’information","Armoire technique","Terrasse","Vélo/trottinette","Véhicule motorisé","Panneau publicitaire","Barrière","Poubelle mal placée","Sac poubelle","Borne ou câble de recharge pour véhicule électrique","Lampadaire","Dropzone mal placée"]
+            },
+            "nl":{
+                "consigne":"Geef ons informatie over het betreffende obstakel",
+                "values-labels":["Paaltje", "Signalisatiebord / Informatiebord", "Technische kast", "Terras", "Fiets/step", "Gemotoriseerd voertuig", "Reclamebord", "Hek", "Verkeerd geplaatste vuilnisbak", "Vuilniszak", "Oplaadpaal of -kabel voor elektrische voertuigen", "Straatlantaarn", "Verkeerd geplaatste dropzone"]
+            }
+        },
+        "contact-information":{
+            "fr":{
+                "consigne":"Vos coordonnées :",
+                "values-labels":{
+                    "name":"Nom",
+                    "first-name":"Prénom",
+                    "email":"Email"
+                }
+            },
+            "nl":{
+                "consigne":"Uw gegevens :",
+                "values-labels":{
+                    "name":"Naam",
+                    "first-name":"Voornam",
+                    "email":"Email"
+                }
+            }
+        },
+        "autorisation-contact":{
+        "fr":{
+            "values-labels":"J'accepte de conserver mes coordonnées dans votre base de données"
+            },
+        "nl":{
+            "values-labels":"Ik stem ermee in dat mijn gegevens worden opgeslagen in uw database."
+            }
+        },
+        "autorisation-newsletter":{
+        "fr":{
+            "values-labels":"J’accepte de recevoir la newsletter de Walk :"
+            },
+        "nl":{
+            "values-labels":"Ik stem ermee in om de nieuwsbrief van Walk te ontvangen:"
+            }
+        },
+        "refs-imgs":{
+            "fr":{
+                "values-labels":"Photo(s) de l’obstacle :"
+            },
+            "nl":{
+                "values-labels":"Foto('s) van het obstakel:"
+            }
+        }
+    }
+}
