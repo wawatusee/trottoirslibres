@@ -41,13 +41,13 @@ const CSS=
 	color: #333;
 }
 .option:hover {
-	background-color: #801337;
-	color: white;
+	background-color: var(--secondary-indigo);
+	color: var(--main-clear-color);
 }
 .option > span {
 	font-style: italic;
 	font-weight: 500;
-	color: #939292;
+	color: var(--grey-clear-color);
 	font-size: 12px;
 	white-space: nowrap;
 }
