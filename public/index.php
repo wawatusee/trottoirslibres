@@ -94,8 +94,10 @@ $imgsLabel=$imagesForm["values-labels"];
 </div>
 <div class="container">
     <h2><?=$titre?></h2>
+    <form id="reportForm">
  <!--Adresse-->
-    <form action="#" method="post">
+
+    <!--<form action="#" method="post">-->
             <div class="form-group" id="address" disabled>
                 <p class="consigne"><?=$adressConsigne?></p>
                 <label for="adresse"><?=$adressStreetLabelsStreet?></label>
@@ -149,7 +151,8 @@ $imgsLabel=$imagesForm["values-labels"];
 <!--Fin récupération images-->
             <button type="submit">Envoyer</button>
         </form>
+        <script src="js/reportform.js"></script>
     </div>
-<script src="js/formdatas.js"></script>
+<!--<script src="js/formdatas.js"></script>-->
 </body>
 </html>
