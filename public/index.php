@@ -153,6 +153,32 @@ $imgsLabel=$imagesForm["values-labels"];
         </form>
         <script src="js/reportform.js"></script>
     </div>
-<!--<script src="js/formdatas.js"></script>-->
+
+    <!-- Partie cachée -->
+    <div id="partieCachee" style="display: none;">
+        <!-- Contenu de la partie cachée ici -->
+        <button id="btnEnvoyerMail">Envoyer le mail</button>
+        <button id="btnRetour">Retour au formulaire</button>
+    </div>
+
+    <script>
+        // Écouteur d'événement pour le bouton "Envoyer"
+        document.getElementById('btnEnvoyer').addEventListener('click', function() {
+            // Afficher la partie cachée
+            document.getElementById('partieCachee').style.display = 'block';
+        });
+
+        // Écouteur d'événement pour le bouton "Envoyer le mail"
+        document.getElementById('btnEnvoyerMail').addEventListener('click', function() {
+            // Traitement pour envoyer le mail en PHP
+            // Redirection ou affichage d'un message de confirmation
+        });
+
+        // Écouteur d'événement pour le bouton "Retour"
+        document.getElementById('btnRetour').addEventListener('click', function() {
+            // Masquer la partie cachée et afficher le formulaire
+            document.getElementById('partieCachee').style.display = 'none';
+        });
+    </script>
 </body>
 </html>

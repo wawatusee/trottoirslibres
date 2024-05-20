@@ -78,6 +78,44 @@
             "nl":{
                 "values-labels":"Foto('s) van het obstakel:"
             }
-        }
+        },
+        
+            "mail": {
+              "subject": {
+                "fr": "Signalement d'une anomalie sur le trottoir",
+                "nl": "Melding van een anomalie op het voetpad",
+                "en": "Report of an anomaly on the sidewalk"
+              },
+              "body": {
+                "fr": {
+                  "content": "Bonjour Échevin de la Mobilité,\n\nNous vous informons qu'une anomalie a été signalée sur le trottoir. Voici les détails :\n\nAdresse de l'anomalie :\n{{address}}\n\nType d'encombrement :\n{{encombrement}}\n\nCoordonnées du piéton :\nNom : {{name}}\nPrénom : {{first-name}}\nEmail : {{email}}\n\nAutorisation de conservation des coordonnées : {{autorisation-contact}}\nAutorisation de recevoir la newsletter : {{autorisation-newsletter}}\n\nMerci de prendre les mesures nécessaires.\n\nCordialement,\n{{votre organisation}}"
+                },
+                "nl": {
+                  "content": "Beste Schepen van Mobiliteit,\n\nWe willen u op de hoogte stellen dat er een anomalie is gemeld op het voetpad. Hier zijn de details:\n\nAdres van de anomalie:\n{{address}}\n\nType van belemmering:\n{{encombrement}}\n\nGegevens van de voetganger:\nNaam: {{name}}\nVoornaam: {{first-name}}\nE-mail: {{email}}\n\nToestemming voor het bewaren van de gegevens: {{autorisation-contact}}\nToestemming om de nieuwsbrief te ontvangen: {{autorisation-newsletter}}\n\nDank u om de nodige maatregelen te nemen.\n\nMet vriendelijke groeten,\n{{uw organisatie}}"
+                },
+                "en": {
+                  "content": "Dear Alderman of Mobility,\n\nWe wish to inform you that an anomaly has been reported on the sidewalk. Here are the details:\n\nAddress of the anomaly:\n{{address}}\n\nType of obstruction:\n{{encombrement}}\n\nPedestrian's information:\nName: {{name}}\nFirst Name: {{first-name}}\nEmail: {{email}}\n\nPermission to retain contact details: {{autorisation-contact}}\nPermission to receive the newsletter: {{autorisation-newsletter}}\n\nThank you for taking the necessary measures.\n\nSincerely,\n{{your organization}}"
+                },
+                "details": {
+                  "fr": {
+                    "address": "Adresse de l'anomalie",
+                    "type": "Type d'encombrement",
+                    "pedestrian-info": "Coordonnées du piéton"
+                  },
+                  "nl": {
+                    "address": "Adres van de anomalie",
+                    "type": "Type van belemmering",
+                    "pedestrian-info": "Gegevens van de voetganger"
+                  },
+                  "en": {
+                    "address": "Address of the anomaly",
+                    "type": "Type of obstruction",
+                    "pedestrian-info": "Pedestrian's information"
+                  }
+                }
+              }
+            }
+          
+          
     }
 }
