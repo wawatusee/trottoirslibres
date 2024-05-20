@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formObject.address.numero = document.querySelector('[data-address="number"]').value;
         formObject.address.postCode = document.querySelector('[data-address="post-code"]').value;
         formObject.address.municipality = document.querySelector('[data-address="municipality"]').value;
+        formObject.address.adnc = document.querySelector('[data-address="adnc"]').value;
 
         // Parcourir les données du formulaire et les affecter aux bons groupes
         formData.forEach((value, key) => {
