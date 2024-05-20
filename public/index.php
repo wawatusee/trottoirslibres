@@ -132,7 +132,7 @@ $imgsLabel=$imagesForm["values-labels"];
             </div>
 <!--Fin contact information-->
 <!--Autorisation conservation coordonnées-->
-            <div class="form-group">
+            <div class="form-group" id="autorisation-contact">
                 <input type="checkbox" id="autorisation" name="autorisation">
                 <label for="autorisation"><?=$autorContactLabel?></label>
             </div>
