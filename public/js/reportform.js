@@ -40,14 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Convertir l'objet en JSON
-        const json = JSON.stringify(formObject, null, 2);
+        const jsonDatas = JSON.stringify(formObject, null, 2);
 
         // Afficher le JSON dans la console (ou utiliser comme souhaité)
-        console.log(json);
+        console.log(jsonDatas);
 
         // Optionnel : afficher le JSON sur la page
         const pre = document.createElement('pre');
-        pre.textContent = json;
+        pre.textContent = jsonDatas;
         document.body.appendChild(pre);
     });
 });

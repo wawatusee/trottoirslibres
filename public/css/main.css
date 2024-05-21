@@ -19,7 +19,7 @@ select#lang option {
 /* Style pour le bouton de soumission (peut être personnalisé selon vos besoins) */
 input[type="submit"] {
   padding: 10px 20px;
-  background-color:var(secondary-indigo);
+  background-color:var(--secondary-indigo);
   color: var(--secondary-citron);
   border: none;
   border-radius: 5px;
@@ -86,16 +86,16 @@ input[type="submit"] {
     }
     /*Comportement draftmail*/
     .hidden {
-      display: none;
+      visibility: hidden;
   }
-  
+
   #maildraft {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0,0.2);
       color: #fff;
       display: flex;
       flex-direction: column;

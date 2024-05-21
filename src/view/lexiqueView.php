@@ -24,8 +24,10 @@ class LexiqueView {
         $htmlObstacleContent = "";
         foreach($obstacles_arr as $obstacle) {
             $htmlObstacleContent .= <<<OBSTACLE
+            <span>
             <input type="checkbox" id="$obstacle" name="type-encombrement[]" value="$obstacle">
             <label for="$obstacle">$obstacle</label>
+            </span>
 OBSTACLE;
         }
         return $htmlObstacleContent;

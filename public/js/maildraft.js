@@ -7,7 +7,7 @@ document.getElementById('reportForm').addEventListener('submit', function(event)
 
     // Afficher le brouillon du mail
     document.getElementById('maildraft').classList.remove('hidden');
-    document.getElementById('reportForm').classList.add('hidden');
+    //document.getElementById('reportForm').classList.add('hidden');
 
     // Remplir le contenu du brouillon avec les données
     let draftContent = `
@@ -29,7 +29,7 @@ document.getElementById('reportForm').addEventListener('submit', function(event)
 document.getElementById('btnRetour').addEventListener('click', function() {
     // Masquer le brouillon et afficher le formulaire
     document.getElementById('maildraft').classList.add('hidden');
-    document.getElementById('reportForm').classList.remove('hidden');
+    //document.getElementById('reportForm').classList.remove('hidden');
 });
 
 document.getElementById('btnEnvoyerMail').addEventListener('click', function() {
