@@ -96,7 +96,6 @@ $imgsLabel=$imagesForm["values-labels"];
     <h2><?=$titre?></h2>
     <form id="reportForm">
  <!--Adresse-->
-
     <!--<form action="#" method="post">-->
             <div class="form-group" id="address" disabled>
                 <p class="consigne"><?=$adressConsigne?></p>
@@ -149,14 +148,15 @@ $imgsLabel=$imagesForm["values-labels"];
                 <input type="file" id="photo" name="photo">
             </div>
 <!--Fin récupération images-->
-            <button type="submit">Envoyer</button>
+            <button type="submit" id="btnEnvoyer">Envoyer</button>
         </form>
         <script src="js/reportform.js"></script>
     </div>
 
     <!-- Partie cachée -->
-    <div id="partieCachee" style="display: none;">
-        <!-- Contenu de la partie cachée ici -->
+    <div id="maildraft" style="display: none;">
+        <!-- Contenu de la page aperçu mail ici -->
+        <?php require_once ("../inc/pages/mail.php");?>
         <button id="btnEnvoyerMail">Envoyer le mail</button>
         <button id="btnRetour">Retour au formulaire</button>
     </div>
@@ -165,7 +165,7 @@ $imgsLabel=$imagesForm["values-labels"];
         // Écouteur d'événement pour le bouton "Envoyer"
         document.getElementById('btnEnvoyer').addEventListener('click', function() {
             // Afficher la partie cachée
-            document.getElementById('partieCachee').style.display = 'block';
+            document.getElementById('maildraft').style.display = 'block';
         });
 
         // Écouteur d'événement pour le bouton "Envoyer le mail"
@@ -177,7 +177,7 @@ $imgsLabel=$imagesForm["values-labels"];
         // Écouteur d'événement pour le bouton "Retour"
         document.getElementById('btnRetour').addEventListener('click', function() {
             // Masquer la partie cachée et afficher le formulaire
-            document.getElementById('partieCachee').style.display = 'none';
+            document.getElementById('maildraft').style.display = 'none';
         });
     </script>
 </body>
