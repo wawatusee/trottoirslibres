@@ -1,39 +1,86 @@
-document.getElementById('reportForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    // Récupérer les données du formulaire
-    const formData = new FormData(this);
-    const jsonData = Object.fromEntries(formData.entries());
+// Variable globale pour stocker les données du formulaire
+let formObject = {
+    address: {},
+    typeEncombrement: [],
+    contactInformation: {},
+    autorisationContact: false,
+    autorisationNewsletter: false,
+    refsImgs: {}
+};
 
-    // Afficher le brouillon du mail
-    document.getElementById('maildraft').classList.remove('hidden');
-    //document.getElementById('reportForm').classList.add('hidden');
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('reportForm');
 
-    // Remplir le contenu du brouillon avec les données
-    let draftContent = `
-        <strong>Adresse :</strong> ${jsonData['adresse']}<br>
-        <strong>Numéro :</strong> ${jsonData['numero']}<br>
-        <strong>Code Postal :</strong> ${jsonData['post-code']}<br>
-        <strong>Commune :</strong> ${jsonData['municipality']}<br>
-        <strong>Type d'encombrement :</strong> ${jsonData['type-encombrement']}<br>
-        <strong>Nom :</strong> ${jsonData['name']}<br>
-        <strong>Prénom :</strong> ${jsonData['first-name']}<br>
-        <strong>Email :</strong> ${jsonData['email']}<br>
-        <strong>Autorisation Contact :</strong> ${jsonData['autorisation'] ? 'Oui' : 'Non'}<br>
-        <strong>Newsletter :</strong> ${jsonData['recevoir-newsletter'] ? 'Oui' : 'Non'}<br>
-        <strong>Photo :</strong> ${jsonData['photo'] ? jsonData['photo'].name : 'Aucune'}
-    `;
-    document.getElementById('draftContent').innerHTML = draftContent;
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Empêche l'envoi du formulaire
+
+        // Récupérer les données du formulaire
+        const formData = new FormData(form);
+
+        // Réinitialiser l'objet formObject
+        formObject = {
+            address: {},
+            typeEncombrement: [],
+            contactInformation: {},
+            autorisationContact: false,
+            autorisationNewsletter: false,
+            refsImgs: {}
+        };
+
+        // Récupérer les données de l'adresse via les IDs spécifiques
+        formObject.address.adresse = document.getElementById("adresse-id").value;
+        formObject.address.numero = document.querySelector('[data-address="number"]').value;
+        formObject.address.postCode = document.querySelector('[data-address="post-code"]').value;
+        formObject.address.municipality = document.querySelector('[data-address="municipality"]').value;
+        formObject.address.adnc = document.querySelector('[data-address="adnc"]').value;
+
+        // Parcourir les données du formulaire et les affecter aux bons groupes
+        formData.forEach((value, key) => {
+            if (key.startsWith('type-encombrement')) {
+                formObject.typeEncombrement.push(value);
+            } else if (key === 'name' || key === 'first-name' || key === 'email') {
+                formObject.contactInformation[key] = value;
+            } else if (key === 'autorisation') {
+                formObject.autorisationContact = true; // convertir en booléen
+            } else if (key === 'recevoir-newsletter') {
+                formObject.autorisationNewsletter = true; // convertir en booléen
+            } else if (key === 'photo') {
+                formObject.refsImgs[key] = value.name; // obtenir le nom du fichier photo
+            }
+        });
+
+        // Convertir l'objet en JSON
+        const jsonDatas = JSON.stringify(formObject, null, 2);
+
+        // Afficher le JSON dans la console (ou utiliser comme souhaité)
+        console.log(jsonDatas);
+
+        // Optionnel : afficher le JSON sur la page
+        const pre = document.createElement('pre');
+        pre.textContent = jsonDatas;
+        document.body.appendChild(pre);
+
+        // Afficher l'aperçu du mail
+        showMailPreview();
+    });
 });
 
-document.getElementById('btnRetour').addEventListener('click', function() {
-    // Masquer le brouillon et afficher le formulaire
-    document.getElementById('maildraft').classList.add('hidden');
-    //document.getElementById('reportForm').classList.remove('hidden');
-});
+// Fonction pour afficher l'aperçu du mail
+function showMailPreview() {
+    const mailPreviewContainer = document.getElementById('mailPreviewContainer');
+    const reportForm = document.getElementById('reportForm');
 
-document.getElementById('btnEnvoyerMail').addEventListener('click', function() {
-    // Traitement pour envoyer le mail en PHP
-    // Vous pouvez ajouter ici un appel AJAX ou une redirection pour envoyer les données au serveur
-    alert('Mail envoyé !');
-});
+    // Remplir le contenu du mail avec les données de formObject
+    document.getElementById('mailAddress').textContent = formObject.address.adresse;
+    document.getElementById('mailNumber').textContent = formObject.address.numero;
+    document.getElementById('mailPostCode').textContent = formObject.address.postCode;
+    document.getElementById('mailMunicipality').textContent = formObject.address.municipality;
+    document.getElementById('mailTypeEncombrement').textContent = formObject.typeEncombrement.join(', ');
+    document.getElementById('mailName').textContent = formObject.contactInformation.name;
+    document.getElementById('mailFirstName').textContent = formObject.contactInformation['first-name'];
+    document.getElementById('mailEmail').textContent = formObject.contactInformation.email;
+
+    // Masquer le formulaire et afficher l'aperçu du mail
+    reportForm.classList.add('hidden');
+    mailPreviewContainer.classList.remove('hidden');
+}

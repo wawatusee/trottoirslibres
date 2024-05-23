@@ -32,4 +32,10 @@ OBSTACLE;
         }
         return $htmlObstacleContent;
     }
+    public function getMailDraft($section) {
+        if (isset($this->data->refs->$section)) {
+            return $this->data->refs->$section;
+        }
+        return null;
+    }
 }

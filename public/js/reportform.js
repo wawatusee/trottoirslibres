@@ -1,3 +1,13 @@
+// Variable globale pour stocker les données du formulaire
+let formObject = {
+    address: {},
+    typeEncombrement: [],
+    contactInformation: {},
+    autorisationContact: false,
+    autorisationNewsletter: false,
+    refsImgs: {}
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('reportForm');
 
@@ -7,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Récupérer les données du formulaire
         const formData = new FormData(form);
 
-        // Initialiser l'objet formObject avec des groupes
-        const formObject = {
+        // Réinitialiser l'objet formObject
+        formObject = {
             address: {},
             typeEncombrement: [],
             contactInformation: {},
@@ -49,5 +59,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const pre = document.createElement('pre');
         pre.textContent = jsonDatas;
         document.body.appendChild(pre);
+
+        // Afficher l'aperçu du mail
+        showMailPreview();
     });
 });
+
+// Fonction pour afficher l'aperçu du mail
+function showMailPreview() {
+    const mailPreviewContainer = document.getElementById('mailPreviewContainer');
+    const reportForm = document.getElementById('reportForm');
+
+    // Remplir le contenu du mail avec les données de formObject
+    document.getElementById('mailAddress').textContent = formObject.address.adresse;
+    document.getElementById('mailNumber').textContent = formObject.address.numero;
+    document.getElementById('mailPostCode').textContent = formObject.address.postCode;
+    document.getElementById('mailMunicipality').textContent = formObject.address.municipality;
+    document.getElementById('mailTypeEncombrement').textContent = formObject.typeEncombrement.join(', ');
+    document.getElementById('mailName').textContent = formObject.contactInformation.name;
+    document.getElementById('mailFirstName').textContent = formObject.contactInformation['first-name'];
+    document.getElementById('mailEmail').textContent = formObject.contactInformation.email;
+
+    // Masquer le formulaire et afficher l'aperçu du mail
+    reportForm.classList.add('hidden');
+    mailPreviewContainer.classList.remove('hidden');
+}
