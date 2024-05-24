@@ -93,8 +93,9 @@ $imgsLabel=$imagesForm["values-labels"];
         //Fin liste déroulante des langues?>
 </div>
 <div class="container">
-    <h2><?=$titre?></h2>
+
     <form id="reportForm">
+    <h2><?=$titre?></h2>
  <!--Adresse-->
     <!--<form action="#" method="post">-->
             <div class="form-group" id="address" disabled>
@@ -152,10 +153,10 @@ $imgsLabel=$imagesForm["values-labels"];
         </form>
         <script src="js/reportform.js"></script>
     </div>
-
     <!-- Aperçu de mail -->
-    
         <!-- Contenu de la page aperçu mail ici -->
+
+
         <?php require_once ("../inc/pages/mail.php");?>
 </body>
 </html>

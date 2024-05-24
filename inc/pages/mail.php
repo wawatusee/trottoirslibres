@@ -1,13 +1,24 @@
-    <!--données inhérentes au mail-->
-    <?php $mail=$LexiqueView->getSectionLexique("title")->$lang;?>
 
+            <!--données inhérentes au mail-->
+            <?php $mailModelContents=$LexiqueView->getSectionLexique("mail"); 
+        var_dump($mailModelContents)?>
+        <?php $subject=$mailModelContents->subject[$lang]?>
+        <?php $Salutation=$mailModelContents->body[$lang]['salutation']?>
+        <?php $introduction=$mailModelContents->body[$lang]['introduction']?>
+        <?php $raison=$mailModelContents->body[$lang]['raison']?>
     <!-- Aperçu du mail -->
     <div id="mailPreviewContainer" class="hidden">
+    <!--données inhérentes au mail-->
         <h2>Aperçu du Mail</h2>
-        <p><strong>Adresse :</strong> <span id="mailAddress"></span></p>
-        <p><strong>Numéro :</strong> <span id="mailNumber"></span></p>
-        <p><strong>Code Postal :</strong> <span id="mailPostCode"></span></p>
-        <p><strong>Commune :</strong> <span id="mailMunicipality"></span></p>
+        <!--Sujet-->
+        <h2><?=$subject?></h2>
+        <p><?=$Salutation?></p>
+        <p><?=$introduction?></p>
+        <p><?=$raison?><span id="mailAddress"></span><span id="mailNumber"></span><span id="mailPostCode"></span><span id="mailMunicipality"></span></p>
+        <p>Adresses : </p>
+        <p><strong>Numéro :</strong> </p>
+        <p><strong>Code Postal :</strong> </p>
+        <p><strong>Commune :</strong> </p>
         <p><strong>Type d'encombrement :</strong> <span id="mailTypeEncombrement"></span></p>
         <p><strong>Nom :</strong> <span id="mailName"></span></p>
         <p><strong>Prénom :</strong> <span id="mailFirstName"></span></p>

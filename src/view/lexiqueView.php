@@ -14,12 +14,6 @@ class LexiqueView {
         }
         return null;
     }
-    public function getSectionLexiques($section) {
-        if (isset($this->data->refs->$section)) {
-            return $this->data->refs->$section;
-        }
-        return null;
-    }
     public function getObstaclesView($obstacles_arr) {
         $htmlObstacleContent = "";
         foreach($obstacles_arr as $obstacle) {
@@ -32,10 +26,5 @@ OBSTACLE;
         }
         return $htmlObstacleContent;
     }
-    public function getMailDraft($section) {
-        if (isset($this->data->refs->$section)) {
-            return $this->data->refs->$section;
-        }
-        return null;
-    }
+
 }
