@@ -92,13 +92,15 @@
                 "fr": {
                     "salutation":"Chère Madame l'échevine, cher Monsieur l'échevin de la mobilité",
                     "introduction":"Je vous contacte car j’ai remarqué de nombreux obstacles sur les trottoirs de la commune. Je soutiens la campagne de walk.brussels #rasleboldubrol qui vise à dégager les nombreux encombrements sur les trottoirs. Ces obstacles empêchent les gens de se déplacer en toute sécurité, en particulier les personnes avec enfants, les personnes déficientes visuelles ou avec une chaise roulante.",
-                    "raison":"J’ai particulièrement vu des obstacles au niveau du ",
+                    "raison":"Obstacles croisés : ",
+                    "location":"Vus en face du : ",
                     "advise":"Vous pouvez faire la différence pour les piéton•nes en mettant en place les mesures suivantes (sans s’y limiter) :<ul>,<li>la mise en place de plans et de budgets pour l'enlèvement du mobilier urbain excédentaire ou inutilisé,</li>,<li>l'interdiction de tout panneau publicitaire sur les trottoirs;</li>,<li>fournir des conseils aux entreprises qui utilisent le trottoir pour des divertissements en plein air et implémenter le respect d’un cheminement piéton libre de 2 mètres de large;</li>,<li>s'engager à ce que tout nouveau mobilier urbain (parcmètre, borne de recharge, arceaux vélos,…) ne se retrouve pas sur le trottoir;</li>,<li>veiller à ce que les dropzones pour la mobilité partagée (trottinettes, vélos, scooters) soient placées en dehors des trottoirs - il n'est pas nécessaire de sacrifier l'espace piétonnier pour favoriser la micromobilité.</li><ul>Merci d’avance pour les actions qui seront mises en place.Bien à vous,"
                 },
                 "nl":{
                     "salutation":"Geachte mevrouw schepen, geachte heer schepen van mobiliteit",
                     "introduction":"Ik contacteer u omdat ik een aantal obstakels heb vastgesteld op de voetpaden in de gemeente. Ik steun de campagne van walk.brussels #genoegvandetroep, die tot doel heeft de vele obstakels op de voetpaden weg te werken. Door deze obstakels kunnen mensen zich niet veilig verplaatsen, vooral mensen met kinderen, slechtzienden of mensen in een rolstoel.",
-                    "raison":"Ik heb vooral obstakels gezien ter hoogte van ",
+                    "raison":"Ik heb vooral ",
+                    "location":"gezien ter hoogte van ",
                     "advise":"U kunt het verschil maken voor voetgangers door de volgende maatregelen te implementeren, waaraan u zich niet hoeft te beperken:<ul>,<li>plannen opstellen en budgetten vrijmaken ter verwijdering van overtollig of ongebruikt straatmeubilair;</li>,<li>alle reclambeorden op trottoirs verbieden;</li>,<li>bedrijven die het voetpad gebruiken voor evenementen in de open lucht goed bijstaan en daarbij zorgen voor een onbelemmerde doorgang voor voetgangers van minimaal 2 meter breed;</li>,<li>garanderen dat nieuw straatmeubilair (parkeermeters, oplaadpunten, fietsenrekken, enz.) niet op het voetpad terecht komt;</li>,<li>ervoor zorgen dat dropzones voor gedeelde mobiliteit (steps, fietsen, scooters) niet op het voetpad worden gezet. Het is niet nodig om voetgangersruimte op te offeren om micromobiliteit aan te moedigen.</li><ul>Alvast bedankt om tot actie over te gaan. Met vriendelijke groeten,"
                 }
             }

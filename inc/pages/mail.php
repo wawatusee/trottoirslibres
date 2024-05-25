@@ -5,19 +5,21 @@
         <?php $subject=$mailModelContents->subject[$lang]?>
         <?php $Salutation=$mailModelContents->body[$lang]['salutation']?>
         <?php $introduction=$mailModelContents->body[$lang]['introduction']?>
-        <?php $raison=$mailModelContents->body[$lang]['raison']?>
+        <?php $raisonEncombrement=$mailModelContents->body[$lang]['raison']?>
+        <?php $locationObstacle=$mailModelContents->body[$lang]['location']?>
+        <?php $advise=$mailModelContents->body[$lang]['advise']?>
     <!-- Aperçu du mail -->
     <div id="mailPreviewContainer" class="hidden">
     <!--données inhérentes au mail-->
+   <?php var_dump($locationObstacle)?>
         <h2>Aperçu du Mail :</h2>
         <!--Sujet-->
         <div class="mailPreview">
             <h2><?=$subject?></h2>
             <p><?=$Salutation?></p>
-            <p><?=$introduction?><span id="mailTypeEncombrement"></span></p>
-            <p><?=$raison?><span id="mailNumber"></span><?=" "?><span id="mailAddress"></span><?=", "?><span id="mailPostCode"></span><?=" "?><span id="mailMunicipality"></span></p>
-            
-
+            <p><?=$introduction?></p><br>
+            <p><strong><?=$raisonEncombrement?></strong><span id="mailTypeEncombrement"></span><br><strong><?=$locationObstacle?></strong><span id="mailNumber"></span><?=" "?><span id="mailAddress"></span><?=", "?><span id="mailPostCode"></span><?=" "?><span id="mailMunicipality"></span></p><br>
+            <p><?=$advise?></p>
             <button id="sendMailButton">Envoyer le Mail</button>
             <button id="editFormButton">Modifier</button>
         <p><strong>Nom :</strong> <span id="mailName"></span></p>

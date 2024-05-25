@@ -109,6 +109,8 @@ input[type="submit"] {
   }
   .mailPreview {
     max-width: 600px;
+    max-height: 80%;
+    overflow: auto;
     text-align: justify;
     margin: 0 auto;
   }
