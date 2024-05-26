@@ -1,7 +1,6 @@
 
             <!--données inhérentes au mail-->
-            <?php $mailModelContents=$LexiqueView->getSectionLexique("mail"); 
-       // var_dump($mailModelContents)?>
+            <?php $mailModelContents=$LexiqueView->getSectionLexique("mail"); ?>
         <?php $subject=$mailModelContents->subject[$lang]?>
         <?php $Salutation=$mailModelContents->body[$lang]['salutation']?>
         <?php $introduction=$mailModelContents->body[$lang]['introduction']?>
@@ -11,7 +10,6 @@
     <!-- Aperçu du mail -->
     <div id="mailPreviewContainer" class="hidden">
     <!--données inhérentes au mail-->
-   <?php var_dump($locationObstacle)?>
         <h2>Aperçu du Mail :</h2>
         <!--Sujet-->
         <div class="mailPreview">
@@ -34,5 +32,30 @@
     document.getElementById('reportForm').classList.remove('hidden');
     document.getElementById('mailPreviewContainer').classList.add('hidden');
 });
+//Dernier ajout de Chat pour envoie de mail après aperçu
+document.getElementById('sendMailButton').addEventListener('click', () => {
+    fetch('send_mail.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formObject)  // Utilise formObject ici
+    })
+    .then(response => response.text())  // Utiliser text() pour voir la réponse brute
+    .then(text => {
+        console.log('Réponse brute:', text);  // Log de la réponse brute
+        return JSON.parse(text);  // Parser le texte en JSON
+    })
+    .then(data => {
+        if (data.success) {
+            alert('Mail envoyé avec succès!');
+        } else {
+            alert('Échec de l\'envoi du mail : ' + (data.error || 'Erreur inconnue'));
+        }
+    })
+    .catch(error => {
+        console.error('Erreur:', error);
+        alert('Une erreur est survenue.');
+    });
+});
 </script>
-    

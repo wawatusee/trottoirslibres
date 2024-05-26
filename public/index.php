@@ -155,8 +155,6 @@ $imgsLabel=$imagesForm["values-labels"];
     </div>
     <!-- Aperçu de mail -->
         <!-- Contenu de la page aperçu mail ici -->
-
-
         <?php require_once ("../inc/pages/mail.php");?>
 </body>
 </html>

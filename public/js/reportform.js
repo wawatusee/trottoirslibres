@@ -84,3 +84,4 @@ function showMailPreview() {
     reportForm.classList.add('hidden');
     mailPreviewContainer.classList.remove('hidden');
 }
+
