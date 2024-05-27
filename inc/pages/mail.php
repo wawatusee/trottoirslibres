@@ -59,25 +59,28 @@ document.getElementById('editFormButton').addEventListener('click', () => {
 document.getElementById('sendMailButton').addEventListener('click', async () => {
     const objetMail = document.getElementById('objet-mail').innerText;
     const bodyMail = document.getElementById('body-mail').innerHTML;
-
     const formData = new FormData();
+
     formData.append('objet', objetMail);
     formData.append('body', bodyMail);
     formData.append('formObject', JSON.stringify(formObject));
 
-    const imageFile = document.getElementById('imageUpload').files[0];
-    if (imageFile) {
-        formData.append('image', imageFile);
+    const imageInput = document.getElementById('imageInput');
+    if (imageInput && imageInput.files.length > 0) {
+        formData.append('image', imageInput.files[0]);
     }
 
     try {
+        // Envoi des données à send_mail.php
         const response = await fetch('send_mail.php', {
             method: 'POST',
             body: formData
         });
 
+        // Récupération de la réponse
         const responseData = await response.json();
 
+        // Affichage du message de réussite ou d'échec
         if (responseData.success) {
             alert('Mail envoyé avec succès et fichier JSON enregistré!');
         } else {
@@ -88,5 +91,6 @@ document.getElementById('sendMailButton').addEventListener('click', async () => 
         alert('Une erreur est survenue.');
     }
 });
+
 
 </script>

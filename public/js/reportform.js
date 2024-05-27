@@ -56,9 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(jsonDatas);
 
         // Optionnel : afficher le JSON sur la page
-        const pre = document.createElement('pre');
+        /*const pre = document.createElement('pre');
         pre.textContent = jsonDatas;
-        document.body.appendChild(pre);
+        document.body.appendChild(pre);*/
 
         // Afficher l'aperçu du mail
         showMailPreview();
