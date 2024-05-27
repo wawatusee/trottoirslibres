@@ -1,0 +1,23 @@
+{
+    "address": {
+        "adresse": "Rue Vogler",
+        "numero": "22",
+        "postCode": "1030",
+        "municipality": "Schaerbeek",
+        "adnc": "10301282  22"
+    },
+    "typeEncombrement": [
+        "Panneau de signalisation \/ d\u2019information",
+        "Armoire technique",
+        "V\u00e9hicule motoris\u00e9",
+        "Panneau publicitaire"
+    ],
+    "contactInformation": {
+        "name": "Slow",
+        "first-name": "way",
+        "email": ""
+    },
+    "autorisationContact": true,
+    "autorisationNewsletter": false,
+    "refsImgs": []
+}

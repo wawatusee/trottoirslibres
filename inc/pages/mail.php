@@ -33,36 +33,51 @@
 </div>
 
 <script>
+document.getElementById('imageUpload').addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+        const preview = document.getElementById('imagePreview');
+        preview.src = e.target.result;
+        preview.style.display = 'block';
+
+        const mailPreviewImage = document.getElementById('mailImagePreview');
+        mailPreviewImage.src = e.target.result;
+    };
+
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+});
+
 document.getElementById('editFormButton').addEventListener('click', () => {
     document.getElementById('reportForm').classList.remove('hidden');
     document.getElementById('mailPreviewContainer').classList.add('hidden');
 });
 
-// Envoi de la requête à send_mail.php
 document.getElementById('sendMailButton').addEventListener('click', async () => {
     const objetMail = document.getElementById('objet-mail').innerText;
     const bodyMail = document.getElementById('body-mail').innerHTML;
 
-    const dataToSend = {
-        objet: objetMail,
-        body: bodyMail,
-        formObject: formObject
-    };
+    const formData = new FormData();
+    formData.append('objet', objetMail);
+    formData.append('body', bodyMail);
+    formData.append('formObject', JSON.stringify(formObject));
+
+    const imageFile = document.getElementById('imageUpload').files[0];
+    if (imageFile) {
+        formData.append('image', imageFile);
+    }
 
     try {
-        // Envoi des données à send_mail.php
         const response = await fetch('send_mail.php', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(dataToSend)
+            body: formData
         });
 
-        // Récupération de la réponse
         const responseData = await response.json();
 
-        // Affichage du message de réussite ou d'échec
         if (responseData.success) {
             alert('Mail envoyé avec succès et fichier JSON enregistré!');
         } else {
@@ -73,4 +88,5 @@ document.getElementById('sendMailButton').addEventListener('click', async () => 
         alert('Une erreur est survenue.');
     }
 });
+
 </script>
