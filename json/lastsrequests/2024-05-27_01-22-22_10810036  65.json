@@ -1,0 +1,23 @@
+{
+    "address": {
+        "adresse": "Avenue de Jette",
+        "numero": "65",
+        "postCode": "1081",
+        "municipality": "Koekelberg",
+        "adnc": "10810036  65"
+    },
+    "typeEncombrement": [
+        "Barri\u00e8re",
+        "Sac poubelle"
+    ],
+    "contactInformation": {
+        "name": "Garde",
+        "first-name": "Jette",
+        "email": "gj@gmail.com"
+    },
+    "autorisationContact": false,
+    "autorisationNewsletter": true,
+    "refsImgs": {
+        "photo": "18-woluwe_zenne.jpg"
+    }
+}

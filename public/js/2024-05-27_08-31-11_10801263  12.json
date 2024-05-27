@@ -1,0 +1,24 @@
+{
+    "address": {
+        "adresse": "Rue Vandernoot",
+        "numero": "12",
+        "postCode": "1080",
+        "municipality": "Molenbeek-Saint-Jean",
+        "adnc": "10801263  12"
+    },
+    "typeEncombrement": [
+        "Potelet",
+        "Panneau de signalisation \/ d\u2019information",
+        "Dropzone mal plac\u00e9e"
+    ],
+    "contactInformation": {
+        "name": "Pogo",
+        "first-name": "Violent",
+        "email": "pv@gmail.com"
+    },
+    "autorisationContact": true,
+    "autorisationNewsletter": false,
+    "refsImgs": {
+        "photo": "DSCF6382.jpg"
+    }
+}

@@ -84,12 +84,17 @@
             }
         },
         "mail": {
+            "titrepage":{
+                "fr":"Aperçu du mail",
+                "nl":"E-mailvoorbeeld"
+            },
             "subject": {
               "fr": "Ras le bol du brol sur le trottoir",
               "nl": "Genoeg van de troep op de stoep"
             },
             "body": {
                 "fr": {
+                    
                     "salutation":"Chère Madame l'échevine, cher Monsieur l'échevin de la mobilité",
                     "introduction":"Je vous contacte car j’ai remarqué de nombreux obstacles sur les trottoirs de la commune. Je soutiens la campagne de walk.brussels #rasleboldubrol qui vise à dégager les nombreux encombrements sur les trottoirs. Ces obstacles empêchent les gens de se déplacer en toute sécurité, en particulier les personnes avec enfants, les personnes déficientes visuelles ou avec une chaise roulante.",
                     "raison":"Obstacles croisés : ",
