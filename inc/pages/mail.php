@@ -17,8 +17,8 @@
             <p><?= $Salutation ?></p>
             <p><?= $introduction ?></p><br>
             <p>
-                <strong><?= $raisonEncombrement ?></strong><span id="mailTypeEncombrement"></span><?=" "?><?= $locationObstacle ?>
-                <?=" "?><span id="mailAddress"></span><?=" "?><span id="mailNumber"></span><?=", "?><span id="mailPostCode"></span><?=" "?><span id="mailMunicipality"></span>
+                <strong><?= $raisonEncombrement ?></strong><div class="mailObstacles"><span id="mailTypeEncombrement"></span><?=", "?><?= $locationObstacle ?>
+                <?=" "?><span id="mailAddress"></span><?=" "?><span id="mailNumber"></span><?=", "?><span id="mailPostCode"></span><?=" "?><span id="mailMunicipality"></span></div>
             </p><br>
             <p><?= $advise ?></p>
             <button id="sendMailButton">Envoyer le Mail</button>

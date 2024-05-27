@@ -145,7 +145,7 @@ $imgsLabel=$imagesForm["values-labels"];
 <!--Fin autorisation réception newsletter-->
 <!--Récupération images-->
             <div class="form-group" id="refs-imgs">
-            <label for="imageUpload">Télécharger une image :</label>
+            <label for="imageUpload"><?=$imgsLabel?> :</label>
             <input type="file" id="imageUpload" name="image" accept="image/*">
             <img id="imagePreview" src="" alt="Aperçu de l'image" style="display:none; max-width: 100%; height: auto;">
             </div>

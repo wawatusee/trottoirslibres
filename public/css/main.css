@@ -2,19 +2,27 @@
 /* Style pour la liste déroulante */
 
 select#lang {
+  margin-left:20px;
+  margin-top: 20px;
+  margin-right: 20px;
   padding: 4px;
   border: none;
-  font-size: 1em;
-  background-color:var(--main-dark-color); /* Fond blanc */
-  color: var(--main-clear-color); /* Couleur du texte */
-
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+  background-color:var(--first-color); /* Fond blanc */
+  color: var(--secondary-citron); /* Couleur du texte */
 }
 
 /* Style pour les options de la liste déroulante */
 select#lang option {
-  background-color:var(--main-clear-color); /* Fond blanc */
-  color: var(--main-dark-color) /* Couleur du texte */
+  border: none;
+  background-color:var(--first-color); /* Corail */
+  color: var(--main-dark-color); /* Couleur du texte */
+  font-size:smaller;
 }
+
+
 
 /* Style pour le bouton de soumission (peut être personnalisé selon vos besoins) */
 input[type="submit"] {
@@ -83,6 +91,7 @@ input[type="submit"] {
       -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     }
+    /*Aperçu mail*/
     /*Comportement draftmail*/
     .hidden {
       visibility: hidden;
@@ -107,10 +116,20 @@ input[type="submit"] {
     max-height: 80%;
     overflow: auto;
     text-align: justify;
-    margin: auto;
-    padding-right: 20px;
-  }
+    margin:auto;
 
+  }
+  .mailObstacles{
+    color: var(--secondary-citron);
+    display: inline;
+  }
+  #body-mail{
+    margin: 20px;
+    padding: 20px;
+  }
+  #body-mail>p, h3{
+  line-height: 1.8;
+  }
   
   #maildraft h3, #maildraft p, #maildraft button {
       margin: 10px;
