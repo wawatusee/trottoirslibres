@@ -114,7 +114,9 @@ $imgsLabel=$imagesForm["values-labels"];
  <!--Type d'encombrement-->
             <div class="form-group" id="type-encombrement-liste">
                 <p class="consigne"><?=$consigneEncombrements?></p>
+                <div class="obstaclesChoices">
                 <?=$htmlContentObstacles?>
+                </div>
             </div>
 <script src="js/type-encombrement-liste.js"></script>
  <!--Fin type d'encombrement-->
