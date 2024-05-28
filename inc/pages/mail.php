@@ -77,25 +77,24 @@ document.getElementById('sendMailButton').addEventListener('click', async () => 
     formData.append('formObject', JSON.stringify(formObject));
 
     try {
-        // Envoi des données à send_mail.php
-        const response = await fetch('send_mail.php', {
-            method: 'POST',
-            body: formData
-        });
+    // Envoi des données à send_mail.php
+    const response = await fetch('send_mail.php', {
+        method: 'POST',
+        body: formData
+    });
 
-        // Récupération de la réponse
-        const responseData = await response.json();
-
-        // Affichage du message de réussite ou d'échec
-        if (responseData.success) {
-            alert('Mail envoyé avec succès et fichier JSON enregistré!');
-        } else {
-            alert('Échec de l\'envoi du mail ou de l\'enregistrement du fichier JSON : ' + (responseData.error || 'Erreur inconnue'));
-        }
-    } catch (error) {
-        console.error('Erreur:', error);
-        alert('Une erreur est survenue.');
+    // Vérifier si la réponse est OK (statut HTTP 200)
+    if (response.ok) {
+        alert('Merci à tous de votre passage et à bientôt!');
+    } else {
+        // Si la réponse n'est pas OK
+        alert('Échec de l\'envoi du mail ou de l\'enregistrement du fichier JSON : Statut HTTP ' + response.status);
     }
+} catch (error) {
+    console.error('Erreur:', error);
+    alert('Une erreur est survenue lors de la requête.');
+}
+
 });
 
 </script>

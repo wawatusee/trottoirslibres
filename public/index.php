@@ -55,6 +55,7 @@ $contactInformationMail=$contactInformationDetails["email"];
 //Autorisation conservation coordonnées
 $autorisationKeepContactInformation=$LexiqueView->getSectionLexique("autorisation-contact")->$lang;
 $autorContactLabel=$autorisationKeepContactInformation["values-labels"];
+$politiqueDatas=$LexiqueView->getSectionLexique("politique-datas")->$lang;
 //Fin utorisation conservation coordonnées
 //Acceptation newsletter
 $acceptationNewsletter=$LexiqueView->getSectionLexique("autorisation-newsletter")->$lang;
@@ -71,7 +72,7 @@ $imgsLabel=$imagesForm["values-labels"];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trottoirs-libres</title>
+    <title>vrijetrottoirslibres.be</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/input-address.js" type="module" defer></script>
@@ -138,6 +139,7 @@ $imgsLabel=$imagesForm["values-labels"];
                 <input type="checkbox" id="autorisation" name="autorisation">
                 <label for="autorisation"><?=$autorContactLabel?></label>
             </div>
+            <div class="asterix"><?=$politiqueDatas?></div>
 <!--Fin autorisation conservation coordonnées-->
 <!--Autorisation réception newsletter-->
             <div class="form-group" id="autorisation-newsletter">
@@ -154,6 +156,7 @@ $imgsLabel=$imagesForm["values-labels"];
 <!--Fin récupération images-->
             <button type="submit" id="btnEnvoyer">Envoyer</button>
         </form>
+        <footer><img class="logo" src="/public/img/deco/logo_blanc.svg" alt="lien vers le site walk"></footer>
         <script src="js/reportform.js"></script>
     </div>
     <!-- Aperçu de mail -->

@@ -98,6 +98,13 @@ input[type="submit"] {
       flex-direction: row;
       flex-wrap: wrap;
     }
+    .asterix{
+      /*Pour politique de confidentialié*/
+      font-size: small;
+    }
+    .logo{
+      max-width: 80vw;
+    }
     /*Aperçu mail*/
     .hidden {
       visibility: hidden;
