@@ -5,7 +5,7 @@ let formObject = {
     contactInformation: {},
     autorisationContact: false,
     autorisationNewsletter: false,
-    refsImgs: {}
+    /*refsImgs: {}*/
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contactInformation: {},
             autorisationContact: false,
             autorisationNewsletter: false,
-            refsImgs: {}
+            /*refsImgs: {}*/
         };
 
         // Récupérer les données de l'adresse via les IDs spécifiques
@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 formObject.autorisationContact = true; // convertir en booléen
             } else if (key === 'recevoir-newsletter') {
                 formObject.autorisationNewsletter = true; // convertir en booléen
-            } else if (key === 'photo') {
+            } /*else if (key === 'photo') {
                 formObject.refsImgs[key] = value.name; // obtenir le nom du fichier photo
-            }
+            }*/
         });
 
         // Convertir l'objet en JSON

@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: application/json; charset=UTF-8');
 // Activer l'affichage des erreurs pour le développement local
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -69,13 +70,13 @@ if (isset($objet, $body, $formObject)) {
 
     // Envoi du mail
     $headers = 'From: info@vrijetrottoirslibres.be' . "\r\n" .
-               'Reply-To: info@walk.brussels' . "\r\n" .
+               'Reply-To: info@vrijetrottoirslibres.be' . "\r\n" .
                'Content-Type: text/html; charset=UTF-8' . "\r\n";
 
-/*Mail de TESTS */
-//L'adresse de kieran1@hotmail.fr remplace $to pour les tests
+    /*Mail de TESTS */
+    //L'adresse de kieran1@hotmail.fr remplace $to pour les tests
     $mailSent = mail("kieran1@hotmail.fr", $objet, $body, $headers);
-
+    //$mailSent = mail("kieran1@hotmail.fr", 'objet de mail', 'le corps du mail', $headers);
     // Vérification de l'envoi du mail
     if ($mailSent) {
         echo json_encode(['success' => true, 'message' => 'Mail envoyé avec succès et fichier JSON enregistré']);
@@ -85,4 +86,15 @@ if (isset($objet, $body, $formObject)) {
 } else {
     echo json_encode(['success' => false, 'error' => 'Données invalides']);
 }
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+function error_handler($errno, $errstr, $errfile, $errline) {
+    echo json_encode(['success' => false, 'error' => "$errstr in $errfile on line $errline"]);
+    exit();
+}
+
+set_error_handler('error_handler');
+
 ?>

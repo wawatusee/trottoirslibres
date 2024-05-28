@@ -1,0 +1,20 @@
+{
+    "address": {
+        "adresse": "Quai des Charbonnages",
+        "numero": "46",
+        "postCode": "1080",
+        "municipality": "Molenbeek-Saint-Jean",
+        "adnc": "10801040  46"
+    },
+    "typeEncombrement": [
+        "Sac poubelle"
+    ],
+    "contactInformation": {
+        "name": "Labarr\u00e8re",
+        "first-name": "Kieran",
+        "email": "kieran.labarrere@gmail.com"
+    },
+    "autorisationContact": true,
+    "autorisationNewsletter": true,
+    "refsImgs": []
+}

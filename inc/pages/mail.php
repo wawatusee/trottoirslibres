@@ -32,22 +32,32 @@
 </div>
 
 <script>
-document.getElementById('imageUpload').addEventListener('change', (event) => {
-    const file = event.target.files[0];
-    const reader = new FileReader();
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('imageUpload').addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        const reader = new FileReader();
 
-    reader.onload = (e) => {
-        const preview = document.getElementById('imagePreview');
-        preview.src = e.target.result;
-        preview.style.display = 'block';
+        reader.onload = (e) => {
+            const preview = document.getElementById('imagePreview');
+            preview.src = e.target.result;
+            preview.style.display = 'block';
 
-        const mailPreviewImage = document.getElementById('mailImagePreview');
-        mailPreviewImage.src = e.target.result;
-    };
+            const mailPreviewImage = document.getElementById('mailImagePreview');
+            if (mailPreviewImage) {
+                mailPreviewImage.src = e.target.result;
+                mailPreviewImage.style.display = 'block';
+            }
+        };
 
-    if (file) {
-        reader.readAsDataURL(file);
-    }
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    });
+
+    document.getElementById('editFormButton').addEventListener('click', () => {
+        document.getElementById('reportForm').classList.remove('hidden');
+        document.getElementById('mailPreviewContainer').classList.add('hidden');
+    });
 });
 
 document.getElementById('editFormButton').addEventListener('click', () => {
@@ -58,16 +68,13 @@ document.getElementById('editFormButton').addEventListener('click', () => {
 document.getElementById('sendMailButton').addEventListener('click', async () => {
     const objetMail = document.getElementById('objet-mail').innerText;
     const bodyMail = document.getElementById('body-mail').innerHTML;
-    const formData = new FormData();
+
+    const formElement = document.getElementById('reportForm');
+    const formData = new FormData(formElement);
 
     formData.append('objet', objetMail);
     formData.append('body', bodyMail);
     formData.append('formObject', JSON.stringify(formObject));
-
-    const imageInput = document.getElementById('imageInput');
-    if (imageInput && imageInput.files.length > 0) {
-        formData.append('image', imageInput.files[0]);
-    }
 
     try {
         // Envoi des données à send_mail.php
@@ -90,6 +97,5 @@ document.getElementById('sendMailButton').addEventListener('click', async () => 
         alert('Une erreur est survenue.');
     }
 });
-
 
 </script>
