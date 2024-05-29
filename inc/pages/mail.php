@@ -86,6 +86,9 @@ document.getElementById('sendMailButton').addEventListener('click', async () => 
     // Vérifier si la réponse est OK (statut HTTP 200)
     if (response.ok) {
         alert('Merci à tous de votre passage et à bientôt!');
+                // Désactiver les boutons "editFormButton" et "sendMailButton"
+        document.getElementById('editFormButton').disabled = true;
+        document.getElementById('sendMailButton').disabled = true;
     } else {
         // Si la réponse n'est pas OK
         alert('Échec de l\'envoi du mail ou de l\'enregistrement du fichier JSON : Statut HTTP ' + response.status);

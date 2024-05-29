@@ -8,7 +8,8 @@ ini_set('display_errors', 1);
 //Tableaux des mails des échevins à la mobilité
 $destinataires=[
     '1000'=>'cabinet.b.dhondt@brucity.be',
-    '1030'=>'kabinet-byttebier@1030.be',
+    //'1030'=>'kabinet-byttebier@1030.be',
+    '1030'=>'info@walk.brussels.com',
     '1040'=>'caroline.joway@etterbeek.brussels',
     '1050'=>'yves.rouyet@ixelles.brussels',
     '1060'=>'cmorenville@stgilles.brussels',
@@ -68,14 +69,20 @@ if (isset($objet, $body, $formObject)) {
         $body .= '<br><br><img src="' . $imageUrl . '" alt="Obstacle Image">';
     }
 
-    // Envoi du mail
+    // En-têtes additionnels
+    $cc = 'info@walk.brussels.com'; // Adresse en copie (Cc)
+    $bcc = 'kieran1@hotmail.fr'; // Adresse en copie cachée (Bcc)
+
     $headers = 'From: info@vrijetrottoirslibres.be' . "\r\n" .
                'Reply-To: info@vrijetrottoirslibres.be' . "\r\n" .
+               'Cc: ' . $cc . "\r\n" .
+               'Bcc: ' . $bcc . "\r\n" .
                'Content-Type: text/html; charset=UTF-8' . "\r\n";
 
     /*Mail de TESTS */
     //L'adresse de kieran1@hotmail.fr remplace $to pour les tests
-    $mailSent = mail("kieran1@hotmail.fr", $objet, $body, $headers);
+    //$mailSent = mail("kieran1@hotmail.fr", $objet, $body, $headers);
+    $mailSent = mail($to, $objet, $body, $headers);
     //$mailSent = mail("kieran1@hotmail.fr", 'objet de mail', 'le corps du mail', $headers);
     // Vérification de l'envoi du mail
     if ($mailSent) {

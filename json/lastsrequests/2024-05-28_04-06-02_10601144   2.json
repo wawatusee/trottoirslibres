@@ -1,0 +1,20 @@
+{
+    "address": {
+        "adresse": "Rue du Tir",
+        "numero": "2",
+        "postCode": "1060",
+        "municipality": "Saint-Gilles",
+        "adnc": "10601144   2"
+    },
+    "typeEncombrement": [
+        "V\u00e9lo\/trottinette",
+        "Panneau publicitaire"
+    ],
+    "contactInformation": {
+        "name": "Battements",
+        "first-name": "Delle",
+        "email": "bd@outlook.fr"
+    },
+    "autorisationContact": false,
+    "autorisationNewsletter": false
+}
