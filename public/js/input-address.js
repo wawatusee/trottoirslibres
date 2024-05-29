@@ -1,3 +1,4 @@
+// coucou veille branche
 import {
 	getAddressesFromText,
 	getAddressFromLocation,
@@ -14,8 +15,7 @@ import {
  * Renvoit une adresse à partir d'une coordonnée
  *
  */
-const CSS=
-`:host {
+const CSS = `:host {
 	position: relative;
 	display: inline-block;
 }
@@ -41,13 +41,13 @@ const CSS=
 	color: #333;
 }
 .option:hover {
-	background-color: var(--secondary-indigo);
-	color: var(--main-clear-color);
+	background-color: #801337;
+	color: white;
 }
 .option > span {
 	font-style: italic;
 	font-weight: 500;
-	color: var(--grey-clear-color);
+	color: #939292;
 	font-size: 12px;
 	white-space: nowrap;
 }
@@ -93,7 +93,7 @@ button {
 	}
 }
 
-`
+`;
 const HTML = `
 	<style>${CSS}</style>
     <div class="address">
@@ -136,6 +136,7 @@ class InputAddress extends HTMLElement {
 		this.elementInput = this.querySelector("#adresse-id");
 		this.elementNumber = document.querySelector('[data-address="number"]');
 		this.elementPostCode = document.querySelector('[data-address="post-code"]');
+		this.elementAdnc = document.querySelector('[data-address="adnc"]');
 		this.elementMunicipality = document.querySelector(
 			'[data-address="municipality"]'
 		);
@@ -170,9 +171,17 @@ class InputAddress extends HTMLElement {
 			}
 		});
 
+		this.elementNumber.addEventListener("keydown", (e) => {
+			e.target.style.background = "";
+			e.target.classList.remove("error");
+		});
+
 		this.elementNumber.addEventListener("change", () =>
 			this.validationAdress()
 		);
+
+		const userLang = document.documentElement.lang;
+		this.userLang = ["fr", "nl"].includes(userLang) ? userLang : "fr";
 
 		this.resetAddress();
 	}
@@ -186,6 +195,7 @@ class InputAddress extends HTMLElement {
 		this.elementMunicipality.value = "";
 		this.elementPostCode.disabled = false;
 		this.elementMunicipality.disabled = false;
+		this.elementAdnc.value = "";
 		this.elementInput.focus();
 	}
 	updateAdress(address) {
@@ -195,6 +205,7 @@ class InputAddress extends HTMLElement {
 		this.elementNumber.value = address.number ?? "";
 		this.elementPostCode.value = address.postCode ?? "";
 		this.elementMunicipality.value = address.municipality ?? "";
+		this.elementAdnc.value = address.adNc ?? "";
 		this.elementPostCode.disabled = true;
 		this.elementMunicipality.disabled = true;
 		if (this.elementNumber.value === "") this.elementNumber.focus();
@@ -218,7 +229,7 @@ class InputAddress extends HTMLElement {
 	async work(search) {
 		search = search.trim();
 		if (search.length > 2) {
-			const addresses = await getAddressesFromText(search);
+			const addresses = await getAddressesFromText(search, this.userLang);
 
 			if (addresses.error === true) {
 				console.log("error API", addresses);
@@ -235,14 +246,18 @@ class InputAddress extends HTMLElement {
 			postcode: this.elementPostCode.value,
 			municipality: this.elementMunicipality.value,
 		};
-		const result = await getAddresseFromParts(adress);
+		const result = await getAddresseFromParts(adress, this.userLang);
 		console.log(result);
 		if (result && result[0]) {
 			if (result[0].adNc) {
 				this.elementPostCode.value = result[0].postCode;
 				this.elementMunicipality.value = result[0].municipality;
+				this.elementAdnc.value = result[0].adNc;
 			} else {
+				this.elementNumber.focus();
+				this.elementNumber.select();
 				this.elementNumber.style.background = "red";
+				this.elementNumber.classList.add("error");
 			}
 		}
 	}
@@ -295,7 +310,7 @@ class InputAddress extends HTMLElement {
 
 	async makeGeoPosition() {
 		const onSuccess = async (pos) => {
-			const address = await getAddressFromLocation(pos.coords);
+			const address = await getAddressFromLocation(pos.coords, this.userLang);
 			if (address && address[0]) {
 				this.updateAdress(address[0]);
 			}

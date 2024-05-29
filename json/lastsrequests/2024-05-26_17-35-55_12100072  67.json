@@ -1,0 +1,23 @@
+{
+    "address": {
+        "adresse": "Rue du Moulin",
+        "numero": "67",
+        "postCode": "1210",
+        "municipality": "Saint-Josse-ten-Noode",
+        "adnc": "12100072  67"
+    },
+    "typeEncombrement": [
+        "Potelet",
+        "V\u00e9lo\/trottinette"
+    ],
+    "contactInformation": {
+        "name": "Cobra",
+        "first-name": "Affut\u00e9",
+        "email": "ca@gmail.com"
+    },
+    "autorisationContact": true,
+    "autorisationNewsletter": true,
+    "refsImgs": {
+        "photo": "escher-geeko.png"
+    }
+}

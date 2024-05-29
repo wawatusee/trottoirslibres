@@ -1,0 +1,21 @@
+{
+    "address": {
+        "adresse": "Rue F\u00e9lix Bovie",
+        "numero": "24",
+        "postCode": "1050",
+        "municipality": "Ixelles",
+        "adnc": "10501240  24"
+    },
+    "typeEncombrement": [
+        "Sac poubelle",
+        "Dropzone mal plac\u00e9e"
+    ],
+    "contactInformation": {
+        "name": "Labarr\u00e8re",
+        "first-name": "Kieran",
+        "email": "kieran.labarrere@gmail.com"
+    },
+    "autorisationContact": true,
+    "autorisationNewsletter": true,
+    "refsImgs": []
+}

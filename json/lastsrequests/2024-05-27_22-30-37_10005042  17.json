@@ -1,0 +1,21 @@
+{
+    "address": {
+        "adresse": "Rue Franklin",
+        "numero": "17",
+        "postCode": "1000",
+        "municipality": "Bruxelles",
+        "adnc": "10005042  17"
+    },
+    "typeEncombrement": [
+        "Lampadaire",
+        "Dropzone mal plac\u00e9e"
+    ],
+    "contactInformation": {
+        "name": "",
+        "first-name": "",
+        "email": ""
+    },
+    "autorisationContact": false,
+    "autorisationNewsletter": false,
+    "refsImgs": []
+}

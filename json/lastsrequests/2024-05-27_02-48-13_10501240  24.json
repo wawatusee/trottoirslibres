@@ -1,0 +1,23 @@
+{
+    "address": {
+        "adresse": "Rue F\u00e9lix Bovie",
+        "numero": "24",
+        "postCode": "1050",
+        "municipality": "Ixelles",
+        "adnc": "10501240  24"
+    },
+    "typeEncombrement": [
+        "Potelet",
+        "Sac poubelle"
+    ],
+    "contactInformation": {
+        "name": "lapin",
+        "first-name": "degarenne",
+        "email": "ld@hotmail.fr"
+    },
+    "autorisationContact": false,
+    "autorisationNewsletter": true,
+    "refsImgs": {
+        "photo": "ARAU_Haren.jpg"
+    }
+}

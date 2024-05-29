@@ -1,0 +1,20 @@
+{
+    "address": {
+        "adresse": "Place Madou",
+        "numero": "1",
+        "postCode": "1210",
+        "municipality": "Saint-Josse-ten-Noode",
+        "adnc": "12100065   1"
+    },
+    "typeEncombrement": [
+        "V\u00e9lo\/trottinette",
+        "Panneau publicitaire"
+    ],
+    "contactInformation": {
+        "name": "Battements",
+        "first-name": "Delle",
+        "email": "bd@outlook.fr"
+    },
+    "autorisationContact": false,
+    "autorisationNewsletter": false
+}

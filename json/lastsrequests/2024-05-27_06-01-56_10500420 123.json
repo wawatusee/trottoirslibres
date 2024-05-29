@@ -1,0 +1,23 @@
+{
+    "address": {
+        "adresse": "Chauss\u00e9e de Boondael",
+        "numero": "123",
+        "postCode": "1050",
+        "municipality": "Ixelles",
+        "adnc": "10500420 123"
+    },
+    "typeEncombrement": [
+        "V\u00e9hicule motoris\u00e9",
+        "Panneau publicitaire"
+    ],
+    "contactInformation": {
+        "name": "Slow",
+        "first-name": "way",
+        "email": ""
+    },
+    "autorisationContact": true,
+    "autorisationNewsletter": false,
+    "refsImgs": {
+        "photo": "16-anderlecht_abords-de-la-senne.jpg"
+    }
+}

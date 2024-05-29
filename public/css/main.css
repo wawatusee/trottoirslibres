@@ -2,24 +2,32 @@
 /* Style pour la liste déroulante */
 
 select#lang {
+  margin-left:20px;
+  margin-top: 20px;
+  margin-right: 20px;
   padding: 4px;
   border: none;
-  font-size: 1em;
-  background-color:var(--main-dark-color); /* Fond blanc */
-  color: var(--main-clear-color); /* Couleur du texte */
-
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+  background-color:var(--first-color); /* Fond blanc */
+  color: var(--secondary-citron); /* Couleur du texte */
 }
 
 /* Style pour les options de la liste déroulante */
 select#lang option {
-  background-color: #fff; /* Fond blanc */
-  color: #333; /* Couleur du texte */
+  border: none;
+  background-color:var(--first-color); /* Corail */
+  color: var(--main-dark-color); /* Couleur du texte */
+  font-size:smaller;
 }
+
+
 
 /* Style pour le bouton de soumission (peut être personnalisé selon vos besoins) */
 input[type="submit"] {
   padding: 10px 20px;
-  background-color:var(secondary-indigo);
+  background-color:var(--secondary-indigo);
   color: var(--secondary-citron);
   border: none;
   border-radius: 5px;
@@ -42,10 +50,7 @@ input[type="submit"] {
     form {
       max-width: 500px;
     }
-    p * {
-      display: block;
-      padding-top: 10px;
-    }
+
     .form-group {
         line-height: 250%
     }
@@ -53,6 +58,8 @@ input[type="submit"] {
       margin-top: 1em;
       margin-bottom: 1em;
       font-weight: bold;
+      display: block;
+      padding-top: 10px;
     }
     .element {
       margin-top: 2rem;
@@ -77,10 +84,67 @@ input[type="submit"] {
       padding: 5px 0;
       margin: 2px 0 0;
       font-size: 14px;
-      background-color: #fff;
+      background-color: var(--main-clear-color);
       border: 1px solid #ccc;
       border: 1px solid rgba(0, 0, 0, 0.15);
       border-radius: 4px;
       -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     }
+    /*type-encombrement-liste*/
+    /*span cases*/
+    .obstaclesChoices{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .asterix{
+      /*Pour politique de confidentialié*/
+      font-size: small;
+    }
+    .logo{
+      max-width: 80vw;
+    }
+    /*Aperçu mail*/
+    .hidden {
+      visibility: hidden;
+  }
+
+  #mailPreviewContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--secondary-indigo);
+      color: var(--main-clear-color);
+      z-index: 1000;
+  }
+  .mailPreview>span{
+    display: inline;
+    color: var(--secondary-citron);
+  }
+  .mailPreview {
+    max-width: 600px;
+    max-height: 80%;
+    overflow: auto;
+    text-align: justify;
+    margin:auto;
+
+  }
+  .mailObstacles{
+    color: var(--secondary-citron);
+    display: inline;
+  }
+  #body-mail{
+    margin: 20px;
+    padding: 20px;
+  }
+  #body-mail>p, h3{
+  line-height: 1.8;
+  }
+  
+  #maildraft h3, #maildraft p, #maildraft button {
+      margin: 10px;
+  }
+  
