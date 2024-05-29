@@ -5,7 +5,6 @@ let formObject = {
     contactInformation: {},
     autorisationContact: false,
     autorisationNewsletter: false,
-    /*refsImgs: {}*/
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
             contactInformation: {},
             autorisationContact: false,
             autorisationNewsletter: false,
-            /*refsImgs: {}*/
         };
 
         // Récupérer les données de l'adresse via les IDs spécifiques
@@ -44,9 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 formObject.autorisationContact = true; // convertir en booléen
             } else if (key === 'recevoir-newsletter') {
                 formObject.autorisationNewsletter = true; // convertir en booléen
-            } /*else if (key === 'photo') {
-                formObject.refsImgs[key] = value.name; // obtenir le nom du fichier photo
-            }*/
+            } 
         });
 
         // Convertir l'objet en JSON
@@ -54,12 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Afficher le JSON dans la console (ou utiliser comme souhaité)
         console.log(jsonDatas);
-
-        // Optionnel : afficher le JSON sur la page
-        /*const pre = document.createElement('pre');
-        pre.textContent = jsonDatas;
-        document.body.appendChild(pre);*/
-
         // Afficher l'aperçu du mail
         showMailPreview();
     });
