@@ -8,8 +8,8 @@ ini_set('display_errors', 1);
 //Tableaux des mails des échevins à la mobilité
 $destinataires=[
     '1000'=>'cabinet.b.dhondt@brucity.be',
-    //'1030'=>'kabinet-byttebier@1030.be',
-    '1030'=>'info@walk.brussels.com',
+    '1030'=>'kabinet-byttebier@1030.be',
+    //'1030'=>'info@walk.brussels.com',
     '1040'=>'caroline.joway@etterbeek.brussels',
     '1050'=>'yves.rouyet@ixelles.brussels',
     '1060'=>'cmorenville@stgilles.brussels',
