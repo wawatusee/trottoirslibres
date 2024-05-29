@@ -1,0 +1,22 @@
+{
+    "address": {
+        "adresse": "F\u00e9lix Boviestraat",
+        "numero": "24",
+        "postCode": "1050",
+        "municipality": "Elsene",
+        "adnc": "10501240  24"
+    },
+    "typeEncombrement": [
+        "Verkeerd geplaatste dropzone"
+    ],
+    "contactInformation": {
+        "name": "jeff",
+        "first-name": "lorand",
+        "email": "jf@lorand.com"
+    },
+    "autorisationContact": true,
+    "autorisationNewsletter": true,
+    "refsImgs": {
+        "photo": "8-marais-wiels.jpg"
+    }
+}

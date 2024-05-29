@@ -1,0 +1,21 @@
+{
+    "address": {
+        "adresse": "Chauss\u00e9e de Haecht",
+        "numero": "4",
+        "postCode": "1210",
+        "municipality": "Saint-Josse-ten-Noode",
+        "adnc": "12100053   4"
+    },
+    "typeEncombrement": [
+        "Panneau de signalisation \/ d\u2019information",
+        "Panneau publicitaire"
+    ],
+    "contactInformation": {
+        "name": "Capitaine",
+        "first-name": "Haddock",
+        "email": "ch@gadhi.com"
+    },
+    "autorisationContact": true,
+    "autorisationNewsletter": false,
+    "refsImgs": []
+}

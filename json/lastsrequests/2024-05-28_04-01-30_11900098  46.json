@@ -1,0 +1,20 @@
+{
+    "address": {
+        "adresse": "Rue Jean-Baptiste Baeck",
+        "numero": "46",
+        "postCode": "1190",
+        "municipality": "Forest",
+        "adnc": "11900098  46"
+    },
+    "typeEncombrement": [
+        "V\u00e9lo\/trottinette",
+        "Panneau publicitaire"
+    ],
+    "contactInformation": {
+        "name": "Battements",
+        "first-name": "Delle",
+        "email": "bd@outlook.fr"
+    },
+    "autorisationContact": false,
+    "autorisationNewsletter": false
+}

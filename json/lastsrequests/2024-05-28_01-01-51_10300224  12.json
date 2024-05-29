@@ -1,0 +1,20 @@
+{
+    "address": {
+        "adresse": "Rue du Radium",
+        "numero": "12",
+        "postCode": "1030",
+        "municipality": "Schaerbeek",
+        "adnc": "10300224  12"
+    },
+    "typeEncombrement": [
+        "Sac poubelle",
+        "Dropzone mal plac\u00e9e"
+    ],
+    "contactInformation": {
+        "name": "Labarr\u00e8re",
+        "first-name": "Kieran",
+        "email": "kieran.labarrere@gmail.com"
+    },
+    "autorisationContact": true,
+    "autorisationNewsletter": true
+}

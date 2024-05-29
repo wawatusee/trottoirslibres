@@ -9,18 +9,18 @@
                 "consigne":"Donnez-nous l’adresse de l’obstacle sur le trottoir",
                 "address-place-holder":"(Utilisez la position actuelle)",
                 "values-labels":{
-                "street":"rue",
-                "number":"numéro",
+                "street":"Rue",
+                "number":"Numéro",
                 "postcode":"Code postal",
-                "municipality": "commune"
+                "municipality": "Commune"
                 }
             },
             "nl":{  
                 "consigne":"Geef ons het adres van het obstakel op de stoep",
-                "address-place-holder":"(Gebruik de huidige positie)",
+                "address-place-holder":"(Gebruik de huidige locatie)",
                 "values-labels":{
                     "street":"Straat",
-                    "number":"numéro",
+                    "number":"Nummer",
                     "postcode":"Postcode",
                     "municipality": "Gemeente"
                     }
@@ -29,11 +29,11 @@
         
         "encombrements":{
             "fr":{
-                "consigne":"Donnez-nous des informations sur l’obstacle en question",
+                "consigne":"Indiquez les obstacles que vous avez vus",
                 "values-labels":["Potelet","Panneau de signalisation / d’information","Armoire technique","Terrasse","Vélo/trottinette","Véhicule motorisé","Panneau publicitaire","Barrière","Poubelle mal placée","Sac poubelle","Borne ou câble de recharge pour véhicule électrique","Lampadaire","Dropzone mal placée"]
             },
             "nl":{
-                "consigne":"Geef ons informatie over het betreffende obstakel",
+                "consigne":"Duid aan welke obstakels u gezien heeft",
                 "values-labels":["Paaltje", "Signalisatiebord / Informatiebord", "Technische kast", "Terras", "Fiets/step", "Gemotoriseerd voertuig", "Reclamebord", "Hek", "Verkeerd geplaatste vuilnisbak", "Vuilniszak", "Oplaadpaal of -kabel voor elektrische voertuigen", "Straatlantaarn", "Verkeerd geplaatste dropzone"]
             }
         },
@@ -50,34 +50,65 @@
                 "consigne":"Uw gegevens :",
                 "values-labels":{
                     "name":"Naam",
-                    "first-name":"Voornam",
-                    "email":"Email"
+                    "first-name":"Voornaam",
+                    "email":"E-mail"
                 }
             }
         },
         "autorisation-contact":{
         "fr":{
-            "values-labels":"J'accepte de conserver mes coordonnées dans votre base de données"
+            "values-labels":"J'accepte que Walk.Brussels conserve mes données dans sa base de données."
             },
         "nl":{
-            "values-labels":"Ik stem ermee in dat mijn gegevens worden opgeslagen in uw database."
+            "values-labels":"Ik stem ermee in dat Walk.Brussels mijn gegevens opslaat in hun database."
             }
         },
         "autorisation-newsletter":{
         "fr":{
-            "values-labels":"J’accepte de recevoir la newsletter de Walk :"
+            "values-labels":"J’accepte de recevoir la newsletter de Walk.Brussels."
             },
         "nl":{
-            "values-labels":"Ik stem ermee in om de nieuwsbrief van Walk te ontvangen:"
+            "values-labels":"Ik stem ermee in om de nieuwsbrief van Walk.Brussels te ontvangen."
             }
+        },
+        "politique-datas":{
+            "fr":"Notre <a href='https://www.walk.brussels/privacy-fr'>politique</a> relative à la protection de la vie privée.",
+            "nl":"Raadpleeg onze <a href='https://www.walk.brussels/privacy-fr'>privacyverklaring</a> ter bescherming van uw persoonlijke gegevens."
         },
         "refs-imgs":{
             "fr":{
-                "values-labels":"Photo(s) de l’obstacle :"
+                "values-labels":"Télécharger une image :"
             },
             "nl":{
-                "values-labels":"Foto('s) van het obstakel:"
+                "values-labels":"Foto opladen:"
             }
-        }
+        },
+        "mail": {
+            "titrepage":{
+                "fr":"Aperçu du mail",
+                "nl":"E-mailvoorbeeld"
+            },
+            "subject": {
+              "fr": "Ras le bol du brol sur le trottoir",
+              "nl": "Genoeg van de troep op de stoep"
+            },
+            "body": {
+                "fr": {
+                    
+                    "salutation":"Chère Madame/ Cher Monsieur l'échevin•e",
+                    "introduction":"Dans le cadre de notre campagne 'ras-le-bol du brol sur le trottoir' nous voulons vous informer qu'un.e citoyen.ne nous a signalé des obstacles sur le trottoir de votre commune. Notre campagne a pour but de libérer les trottoirs des nombreux encombrements. Ces obstacles empêchent les gens de se déplacer en toute sécurité, en particulier les personnes avec enfants, les personnes déficientes visuelles ou avec une chaise roulante.",
+                    "raison":"Obstacles croisés : ",
+                    "location":"situés ",
+                    "advise":"Vous pouvez faire la différence pour les piéton•nes en mettant en place les mesures suivantes (sans s’y limiter) :<ul><li>la mise en place de plans et de budgets pour libérer le cheminement piéton (rationalisation des poteaux, enlèvement du mobilier urbain excédentaire ou inutilisé,...)</li><li>l'interdiction de tout panneau publicitaire sur les trottoirs;</li><li>fournir des conseils aux entreprises qui utilisent le trottoir pour des divertissements en plein air et implémenter le respect d’un cheminement piéton libre de 2 mètres de large;</li><li>s'engager à ce que tout nouveau mobilier urbain (parcmètre, borne de recharge, arceaux vélos,…) ne se retrouve pas sur le trottoir;</li><li>veiller à ce que les dropzones pour la mobilité partagée (trottinettes, vélos, scooters) soient placées en dehors des trottoirs - il n'est pas nécessaire de sacrifier l'espace piétonnier pour favoriser la micromobilité.</li></ul><p>Merci d’avance pour les actions qui seront mises en place.</p><p>Bien à vous,</p><p> Walk.Brussels asbl</p><p>info@walk.brussels</p>"
+                },
+                "nl":{
+                    "salutation":"Geachte mevrouw / heer schepen van mobiliteit",
+                    "introduction":"In het kader van onze campagne 'genoeg van de troep op de stoep' willen we u laten weten dat een medeburger ons op de hoogte heeft gebracht van een aantal obstakels op de voetpaden van uw gemeente. Onze campagne heeft tot doel de voetpaden te ontzien van de vele obstakels. Door deze obstakels kunnen mensen zich niet veilig verplaatsen, vooral mensen met kinderen, slechtzienden of mensen in een rolstoel.",
+                    "raison":"Obstakels opgemerkt ",
+                    "location":"ter hoogte van ",
+                    "advise":"U kunt het verschil maken voor voetgangers door de volgende maatregelen te implementeren, waaraan u zich niet hoeft te beperken:<ul><li>plannen opstellen en budgetten aanleggen om het voetpad vrij te maken (stroomlijnen van paaltjes, weghalen van overtollig of ongebruikt straatmeubilair,...);</li><li>alle reclambeorden op trottoirs verbieden;</li><li>bedrijven die het voetpad gebruiken voor evenementen in de open lucht goed bijstaan en daarbij zorgen voor een onbelemmerde doorgang voor voetgangers van minimaal 2 meter breed;</li><li>garanderen dat nieuw straatmeubilair (parkeermeters, oplaadpunten, fietsenrekken, enz.) niet op het voetpad terecht komt;</li><li>ervoor zorgen dat dropzones voor gedeelde mobiliteit (steps, fietsen, scooters) niet op het voetpad worden gezet. Het is niet nodig om voetgangersruimte op te offeren om micromobiliteit aan te moedigen.</li></ul>Alvast bedankt om tot actie over te gaan. <p>Met vriendelijke groeten, </p><p>vzw Walk.Brussels </p><p>info@walk.brussels</p>"
+                }
+            }
+          }
     }
 }

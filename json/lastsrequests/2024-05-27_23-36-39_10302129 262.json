@@ -1,0 +1,21 @@
+{
+    "address": {
+        "adresse": "Chauss\u00e9e de Haecht",
+        "numero": "262",
+        "postCode": "1030",
+        "municipality": "Schaerbeek",
+        "adnc": "10302129 262"
+    },
+    "typeEncombrement": [
+        "Sac poubelle",
+        "Dropzone mal plac\u00e9e"
+    ],
+    "contactInformation": {
+        "name": "Labarr\u00e8re",
+        "first-name": "Kieran",
+        "email": "kieran.labarrere@gmail.com"
+    },
+    "autorisationContact": true,
+    "autorisationNewsletter": true,
+    "refsImgs": []
+}

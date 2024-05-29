@@ -1,0 +1,18 @@
+{
+    "address": {
+        "adresse": "Rue Vogler",
+        "numero": "24",
+        "postCode": "1030",
+        "municipality": "Schaerbeek",
+        "adnc": "10301282  24"
+    },
+    "typeEncombrement": [],
+    "contactInformation": {
+        "name": "Labarr\u00e8re",
+        "first-name": "kieran",
+        "email": "kieran.labarrere@gmail.com"
+    },
+    "autorisationContact": true,
+    "autorisationNewsletter": true,
+    "refsImgs": []
+}

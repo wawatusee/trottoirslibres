@@ -1,0 +1,21 @@
+{
+    "address": {
+        "adresse": "Rue d'Irlande",
+        "numero": "67",
+        "postCode": "1060",
+        "municipality": "Saint-Gilles",
+        "adnc": ""
+    },
+    "typeEncombrement": [
+        "Armoire technique",
+        "Terrasse"
+    ],
+    "contactInformation": {
+        "name": "Faes",
+        "first-name": "Grace",
+        "email": "fg@hotmail.be"
+    },
+    "autorisationContact": true,
+    "autorisationNewsletter": true,
+    "refsImgs": []
+}

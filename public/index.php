@@ -55,6 +55,7 @@ $contactInformationMail=$contactInformationDetails["email"];
 //Autorisation conservation coordonnées
 $autorisationKeepContactInformation=$LexiqueView->getSectionLexique("autorisation-contact")->$lang;
 $autorContactLabel=$autorisationKeepContactInformation["values-labels"];
+$politiqueDatas=$LexiqueView->getSectionLexique("politique-datas")->$lang;
 //Fin utorisation conservation coordonnées
 //Acceptation newsletter
 $acceptationNewsletter=$LexiqueView->getSectionLexique("autorisation-newsletter")->$lang;
@@ -71,7 +72,7 @@ $imgsLabel=$imagesForm["values-labels"];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trottoirs-libres</title>
+    <title>vrijetrottoirslibres.be</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/input-address.js" type="module" defer></script>
@@ -93,9 +94,11 @@ $imgsLabel=$imagesForm["values-labels"];
         //Fin liste déroulante des langues?>
 </div>
 <div class="container">
+
+    <form id="reportForm" enctype="multipart/form-data">
     <h2><?=$titre?></h2>
  <!--Adresse-->
-    <form action="#" method="post">
+    <!--<form action="#" method="post">-->
             <div class="form-group" id="address" disabled>
                 <p class="consigne"><?=$adressConsigne?></p>
                 <label for="adresse"><?=$adressStreetLabelsStreet?></label>
@@ -112,7 +115,9 @@ $imgsLabel=$imagesForm["values-labels"];
  <!--Type d'encombrement-->
             <div class="form-group" id="type-encombrement-liste">
                 <p class="consigne"><?=$consigneEncombrements?></p>
+                <div class="obstaclesChoices">
                 <?=$htmlContentObstacles?>
+                </div>
             </div>
 <script src="js/type-encombrement-liste.js"></script>
  <!--Fin type d'encombrement-->
@@ -130,10 +135,11 @@ $imgsLabel=$imagesForm["values-labels"];
             </div>
 <!--Fin contact information-->
 <!--Autorisation conservation coordonnées-->
-            <div class="form-group">
+            <div class="form-group" id="autorisation-contact">
                 <input type="checkbox" id="autorisation" name="autorisation">
                 <label for="autorisation"><?=$autorContactLabel?></label>
             </div>
+            <div class="asterix"><?=$politiqueDatas?></div>
 <!--Fin autorisation conservation coordonnées-->
 <!--Autorisation réception newsletter-->
             <div class="form-group" id="autorisation-newsletter">
@@ -143,13 +149,18 @@ $imgsLabel=$imagesForm["values-labels"];
 <!--Fin autorisation réception newsletter-->
 <!--Récupération images-->
             <div class="form-group" id="refs-imgs">
-                <label for="photo"><?=$imgsLabel?> :</label>
-                <input type="file" id="photo" name="photo">
+            <label for="imageUpload"><?=$imgsLabel?> :</label>
+            <input type="file" id="imageUpload" name="image" accept="image/*">
+            <img id="imagePreview" src="" alt="Aperçu de l'image" style="display:none; max-width: 100%; height: auto;">
             </div>
 <!--Fin récupération images-->
-            <button type="submit">Envoyer</button>
+            <button type="submit" id="btnEnvoyer">Envoyer</button>
         </form>
+        <footer><img class="logo" src="/public/img/deco/logo_blanc.svg" alt="lien vers le site walk"></footer>
+        <script src="js/reportform.js"></script>
     </div>
-<script src="js/formdatas.js"></script>
+    <!-- Aperçu de mail -->
+        <!-- Contenu de la page aperçu mail ici -->
+        <?php require_once ("../inc/pages/mail.php");?>
 </body>
 </html>

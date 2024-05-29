@@ -1,0 +1,20 @@
+{
+    "address": {
+        "adresse": "Rue des Papillons",
+        "numero": "2",
+        "postCode": "1070",
+        "municipality": "Anderlecht",
+        "adnc": "10700327   2"
+    },
+    "typeEncombrement": [
+        "V\u00e9lo\/trottinette",
+        "Panneau publicitaire"
+    ],
+    "contactInformation": {
+        "name": "Battements",
+        "first-name": "Delle",
+        "email": "bd@outlook.fr"
+    },
+    "autorisationContact": false,
+    "autorisationNewsletter": false
+}

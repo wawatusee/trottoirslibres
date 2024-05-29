@@ -1,0 +1,23 @@
+{
+    "address": {
+        "adresse": "Rue du Lama",
+        "numero": "2",
+        "postCode": "1180",
+        "municipality": "Uccle",
+        "adnc": "11801198   2"
+    },
+    "typeEncombrement": [
+        "Potelet",
+        "Sac poubelle"
+    ],
+    "contactInformation": {
+        "name": "lapin",
+        "first-name": "degarenne",
+        "email": "ld@hotmail.fr"
+    },
+    "autorisationContact": false,
+    "autorisationNewsletter": true,
+    "refsImgs": {
+        "photo": "ARAU_Haren.jpg"
+    }
+}

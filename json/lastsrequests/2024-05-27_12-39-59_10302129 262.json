@@ -1,0 +1,23 @@
+{
+    "address": {
+        "adresse": "Chauss\u00e9e de Haecht",
+        "numero": "262",
+        "postCode": "1030",
+        "municipality": "Schaerbeek",
+        "adnc": "10302129 262"
+    },
+    "typeEncombrement": [
+        "Panneau de signalisation \/ d\u2019information",
+        "Armoire technique",
+        "V\u00e9hicule motoris\u00e9",
+        "Panneau publicitaire"
+    ],
+    "contactInformation": {
+        "name": "Slow",
+        "first-name": "way",
+        "email": ""
+    },
+    "autorisationContact": true,
+    "autorisationNewsletter": false,
+    "refsImgs": []
+}
