@@ -39,7 +39,7 @@
         },
         "contact-information":{
             "fr":{
-                "consigne":"Vos coordonnées :",
+                "consigne":"Vos coordonnées ",
                 "values-labels":{
                     "name":"Nom",
                     "first-name":"Prénom",
@@ -47,7 +47,7 @@
                 }
             },
             "nl":{
-                "consigne":"Uw gegevens :",
+                "consigne":"Uw gegevens ",
                 "values-labels":{
                     "name":"Naam",
                     "first-name":"Voornaam",
@@ -77,10 +77,10 @@
         },
         "refs-imgs":{
             "fr":{
-                "values-labels":"Télécharger une image :"
+                "values-labels":"Prendre une photo"
             },
             "nl":{
-                "values-labels":"Foto opladen:"
+                "values-labels":"Een foto nemen"
             }
         },
         "mail": {

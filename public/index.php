@@ -94,7 +94,7 @@ $imgsLabel=$imagesForm["values-labels"];
         //Fin liste déroulante des langues?>
 </div>
 <div class="container">
-
+<!--FORMULAIRE-->
     <form id="reportForm" enctype="multipart/form-data">
     <h2><?=$titre?></h2>
  <!--Adresse-->
@@ -124,14 +124,14 @@ $imgsLabel=$imagesForm["values-labels"];
 <!--contact information-->
             <div class="form-group" id="contact-information">
                 <p class="consigne"><?=$contactInformationConsigne?></p>
-                <label for="name"><?=$contactInformationName?> :</label>
+                <label for="name"><?=$contactInformationName?> </label>
                 <input type="text" id="name" name="name" placeholder="<?=$contactInformationName?>" autocomplete="name">
 
-                <label for="first-name"><?=$contactInformationFirstName?>:</label>
+                <label for="first-name"><?=$contactInformationFirstName?> </label>
                 <input type="text" id="first-name" name="first-name" placeholder="<?=$contactInformationFirstName?>" autocomplete="given-name">
 
-                <label for="email"><?=$contactInformationMail?> :</label>
-                <input type="email" id="email" name="email" placeholder="<?=$contactInformationMail?>" autocomplete="email">
+                <label  for="email"><?=$contactInformationMail?> </label>
+                <input class=" " type="email" id="email" name="email" placeholder="<?=$contactInformationMail?>" autocomplete="email">
             </div>
 <!--Fin contact information-->
 <!--Autorisation conservation coordonnées-->
@@ -149,7 +149,7 @@ $imgsLabel=$imagesForm["values-labels"];
 <!--Fin autorisation réception newsletter-->
 <!--Récupération images-->
             <div class="form-group" id="refs-imgs">
-            <label for="imageUpload"><?=$imgsLabel?> :</label>
+            <label for="imageUpload"><?=$imgsLabel?> </label>
             <input type="file" id="imageUpload" name="image" accept="image/*">
             <img id="imagePreview" src="" alt="Aperçu de l'image" style="display:none; max-width: 100%; height: auto;">
             </div>
@@ -159,6 +159,7 @@ $imgsLabel=$imagesForm["values-labels"];
         <footer><img class="logo" src="/public/img/deco/logo_blanc.svg" alt="lien vers le site walk"></footer>
         <script src="js/reportform.js"></script>
     </div>
+<!--FIN FORMULAIRE-->
     <!-- Aperçu de mail -->
         <!-- Contenu de la page aperçu mail ici -->
         <?php require_once ("../inc/pages/mail.php");?>
