@@ -68,6 +68,8 @@ $imgsLabel=$imagesForm["values-labels"];
 $btnSubmitText=$LexiqueView->getSectionLexique("submit")->$lang;
 //Bouton modifier
 $btnModifyText=$LexiqueView->getSectionLexique("modify")->$lang;
+//Bouton envoyer mail
+$btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
 //Fin images
 /*Fin refs Lexique pour multilingue */?>
 <!DOCTYPE html>

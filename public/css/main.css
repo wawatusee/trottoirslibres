@@ -124,7 +124,6 @@ input[type="submit"] {
   .modify,
   .submit{
     display: block; /* S'assurer que le bouton est un élément de bloc pour que margin auto fonctionne */
-
     margin:10px  auto; /* Centre horizontalement */
     width: 130px;
     height: 35px;

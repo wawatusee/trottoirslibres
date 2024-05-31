@@ -91,6 +91,10 @@
             "fr":"Modifier",
             "nl":"Wijzigen"
         },
+        "send-mail":{
+            "fr":"Envoyer le mail",
+            "nl":"Mail verzenden"
+        },
         "mail": {
             "titrepage":{
                 "fr":"Aperçu du mail",

@@ -29,7 +29,7 @@
     </div>
     <div class="btns-actions">
         <button class="modify" id="editFormButton"><?=$btnModifyText?></button>
-        <button class="submit" id="sendMailButton"><?=$btnSubmitText?></button>
+        <button class="submit" id="sendMailButton"><?=$btnSendMail?></button>
     </div>
 </div>
 
