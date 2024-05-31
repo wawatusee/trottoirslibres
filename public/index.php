@@ -64,7 +64,10 @@ $acceptNewsletterLabel=$acceptationNewsletter["values-labels"];
 //Images
 $imagesForm=$LexiqueView->getSectionLexique("refs-imgs")->$lang;
 $imgsLabel=$imagesForm["values-labels"];
-
+//Bouton "Submit"
+$btnSubmitText=$LexiqueView->getSectionLexique("submit")->$lang;
+//Bouton modifier
+$btnModifyText=$LexiqueView->getSectionLexique("modify")->$lang;
 //Fin images
 /*Fin refs Lexique pour multilingue */?>
 <!DOCTYPE html>
@@ -154,9 +157,11 @@ $imgsLabel=$imagesForm["values-labels"];
             <img id="imagePreview" src="" alt="Aperçu de l'image" style="display:none; max-width: 100%; height: auto;">
             </div>
 <!--Fin récupération images-->
-            <button type="submit" id="btnEnvoyer">Envoyer</button>
+        <div class="btns-actions">
+            <button class="submit" type="submit" id="btnEnvoyer"><?=$btnSubmitText?></button>
+        </div>
         </form>
-        <footer><img class="logo" src="/public/img/deco/logo_blanc.svg" alt="lien vers le site walk"></footer>
+        <div><img class="logo" src="/public/img/deco/logo_blanc.svg" alt="lien vers le site walk"></div>
         <script src="js/reportform.js"></script>
     </div>
 <!--FIN FORMULAIRE-->

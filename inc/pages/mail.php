@@ -27,8 +27,10 @@
             <p><strong>Email :</strong> <span id="mailEmail"></span></p>-->
         </div>
     </div>
-    <button id="sendMailButton">Envoyer le Mail</button>
-    <button id="editFormButton">Modifier</button>
+    <div class="btns-actions">
+        <button class="modify" id="editFormButton"><?=$btnModifyText?></button>
+        <button class="submit" id="sendMailButton"><?=$btnSubmitText?></button>
+    </div>
 </div>
 
 <script>

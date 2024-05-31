@@ -83,6 +83,14 @@
                 "values-labels":"Een foto nemen"
             }
         },
+        "submit":{
+            "fr":"Envoyer",
+            "nl":"Verzenden"
+        },
+        "modify":{
+            "fr":"Modifier",
+            "nl":"Wijzigen"
+        },
         "mail": {
             "titrepage":{
                 "fr":"Aperçu du mail",

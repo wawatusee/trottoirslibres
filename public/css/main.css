@@ -104,12 +104,37 @@ input[type="submit"] {
       font-size: small;
     }
     .logo{
-      max-width: 80vw;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width:200px;
     }
     /*Aperçu mail*/
     .hidden {
       visibility: hidden;
   }
+  .btns-mail{
+     margin-left: 50vw; 
+  }
+  /*BOUTONS*/
+  /*Boutons d'action*/
+  .btns-actions{
+    text-align: center; /* Centre horizontalement les éléments en ligne (inline) ou inline-block */
+  }
+  .modify,
+  .submit{
+    display: block; /* S'assurer que le bouton est un élément de bloc pour que margin auto fonctionne */
+
+    margin:10px  auto; /* Centre horizontalement */
+    width: 130px;
+    height: 35px;
+    background-color: var(--first-color);
+    color: var(--main-clear-color);
+    border-style: none;
+    border-radius: 5%;
+  }
+  /*FIN BOUTONS*/
+  /*PREVIEW*/
 
   #mailPreviewContainer {
       position: fixed;
@@ -127,7 +152,7 @@ input[type="submit"] {
   }
   .mailPreview {
     max-width: 600px;
-    max-height: 80%;
+    max-height: 70%;
     overflow: auto;
     text-align: justify;
     margin:auto;
