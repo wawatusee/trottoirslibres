@@ -122,6 +122,16 @@ $btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
                 <p class="consigne"><?=$consigneEncombrements?></p>
                 <div class="obstaclesChoices">
                 <?=$htmlContentObstacles?>
+                <!-- Ajout de la case à cocher "autres" -->
+                <div>
+                    <label for="autres">Autres</label>
+                    <input type="checkbox" id="autres" name="type-encombrement[]" value="autres">
+                </div>
+                <!-- Champ de saisie pour "autres" -->
+                <div id="autres-obstacle" class="hidden-saisie-autres">
+                    <label for="autres-obstacle-description">Description de l'obstacle</label>
+                    <input type="text" id="autres-obstacle-description" name="autres-obstacle-description">
+                </div>
                 </div>
             </div>
 <script src="js/type-encombrement-liste.js"></script>
@@ -163,10 +173,11 @@ $btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
             <button class="submit" type="submit" id="btnEnvoyer"><?=$btnSubmitText?></button>
         </div>
         </form>
+<!--FIN FORMULAIRE-->
         <div><img class="logo" src="/public/img/deco/logo_blanc.svg" alt="lien vers le site walk"></div>
         <script src="js/reportform.js"></script>
     </div>
-<!--FIN FORMULAIRE-->
+
     <!-- Aperçu de mail -->
         <!-- Contenu de la page aperçu mail ici -->
         <?php require_once ("../inc/pages/mail.php");?>

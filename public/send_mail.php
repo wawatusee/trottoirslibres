@@ -3,10 +3,12 @@ header('Content-Type: application/json; charset=UTF-8');
 // Activer l'affichage des erreurs pour le développement local
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
+require_once ("../src/model/ArrayDatas.php");
+$destinatairesDatas=new ArrayDatas("../json/destinataires.json");
+$destinataires=$destinatairesDatas->get_arrayDatas();
 //Config destinataire mail
 //Tableaux des mails des échevins à la mobilité
-$destinataires=[
+/*$destinataires=[
     '1000'=>'cabinet.b.dhondt@brucity.be',
     '1030'=>'kabinet-byttebier@1030.be',
     //'1030'=>'info@walk.brussels.com',
@@ -27,7 +29,8 @@ $destinataires=[
     '1190'=>'amugabo@forest.brussels',
     '1200'=>'g.matgen@woluwe1200.be',
     '1210'=>'bgm@sjtn.brussels',
-];
+];*/
+var_dump($destinataires);
 // Définir le chemin pour sauvegarder les images
 $imageDir = __DIR__ . '/../img/obstacles/';
 

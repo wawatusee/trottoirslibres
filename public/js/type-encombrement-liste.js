@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const typeEncombrementListe = document.getElementById('type-encombrement-liste');
     const checkboxes = typeEncombrementListe.querySelectorAll('input[type="checkbox"]');
     const maxCheckboxes = 4;
+    const autresCheckbox = document.getElementById('autres');
+    const autresObstacle = document.getElementById('autres-obstacle');
     let checkedValues = [];
 
     checkboxes.forEach(function(checkbox) {
@@ -24,5 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Mise à jour de checkedValues ici à chaque changement de l'état des cases à cocher
             console.log(checkedValues);
         });
+    });
+
+    autresCheckbox.addEventListener('change', (event) => {
+        if (event.target.checked) {
+            autresObstacle.classList.remove('hidden-saisie-autres');
+        } else {
+            autresObstacle.classList.add('hidden-saisie-autres');
+        }
     });
 });

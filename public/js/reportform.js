@@ -35,8 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // Parcourir les données du formulaire et les affecter aux bons groupes
         formData.forEach((value, key) => {
             if (key.startsWith('type-encombrement')) {
-                formObject.typeEncombrement.push(value);
-            } else if (key === 'name' || key === 'first-name' || key === 'email') {
+                if (value === 'autres') {
+                    const autresObstacleDescription = document.getElementById('autres-obstacle-description').value.trim();
+                    if (autresObstacleDescription !== '') {
+                        formObject.typeEncombrement.push(autresObstacleDescription);
+                    }
+                } else {
+                    formObject.typeEncombrement.push(value);
+                }
+            }
+            else if (key === 'name' || key === 'first-name' || key === 'email') {
                 formObject.contactInformation[key] = value;
             } else if (key === 'autorisation') {
                 formObject.autorisationContact = true; // convertir en booléen

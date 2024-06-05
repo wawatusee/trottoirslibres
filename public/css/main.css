@@ -99,6 +99,10 @@ input[type="submit"] {
       flex-direction: row;
       flex-wrap: wrap;
     }
+    /*Champs autres*/
+    .hidden-saisie-autres{
+      visibility: hidden;
+    }
     .asterix{
       /*Pour politique de confidentialié*/
       font-size: small;
@@ -113,6 +117,7 @@ input[type="submit"] {
     .hidden {
       visibility: hidden;
   }
+
   .btns-mail{
      margin-left: 50vw; 
   }
