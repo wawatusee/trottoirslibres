@@ -63,17 +63,63 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 // Fonction pour afficher l'aperçu du mail
+// Fonction pour vérifier si les champs du formulaire sont remplis
+// Fonction pour vérifier si les champs du formulaire sont remplis
+function checkFormFields() {
+    // Récupérer la langue de la page HTML
+    const lang = document.documentElement.lang;
+    // Vérifier si les champs obligatoires sont remplis
+    const address = document.getElementById('adresse-id').value;
+    const number = document.querySelector('[data-address="number"]').value;
+    const postCode = document.querySelector('[data-address="post-code"]').value;
+    const municipality = document.querySelector('[data-address="municipality"]').value;
+    const typeEncombrement = document.querySelectorAll('input[name="type-encombrement[]"]:checked');
+
+    console.log('Adresse:', address);
+    console.log('Numéro:', number);
+    console.log('Code postal:', postCode);
+    console.log('Municipalité:', municipality);
+    console.log('Type d\'encombrement:', typeEncombrement);
+
+    if (address === '' || number === '' || postCode === '' || municipality === '' || typeEncombrement.length === 0) {
+        let errorMessage;
+        if (lang === 'fr') {
+            errorMessage = "Veuillez remplir tous les champs obligatoires.";
+        } else if (lang === 'nl') {
+            errorMessage = "Vul alle verplichte velden in.";
+        } else {
+            errorMessage = "Please fill in all required fields.";
+        }
+
+        // Afficher le message d'erreur
+        alert(errorMessage);
+        return false;
+    }
+    
+    return true;
+}
+
+
+// Fonction pour afficher l'aperçu du mail après vérification des champs
 function showMailPreview() {
     const mailPreviewContainer = document.getElementById('mailPreviewContainer');
     const reportForm = document.getElementById('reportForm');
+    
+    // Vérifier si les champs du formulaire sont remplis
+    if (!checkFormFields()) {
+        return; // Arrêter l'exécution de la fonction si les champs ne sont pas remplis
+    }
+
     // Remplir le contenu du mail avec les données de formObject
     document.getElementById('mailAddress').textContent = formObject.address.adresse;
     document.getElementById('mailNumber').textContent = formObject.address.numero;
     document.getElementById('mailPostCode').textContent = formObject.address.postCode;
     document.getElementById('mailMunicipality').textContent = formObject.address.municipality;
     document.getElementById('mailTypeEncombrement').textContent = formObject.typeEncombrement.join(', ');
+    
     // Masquer le formulaire et afficher l'aperçu du mail
     reportForm.classList.add('hidden');
     mailPreviewContainer.classList.remove('hidden');
 }
+
 
