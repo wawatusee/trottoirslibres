@@ -35,6 +35,9 @@
             "nl":{
                 "consigne":"Duid aan welke obstakels u gezien heeft",
                 "values-labels":["Paaltje", "Signalisatiebord / Informatiebord", "Technische kast", "Terras", "Fiets/step", "Gemotoriseerd voertuig", "Reclamebord", "Hek", "Verkeerd geplaatste vuilnisbak", "Vuilniszak", "Oplaadpaal of -kabel voor elektrische voertuigen", "Straatlantaarn", "Verkeerd geplaatste dropzone"]
+            },
+            "en":{
+                "values-labels":["bollard","signageinformationpanel","technicalcabinet","terrace","bikescooter","motorvehicle","advertisingpanel","barrier","misplacedtrashbin","trashbag","chargingstationorcableforelectricvehicle","streetlight","misplaceddropzone"]
             }
         },
         "contact-information":{

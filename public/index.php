@@ -18,7 +18,7 @@ if (isset($_GET['lang']) && array_key_exists($_GET['lang'], $langues_disponibles
 $Lexique=new LexiqueModel("../json/refs.json");
 $lexique_datas=$Lexique->get_lexique();
 require_once("../src/view/lexiqueView.php");
-$LexiqueView=new LexiqueView($lexique_datas,$lang);
+$LexiqueView=new LexiqueView($lexique_datas);
 /*Fin mise en place*/
 //Titre
 $titre=$LexiqueView->getSectionLexique("title")->$lang;
@@ -38,7 +38,7 @@ $adressStreetLabelsMunicipality=$adressStreetLabels["municipality"];
 $typeOfEncombrementView=$LexiqueView->getSectionLexique("encombrements")->$lang;
 $consigneEncombrements=$typeOfEncombrementView["consigne"];
 $objetsEncombrements=$typeOfEncombrementView["values-labels"];
-//var_dump($objetsEncombrements);
+var_dump($objetsEncombrements);
 $htmlContentObstacles= $LexiqueView->getObstaclesView($objetsEncombrements);
 //echo $htmlContentObstacles;
 //Fin type d'encombrements

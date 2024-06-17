@@ -93,6 +93,35 @@ input[type="submit"] {
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     }
     /*type-encombrement-liste*/
+    /*Essai logos*/
+    .checkbox-container {
+      position: relative; /* Nécessaire pour positionner l'indicateur */
+      display: inline-block;
+      width: 48px; /* Taille du bouton cliquable */
+      height: 48px;
+      cursor: pointer;
+      margin-right: 10px; /* Ajout d'un espacement entre les boutons */
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+      display: none; /* Masquer la case à cocher native */
+  }
+  
+  .checkbox-container .indicator {
+      content: "";
+      position: absolute;
+      top: 5px; /* Ajuster pour positionner dans le coin supérieur droit */
+      right: 5px;
+      width: 10px; /* Taille du point */
+      height: 10px;
+      border-radius: 50%; /* Pour rendre le point circulaire */
+      background: transparent; /* Couleur par défaut */
+  }
+  
+  .checkbox-container input[type="checkbox"]:checked + .checkmark + .indicator {
+      background: #007BFF; /* Couleur du point quand coché */
+  }
+  /*Fin essai logo*/
     /*span cases*/
     .obstaclesChoices{
       display: flex;
