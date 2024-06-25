@@ -97,8 +97,8 @@ input[type="submit"] {
     .checkbox-container {
       position: relative; /* Nécessaire pour positionner l'indicateur */
       display: inline-block;
-      width: 48px; /* Taille du bouton cliquable */
-      height: 48px;
+      width: 60px; /* Taille du bouton cliquable */
+      height: 60px;
       cursor: pointer;
       margin-right: 10px; /* Ajout d'un espacement entre les boutons */
   }
@@ -120,13 +120,16 @@ input[type="submit"] {
   
   .checkbox-container input[type="checkbox"]:checked + .checkmark + .indicator {
       background: #007BFF; /* Couleur du point quand coché */
+      background-size: 70px;
   }
   /*Fin essai logo*/
+
     /*span cases*/
     .obstaclesChoices{
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      gap: 3em;
     }
     /*Champs autres*/
     .hidden-saisie-autres{

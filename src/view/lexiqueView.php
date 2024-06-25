@@ -33,7 +33,7 @@ OBSTACLE;
             $en_obstacle = $this->data['refs']["encombrements"]["en"]["values-labels"][$encombrement_index];
             $svg_url = "img/deco/obstacles/{$en_obstacle}.svg"; // Construire dynamiquement l'URL du SVG
             $htmlObstacleContent .= <<<OBSTACLE
-            <label class="checkbox-container" style="background: url('$svg_url') no-repeat center center; background-size: contain;">
+            <label class="checkbox-container" style="background: url('$svg_url') no-repeat center center; background-size: 77px;">
                 <input type="checkbox" id="$en_obstacle" name="type-encombrement[]" value="$obstacle">
                 <span class="checkmark"></span>
                 <span class="indicator"></span>

@@ -122,7 +122,7 @@ $btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
                 <p class="consigne"><?=$consigneEncombrements?></p>
                 <div class="obstaclesChoices">
                 <?=$htmlContentObstacles?>
-                <!-- Ajout de la case à cocher "autres" -->
+                <!-- case à cocher "autres" -->
                 <div>
                     <label for="autres">Autres</label>
                     <input type="checkbox" id="autres" name="type-encombrement[]" value="autres">
