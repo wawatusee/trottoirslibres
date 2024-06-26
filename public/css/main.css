@@ -93,30 +93,25 @@ input[type="submit"] {
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     }
     /*type-encombrement-liste*/
-    /*Essai logos*/
+    /*Essai pictos*/
     .checkbox-container {
-      position: relative; /* Nécessaire pour positionner l'indicateur */
-      display: inline-block;
-      width: 60px; /* Taille du bouton cliquable */
-      height: 60px;
-      cursor: pointer;
-      margin-right: 10px; /* Ajout d'un espacement entre les boutons */
+      width: 80px; /* Taille du bouton cliquable */
+      height: 90px;
+       margin-bottom: 10px;
+       margin-right: 0;
   }
   
- /* .checkbox-container input[type="checkbox"] {
-      display: none;  Masquer la case à cocher native 
-  }*/
   
-
-  /*Fin essai logo*/
-
     /*span cases*/
     .obstaclesChoices{
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 3em;
+      justify-content: space-around;
+      gap: 13px;
+ 
     }
+      /*Fin essai pictos*/
     /*Champs autres*/
     .hidden-saisie-autres{
       visibility: hidden;

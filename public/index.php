@@ -122,6 +122,7 @@ $btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
                 <p class="consigne"><?=$consigneEncombrements?></p>
                 <div class="obstaclesChoices">
                 <?=$htmlContentObstacles?>
+                </div>
                 <!-- case à cocher "autres" -->
                 <div>
                     <label for="autres">Autres</label>
@@ -132,7 +133,7 @@ $btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
                     <label for="autres-obstacle-description">Description de l'obstacle</label>
                     <input type="text" id="autres-obstacle-description" name="autres-obstacle-description">
                 </div>
-                </div>
+                
             </div>
 <script src="js/type-encombrement-liste.js"></script>
  <!--Fin type d'encombrement-->

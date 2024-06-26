@@ -30,14 +30,14 @@
         "encombrements":{
             "fr":{
                 "consigne":"Indiquez les obstacles que vous avez vus",
-                "values-labels":["Potelet","Panneau de signalisation / d’information","Armoire technique","Terrasse","auto","moto","Vélo/trottinette","Véhicule motorisé","Panneau publicitaire","Barrière","Poubelle mal placée","Sac poubelle","Borne ou câble de recharge pour véhicule électrique","Lampadaire","Dropzone mal placée"]
+                "values-labels":["Potelet","Panneau de signalisation / d’information","Armoire technique","Terrasse","auto","moto","Vélo/trottinette","Panneau publicitaire","Barrière","Poubelle mal placée","Sac poubelle","Borne ou câble de recharge pour véhicule électrique","Lampadaire","Dropzone mal placée"]
             },
             "nl":{
                 "consigne":"Duid aan welke obstakels u gezien heeft",
-                "values-labels":["Paaltje", "Signalisatiebord / Informatiebord", "Technische kast", "Terras","auto","moto", "Fiets/step", "Gemotoriseerd voertuig", "Reclamebord", "Hek", "Verkeerd geplaatste vuilnisbak", "Vuilniszak", "Oplaadpaal of -kabel voor elektrische voertuigen", "Straatlantaarn", "Verkeerd geplaatste dropzone"]
+                "values-labels":["Paaltje", "Signalisatiebord / Informatiebord", "Technische kast", "Terras","auto","moto", "Fiets/step", "Reclamebord", "Hek", "Verkeerd geplaatste vuilnisbak", "Vuilniszak", "Oplaadpaal of -kabel voor elektrische voertuigen", "Straatlantaarn", "Verkeerd geplaatste dropzone"]
             },
             "en":{
-                "values-labels":["bollard","signageinformationpanel","technicalcabinet","terrace","auto","moto","bikescooter","motorvehicle","advertisingpanel","barrier","misplacedtrashbin","trashbag","chargingstationorcableforelectricvehicle","streetlight","misplaceddropzone"]
+                "values-labels":["bollard","signageinformationpanel","technicalcabinet","terrace","auto","moto","bikescooter","advertisingpanel","barrier","misplacedtrashbin","trashbag","chargingstationorcableforelectricvehicle","streetlight","misplaceddropzone"]
             }
         },
         "contact-information":{
