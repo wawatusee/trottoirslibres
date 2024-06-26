@@ -103,25 +103,11 @@ input[type="submit"] {
       margin-right: 10px; /* Ajout d'un espacement entre les boutons */
   }
   
-  .checkbox-container input[type="checkbox"] {
-      display: none; /* Masquer la case à cocher native */
-  }
+ /* .checkbox-container input[type="checkbox"] {
+      display: none;  Masquer la case à cocher native 
+  }*/
   
-  .checkbox-container .indicator {
-      content: "";
-      position: absolute;
-      top: 5px; /* Ajuster pour positionner dans le coin supérieur droit */
-      right: 5px;
-      width: 10px; /* Taille du point */
-      height: 10px;
-      border-radius: 50%; /* Pour rendre le point circulaire */
-      background: transparent; /* Couleur par défaut */
-  }
-  
-  .checkbox-container input[type="checkbox"]:checked + .checkmark + .indicator {
-      background: #007BFF; /* Couleur du point quand coché */
-      background-size: 70px;
-  }
+
   /*Fin essai logo*/
 
     /*span cases*/

@@ -35,9 +35,6 @@ OBSTACLE;
             $htmlObstacleContent .= <<<OBSTACLE
             <label class="checkbox-container" style="background: url('$svg_url') no-repeat center center; background-size: 77px;">
                 <input type="checkbox" id="$en_obstacle" name="type-encombrement[]" value="$obstacle">
-                <span class="checkmark"></span>
-                <span class="indicator"></span>
-                
             </label>
     OBSTACLE;
         }
