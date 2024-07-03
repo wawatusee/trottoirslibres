@@ -6,6 +6,7 @@ ini_set('display_errors', 1);
 require_once ("../src/model/ArrayDatas.php");
 $destinatairesDatas=new ArrayDatas("../json/destinataires.json");
 $destinataires=$destinatairesDatas->get_arrayDatas();
+var_dump($destinataires);
 //Config destinataire mail
 //Tableaux des mails des échevins à la mobilité
 /*$destinataires=[

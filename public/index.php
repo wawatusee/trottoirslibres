@@ -38,7 +38,9 @@ $adressStreetLabelsMunicipality=$adressStreetLabels["municipality"];
 $typeOfEncombrementView=$LexiqueView->getSectionLexique("encombrements")->$lang;
 $consigneEncombrements=$typeOfEncombrementView["consigne"];
 $objetsEncombrements=$typeOfEncombrementView["values-labels"];
-var_dump($objetsEncombrements);
+$autresEmcombrement=$typeOfEncombrementView["others"];
+echo $autresEmcombrement;
+//var_dump($objetsEncombrements);
 $htmlContentObstacles= $LexiqueView->getObstaclesView($objetsEncombrements);
 //echo $htmlContentObstacles;
 //Fin type d'encombrements
@@ -127,7 +129,7 @@ $btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
                 <div>
                     
                     <input type="checkbox" id="autres" name="type-encombrement[]" value="autres">
-                    <label for="autres">Autres</label>
+                    <label for="autres"><?=$autresEmcombrement?></label>
                 </div>
                 <!-- Champ de saisie pour "autres" -->
                 <div id="autres-obstacle" class="hidden-saisie-autres">
@@ -144,7 +146,7 @@ $btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
                 <label for="name"><?=$contactInformationName?> </label>
                 <input type="text" id="name" name="name" placeholder="<?=$contactInformationName?>" autocomplete="name">
 
-                <label for="first-name"><?=$contactInformationFirstName?> </label>
+                <label for="first-name"><?=$contactInformationFirstName?></label>
                 <input type="text" id="first-name" name="first-name" placeholder="<?=$contactInformationFirstName?>" autocomplete="given-name">
 
                 <label  for="email"><?=$contactInformationMail?> </label>
