@@ -41,7 +41,7 @@ $typeOfEncombrementView=$LexiqueView->getSectionLexique("encombrements")->$lang;
 $consigneEncombrements=$typeOfEncombrementView["consigne"];
 $objetsEncombrements=$typeOfEncombrementView["values-labels"];
 $autresEmcombrement=$typeOfEncombrementView["others"];
-echo $autresEmcombrement;
+//echo $autresEmcombrement;
 //var_dump($objetsEncombrements);
 $htmlContentObstacles= $LexiqueView->getObstaclesView($objetsEncombrements);
 //echo $htmlContentObstacles;
@@ -108,7 +108,6 @@ $btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
         <h2><?=$titre?></h2>
         <p class="consigne"><?=$formrequiredfields?>*</p>
     <!--Adresse-->
-
         <!--<form action="#" method="post">-->
         <div class="form-group" id="address" disabled>
             <p class="consigne"><?=$adressConsigne?></p>
@@ -171,7 +170,7 @@ $btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
     <!--Fin autorisation réception newsletter-->
     <!--Récupération images-->
         <div class="form-group" id="refs-imgs">
-            <label for="imageUpload"><?=$imgsLabel?> </label>
+            <label for="imageUpload" ><img src="img/deco/apn.png" alt="<?=$imgsLabel?>"></label>
             <input type="file" id="imageUpload" name="image" accept="image/*">
             <img id="imagePreview" src="" alt="Aperçu de l'image" style="display:none; max-width: 100%; height: auto;">
         </div>
@@ -181,7 +180,7 @@ $btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
         </div>
     </form>
 <!--FIN FORMULAIRE-->
-        <div><img class="logo" src="/public/img/deco/logo_blanc.svg" alt="lien vers le site walk"></div>
+        <div><img class="logo" src="img/deco/logo_blanc.svg" alt="lien vers le site walk"></div>
         <script src="js/reportform.js"></script>
     </div>
 

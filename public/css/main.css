@@ -130,6 +130,16 @@ input[type="submit"] {
     .hidden {
       visibility: hidden;
   }
+  /*Bouton parcourir et label prendre une photo*/
+  #refs-imgs{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #refs-imgs>label>img{
+  width: 200px;
+  }
 
   .btns-mail{
      margin-left: 50vw; 
