@@ -91,8 +91,8 @@ if (isset($objet, $body, $formObject)) {
     //L'adresse de kieran1@hotmail.fr remplace $to pour les tests
     //$mailSent = mail("kieran1@hotmail.fr", $objet, $body, $headers);
     //Mail officiel prenant les mails des échevins comme destinataires
-    $mailSent = mail($to, $objet, $body, $headers);
-    //$mailSent = mail("kieran1@hotmail.fr", 'objet de mail', 'le corps du mail', $headers);
+    //$mailSent = mail($to, $objet, $body, $headers);A DECOMMENTER POUR PROD
+    $mailSent = mail("kieran1@hotmail.fr", 'objet de mail', 'le corps du mail', $headers);
     // Vérification de l'envoi du mail
     if ($mailSent) {
         echo json_encode(['success' => true, 'message' => 'Mail envoyé avec succès et fichier JSON enregistré']);

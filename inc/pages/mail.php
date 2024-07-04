@@ -101,5 +101,4 @@ document.getElementById('sendMailButton').addEventListener('click', async () => 
 }
 
 });
-
 </script>

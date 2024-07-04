@@ -4,6 +4,10 @@
             "fr":"Formulaire de Signalement",
             "nl":"Rapportageformulier"
         },
+        "form-duty":{
+            "fr":"Champs obligatoires",
+            "nl":":Verplicht veld"
+        },
         "address":{
             "fr":{
                 "consigne":"Donnez-nous l’adresse de l’obstacle sur le trottoir",

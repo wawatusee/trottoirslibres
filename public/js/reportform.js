@@ -62,8 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
         showMailPreview();
     });
 });
-// Fonction pour afficher l'aperçu du mail
-// Fonction pour vérifier si les champs du formulaire sont remplis
 // Fonction pour vérifier si les champs du formulaire sont remplis
 function checkFormFields() {
     // Récupérer la langue de la page HTML
@@ -98,7 +96,6 @@ function checkFormFields() {
     
     return true;
 }
-
 
 // Fonction pour afficher l'aperçu du mail après vérification des champs
 function showMailPreview() {
