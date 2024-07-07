@@ -1,0 +1,48 @@
+<?php
+// src/view/JsonDataView.php
+
+class JsonDataView {
+    private $jsonData;
+
+    public function __construct($jsonData) {
+        $this->jsonData = $jsonData;
+    }
+
+    public function render() {
+        $html = '<div class="data-container">';
+        
+        foreach ($this->jsonData as $item) {
+            // Création des variables pour chaque élément
+            $adresse = htmlspecialchars($item['address']['adresse']);
+            $numero = htmlspecialchars($item['address']['numero']);
+            $postCode = htmlspecialchars($item['address']['postCode']);
+            $municipality = htmlspecialchars($item['address']['municipality']);
+            $typeEncombrement = htmlspecialchars(implode(', ', $item['typeEncombrement']));
+            $name = htmlspecialchars($item['contactInformation']['name']);
+            $firstName = htmlspecialchars($item['contactInformation']['first-name']);
+            $email = htmlspecialchars($item['contactInformation']['email']);
+            $autorisationContact = ($item['autorisationContact']) ? 'Oui' : 'Non';
+            $autorisationNewsletter = ($item['autorisationNewsletter']) ? 'Oui' : 'Non';
+            $dateTime = htmlspecialchars($item['dateTime']);
+
+            // Création du rendu HTML en utilisant les variables
+            $html .= <<<HTML
+<div class="data-item">
+    <div><span class="label">Adresse:</span> {$adresse}, {$numero}, {$postCode} {$municipality}</div>
+    <div><span class="label">Type d'encombrement:</span> {$typeEncombrement}</div>
+    <div><span class="label">Nom:</span> {$name}</div>
+    <div><span class="label">Prénom:</span> {$firstName}</div>
+    <div><span class="label">Email:</span> {$email}</div>
+    <div><span class="label">Autorisation de contact:</span> {$autorisationContact}</div>
+    <div><span class="label">Autorisation de newsletter:</span> {$autorisationNewsletter}</div>
+    <div><span class="label">Date et heure:</span> {$dateTime}</div>
+</div>
+HTML;
+        }
+
+        $html .= '</div>';
+
+        return $html;
+    }
+}
+?>
