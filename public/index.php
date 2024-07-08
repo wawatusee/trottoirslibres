@@ -142,6 +142,13 @@ $btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
         </div>
     <script src="js/type-encombrement-liste.js"></script>
     <!--Fin type d'encombrement-->
+        <!--Récupération images-->
+        <div class="form-group" id="refs-imgs">
+            <label for="imageUpload" ><img src="img/deco/apn.png" alt="<?=$imgsLabel?>"></label>
+            <input type="file" id="imageUpload" name="image" accept="image/*">
+            <img id="imagePreview" src="" alt="Aperçu de l'image" style="display:none; max-width: 100%; height: auto;">
+        </div>
+    <!--Fin récupération images-->
     <!--contact information-->
         <div class="form-group" id="contact-information">
             <p class="consigne"><?=$contactInformationConsigne?></p>
@@ -168,13 +175,7 @@ $btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
             <label for="recevoir-newsletter"><?=$acceptNewsletterLabel?></label>
         </div>
     <!--Fin autorisation réception newsletter-->
-    <!--Récupération images-->
-        <div class="form-group" id="refs-imgs">
-            <label for="imageUpload" ><img src="img/deco/apn.png" alt="<?=$imgsLabel?>"></label>
-            <input type="file" id="imageUpload" name="image" accept="image/*">
-            <img id="imagePreview" src="" alt="Aperçu de l'image" style="display:none; max-width: 100%; height: auto;">
-        </div>
-    <!--Fin récupération images-->
+
         <div class="btns-actions">
             <button class="submit" type="submit" id="btnEnvoyer"><?=$btnSubmitText?></button>
         </div>
