@@ -4,6 +4,10 @@
             "fr":"Formulaire de Signalement",
             "nl":"Rapportageformulier"
         },
+        "form-duty":{
+            "fr":"Champs obligatoires",
+            "nl":"Verplicht veld"
+        },
         "address":{
             "fr":{
                 "consigne":"Donnez-nous l’adresse de l’obstacle sur le trottoir",
@@ -30,16 +34,22 @@
         "encombrements":{
             "fr":{
                 "consigne":"Indiquez les obstacles que vous avez vus",
-                "values-labels":["Potelet","Panneau de signalisation / d’information","Armoire technique","Terrasse","Vélo/trottinette","Véhicule motorisé","Panneau publicitaire","Barrière","Poubelle mal placée","Sac poubelle","Borne ou câble de recharge pour véhicule électrique","Lampadaire","Dropzone mal placée"]
+                "values-labels":["Potelet","Panneau de signalisation / d’information","Armoire technique","Terrasse","auto","moto","Vélo/trottinette","Panneau publicitaire","Barrière","Poubelle mal placée","Sac poubelle","Borne ou câble de recharge pour véhicule électrique","Lampadaire","Dropzone mal placée"],
+                "others":"Autres"
             },
             "nl":{
                 "consigne":"Duid aan welke obstakels u gezien heeft",
-                "values-labels":["Paaltje", "Signalisatiebord / Informatiebord", "Technische kast", "Terras", "Fiets/step", "Gemotoriseerd voertuig", "Reclamebord", "Hek", "Verkeerd geplaatste vuilnisbak", "Vuilniszak", "Oplaadpaal of -kabel voor elektrische voertuigen", "Straatlantaarn", "Verkeerd geplaatste dropzone"]
+                "values-labels":["Paaltje", "Signalisatiebord / Informatiebord", "Technische kast", "Terras","auto","moto", "Fiets/step", "Reclamebord", "Hek", "Verkeerd geplaatste vuilnisbak", "Vuilniszak", "Oplaadpaal of -kabel voor elektrische voertuigen", "Straatlantaarn", "Verkeerd geplaatste dropzone"],
+                "others":"Andere"
+            },
+            "en":{
+                "values-labels":["bollard","signageinformationpanel","technicalcabinet","terrace","auto","moto","bikescooter","advertisingpanel","barrier","misplacedtrashbin","trashbag","chargingstationorcableforelectricvehicle","streetlight","misplaceddropzone"],
+                "others":"Others"
             }
         },
         "contact-information":{
             "fr":{
-                "consigne":"Vos coordonnées :",
+                "consigne":"Vos coordonnées ",
                 "values-labels":{
                     "name":"Nom",
                     "first-name":"Prénom",
@@ -47,7 +57,7 @@
                 }
             },
             "nl":{
-                "consigne":"Uw gegevens :",
+                "consigne":"Uw gegevens ",
                 "values-labels":{
                     "name":"Naam",
                     "first-name":"Voornaam",
@@ -77,11 +87,23 @@
         },
         "refs-imgs":{
             "fr":{
-                "values-labels":"Télécharger une image :"
+                "values-labels":"Prendre une photo"
             },
             "nl":{
-                "values-labels":"Foto opladen:"
+                "values-labels":"Een foto nemen"
             }
+        },
+        "submit":{
+            "fr":"Envoyer",
+            "nl":"Verzenden"
+        },
+        "modify":{
+            "fr":"Modifier",
+            "nl":"Wijzigen"
+        },
+        "send-mail":{
+            "fr":"Envoyer le mail",
+            "nl":"Mail verzenden"
         },
         "mail": {
             "titrepage":{

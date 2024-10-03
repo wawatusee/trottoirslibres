@@ -3,10 +3,13 @@ header('Content-Type: application/json; charset=UTF-8');
 // Activer l'affichage des erreurs pour le développement local
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
+require_once ("../src/model/ArrayDatas.php");
+$destinatairesDatas=new ArrayDatas("../json/destinataires.json");
+$destinataires=$destinatairesDatas->get_arrayDatas();
+var_dump($destinataires);
 //Config destinataire mail
 //Tableaux des mails des échevins à la mobilité
-$destinataires=[
+/*$destinataires=[
     '1000'=>'cabinet.b.dhondt@brucity.be',
     '1030'=>'kabinet-byttebier@1030.be',
     //'1030'=>'info@walk.brussels.com',
@@ -27,7 +30,8 @@ $destinataires=[
     '1190'=>'amugabo@forest.brussels',
     '1200'=>'g.matgen@woluwe1200.be',
     '1210'=>'bgm@sjtn.brussels',
-];
+];*/
+var_dump($destinataires);
 // Définir le chemin pour sauvegarder les images
 $imageDir = __DIR__ . '/../img/obstacles/';
 
@@ -57,7 +61,11 @@ if (isset($objet, $body, $formObject)) {
         if (!file_exists($imageDir)) {
             mkdir($imageDir, 0777, true);
         }
-        move_uploaded_file($image['tmp_name'], $imagePath);
+        // Redimensionner l'image
+        $maxWidth = 800;
+        $maxHeight = 600;
+        resizeImage($image['tmp_name'], $imagePath, $maxWidth, $maxHeight);
+        //move_uploaded_file($image['tmp_name'], $imagePath);
     }
     // Définir le destinataire en fonction du postcode
     $postcode = $formObject['address']['postcode'];
@@ -82,8 +90,9 @@ if (isset($objet, $body, $formObject)) {
     /*Mail de TESTS */
     //L'adresse de kieran1@hotmail.fr remplace $to pour les tests
     //$mailSent = mail("kieran1@hotmail.fr", $objet, $body, $headers);
-    $mailSent = mail($to, $objet, $body, $headers);
-    //$mailSent = mail("kieran1@hotmail.fr", 'objet de mail', 'le corps du mail', $headers);
+    //Mail officiel prenant les mails des échevins comme destinataires
+    //$mailSent = mail($to, $objet, $body, $headers);A DECOMMENTER POUR PROD
+    $mailSent = mail("kieran1@hotmail.fr", 'objet de mail', 'le corps du mail', $headers);
     // Vérification de l'envoi du mail
     if ($mailSent) {
         echo json_encode(['success' => true, 'message' => 'Mail envoyé avec succès et fichier JSON enregistré']);
@@ -103,5 +112,29 @@ function error_handler($errno, $errstr, $errfile, $errline) {
 }
 
 set_error_handler('error_handler');
+
+// Fonction pour redimensionner l'image
+function resizeImage($sourcePath, $destinationPath, $maxWidth, $maxHeight) {
+    list($origWidth, $origHeight) = getimagesize($sourcePath);
+    $width = $origWidth;
+    $height = $origHeight;
+
+    // Calcul des nouvelles dimensions
+    if ($width > $maxWidth || $height > $maxHeight) {
+        $ratio = min($maxWidth / $width, $maxHeight / $height);
+        $width = (int)($width * $ratio);
+        $height = (int)($height * $ratio);
+    }
+
+    // Création d'une nouvelle image redimensionnée
+    $image_p = imagecreatetruecolor($width, $height);
+    $image = imagecreatefromjpeg($sourcePath);
+    imagecopyresampled($image_p, $image, 0, 0, 0, 0, $width, $height, $origWidth, $origHeight);
+
+    // Sauvegarde de l'image redimensionnée
+    imagejpeg($image_p, $destinationPath, 90); // Qualité de 90%
+    imagedestroy($image_p);
+    imagedestroy($image);
+}
 
 ?>

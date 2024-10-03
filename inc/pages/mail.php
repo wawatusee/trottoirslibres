@@ -21,13 +21,15 @@
                 <?=" "?><span id="mailAddress"></span><?=" "?><span id="mailNumber"></span><?=", "?><span id="mailPostCode"></span><?=" "?><span id="mailMunicipality"></span></div>
             </p><br>
             <p><?= $advise ?></p>
-            <button id="sendMailButton">Envoyer le Mail</button>
-            <button id="editFormButton">Modifier</button>
             <!--3 lignes suivantes au cas où on doive afficher les coordonnées de l'internaute saisies-->
             <!-- <p><strong>Nom :</strong> <span id="mailName"></span></p>
             <p><strong>Prénom :</strong> <span id="mailFirstName"></span></p>
             <p><strong>Email :</strong> <span id="mailEmail"></span></p>-->
         </div>
+    </div>
+    <div class="btns-actions">
+        <button class="modify" id="editFormButton"><?=$btnModifyText?></button>
+        <button class="submit" id="sendMailButton"><?=$btnSendMail?></button>
     </div>
 </div>
 
@@ -99,5 +101,4 @@ document.getElementById('sendMailButton').addEventListener('click', async () => 
 }
 
 });
-
 </script>
