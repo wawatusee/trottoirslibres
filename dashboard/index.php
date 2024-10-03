@@ -17,7 +17,7 @@ $jsonData = $datasJson->getJsonData();
 $jsonDataView = new JsonDataView($jsonData);
 
 // Afficher les données JSON en utilisant la méthode render() de JsonDataView
-echo $jsonDataView->render();
+//echo $jsonDataView->render();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,10 +26,11 @@ echo $jsonDataView->render();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
-    <!-- Contenu de votre interface d'administration -->
+    <?php require_once "../inc/header-dashboard.php"?>
+    <!-- Contenu de l'interface d'administration -->
      <?=$jsonDataView->render()?>
 </body>
 </html>
