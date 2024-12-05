@@ -12,4 +12,46 @@
     padding: 20px;
     border-radius: 15px;
   }
+  .filters {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.data-item {
+    border: 1px solid #ccc;
+    color: var(--main-dark-color);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: var(--first-color);
+}
+.data-item .label {
+    margin-left: 15px;
+    font-weight: bold;
+}
+.filters label {
+padding-left: 20px;
+}
+.dates{
+  display: flex;
+  flex-direction: column;
+}
+#applyFilters{
+  background-color: var(--first-color);
+  border-style: none;
+  color: var(--main-clear-color);
+  border-radius: 5px;
+  font-weight: bold;
+  height: 2.5em;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: 15px;
+}
+#applyFilters:hover{
+  color: var(--main-dark-color);
+}
+
   
