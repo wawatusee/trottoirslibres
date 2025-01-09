@@ -18,7 +18,7 @@ $jsonDataView = new JsonDataView($jsonData);
 
 // Afficher les données JSON en utilisant la méthode render() de JsonDataView
 //echo $jsonDataView->render();
-var_dump($jsonData);
+//var_dump($jsonData);
 ?>
 
 <!DOCTYPE html>

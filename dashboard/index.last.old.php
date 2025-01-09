@@ -4,7 +4,8 @@
 require_once '../src/model/model_json.php';
 
 $datasJson = new DatasJson('../json/lastsrequests/');
-$jsonData = $datasJson->getJsonData();
+$jsonData = $datasJson->getJsonData($datasJson);
+var_dump($datasJson);
 ?>
 
 <!DOCTYPE html>
