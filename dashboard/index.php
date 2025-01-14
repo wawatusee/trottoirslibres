@@ -57,7 +57,7 @@ $jsonDataView = new JsonDataView($jsonData);
     </div>-->
     <!--content filtered under this-->
     <section>
-        <div id="results"></div>
+        <div id="results"><?= $jsonDataView->render() ?></div>
     </section>
     <!-- Contenu de l'interface d'administration -->
 
@@ -121,7 +121,7 @@ $jsonDataView = new JsonDataView($jsonData);
                 });
             }
 
-            displayResults(  <?= json_encode($jsonData); ?>);
+            //displayResults(  <?= json_encode($jsonData); ?>);
         });
     </script>
 </body>
