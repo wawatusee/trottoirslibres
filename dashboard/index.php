@@ -35,7 +35,7 @@ $jsonDataView = new JsonDataView($jsonData);
 <body>
     <!--filters are in the header-->
     <?php require_once "../inc/header-dashboard.php" ?>
-    <div class="filters">
+    <!--<div class="filters">
         <label for="startDate">Date de début :</label>
         <input type="date" id="startDate">
 
@@ -54,13 +54,13 @@ $jsonDataView = new JsonDataView($jsonData);
         </select>
 
         <button id="applyFilters">Appliquer les filtres</button>
-    </div>
+    </div>-->
     <!--content filtered under this-->
     <section>
         <div id="results"></div>
     </section>
     <!-- Contenu de l'interface d'administration -->
-<?= $jsonDataView->render() ?>
+
     <script>
         const typesEncombrement = {
             "fr": ["Potelet", "Panneau de signalisation / d’information", "Armoire technique", "Terrasse", "auto", "moto", "Vélo/trottinette", "Panneau publicitaire", "Barrière", "Poubelle mal placée", "Sac poubelle", "Borne ou câble de recharge pour véhicule électrique", "Lampadaire", "Dropzone mal placée"],
@@ -120,6 +120,8 @@ $jsonDataView = new JsonDataView($jsonData);
                     resultsContainer.appendChild(div);
                 });
             }
+
+            displayResults(  <?= json_encode($jsonData); ?>);
         });
     </script>
 </body>

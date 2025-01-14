@@ -11,6 +11,12 @@
         <label for="typeFilter">Type d’encombrement :</label>
         <select id="typeFilter">
             <option value="">Tous</option>
+            <option value="Potelet">Potelet</option>
+            <option value="Panneau de signalisation / d’information">Panneau de signalisation</option>
+            <option value="Armoire technique">Armoire technique</option>
+            <option value="Vélo/trottinette">Vélo/trottinette</option>
+            <option value="Sac poubelle">Sac poubelle</option>
+            <option value="Barrière">Barrière</option>
         </select>
 
         <label for="municipalityFilter">Commune :</label>
