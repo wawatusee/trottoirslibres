@@ -34,6 +34,19 @@ $jsonDataView = new JsonDataView($jsonData);
             <!-- Liste des types d'encombrements et leurs comptages -->
         </ul>
     </section>
+    <!--time filters-->
+    <section id="temporalFilter">
+        <label for="yearSelect">Année:</label>
+        <select id="yearSelect">
+            <option value="">Toutes les années</option>
+            <!-- Les options seront ajoutées dynamiquement en JS -->
+        </select>
+
+        <!-- Liste des mois -->
+        <ul id="monthList">
+            <!-- Les mois et leurs compteurs de mails seront affichés ici -->
+        </ul>
+    </section>
 
     <!--content filtered under this-->
     <section>
