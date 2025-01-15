@@ -13,6 +13,7 @@ $jsonDataView = new JsonDataView($jsonData);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +21,19 @@ $jsonDataView = new JsonDataView($jsonData);
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
-<body onload="applyCommuneFilter()">
+
+<body>
     <!--filters are in the header-->
     <?php require_once "../inc/header-dashboard.php" ?>
+    <section id="stats">
+        <!-- Affichage du nombre total de mails pour la commune sélectionnée -->
+        <div id="communeCount">Nombre de mails pour la commune: 0</div>
+
+        <!-- Affichage du nombre d'encombrements pour la commune -->
+        <ul id="encombrementList">
+            <!-- Liste des types d'encombrements et leurs comptages -->
+        </ul>
+    </section>
 
     <!--content filtered under this-->
     <section>
