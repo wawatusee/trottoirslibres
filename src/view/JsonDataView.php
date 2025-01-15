@@ -27,17 +27,18 @@ class JsonDataView {
 
             // Création du rendu HTML en utilisant les variables
             $html .= <<<HTML
-<div class="data-item">
-    <div><span class="label">Adresse:</span> {$adresse}, {$numero}, {$postCode} {$municipality}</div>
-    <div><span class="label">Type d'encombrement:</span> {$typeEncombrement}</div>
-    <div><span class="label">Nom:</span> {$name}</div>
-    <div><span class="label">Prénom:</span> {$firstName}</div>
-    <div><span class="label">Email:</span> {$email}</div>
-    <div><span class="label">Autorisation de contact:</span> {$autorisationContact}</div>
-    <div><span class="label">Autorisation de newsletter:</span> {$autorisationNewsletter}</div>
-    <div><span class="label">Date et heure:</span> {$dateTime}</div>
+<div class="data-item" data-post-code="{$postCode}" data-type-encombrement="{$typeEncombrement}">
+    <div class="address"><span class="label">Adresse:</span> {$adresse}, {$numero}, {$postCode} {$municipality}</div>
+    <div class="type"><span class="label">Type d'encombrement:</span> {$typeEncombrement}</div>
+    <div class="name"><span class="label">Nom:</span> {$name}</div>
+    <div class="first-name"><span class="label">Prénom:</span> {$firstName}</div>
+    <div class="email"><span class="label">Email:</span> {$email}</div>
+    <div class="contact-auth"><span class="label">Autorisation de contact:</span> {$autorisationContact}</div>
+    <div class="newsletter-auth"><span class="label">Autorisation de newsletter:</span> {$autorisationNewsletter}</div>
+    <div class="datetime"><span class="label">Date et heure:</span> {$dateTime}</div>
 </div>
 HTML;
+
         }
 
         $html .= '</div>';
