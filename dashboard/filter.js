@@ -1,22 +1,26 @@
-let totalCount;
 function applyCommuneFilter() {
-  if (typeof selectedCommune !== "undefined" && selectedCommune) {
+  let totalCount = 0; // Compteur total de mails
+
+  if (typeof selectedCommune !== "undefined") {
     const dataItems = document.querySelectorAll(".data-item");
-    //On en profite pour compter les mail.
- totalCount = 0;
+    const communeFilter = selectedCommune.trim(); // Filtre de commune
+
     dataItems.forEach((item) => {
       const postCode = item.getAttribute("data-post-code").trim(); // Récupérer le code postal
-      const communeFilter = selectedCommune.trim();
-      if (postCode === communeFilter || communeFilter === "") {
-        item.style.display = ""; // Afficher
-        totalCount += 1;
-        console.log(totalCount);
+
+      if (communeFilter === "" || postCode === communeFilter) {
+        item.style.display = ""; // Afficher l'élément
+        totalCount += 1; // Incrémenter le compteur
       } else {
-        item.style.display = "none"; // Masquer
+        item.style.display = "none"; // Masquer l'élément
       }
     });
   }
-  document.querySelector(
-    "#communeCount"
-  ).textContent = `Nombre de mail pour la commune: ${totalCount}`;
+
+  // Mise à jour du texte avec le total de mails pour la commune sélectionnée
+  const message = selectedCommune.trim() === ""
+    ? `Nombre total de mails : ${totalCount}`
+    : `Nombre de mails pour la commune : ${totalCount}`;
+  
+  document.querySelector("#communeCount").textContent = message;
 }
