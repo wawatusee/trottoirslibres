@@ -13,8 +13,6 @@
     border-radius: 15px;
   }
   .filters {
-    background-color: var(--secondary-citron);
-    color: black;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -56,6 +54,10 @@ padding-left: 20px;
 #applyFilters:hover{
   color: var(--main-dark-color);
 }
+/*New header*/
+header{
 
-h1{  color: var(--secondary-citron);
-  text-align: center;}  
+  background-color: var(--first-color);
+  display: flex;
+}
+  

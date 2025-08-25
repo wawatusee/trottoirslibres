@@ -1,19 +1,20 @@
 <?php
 session_start();
 if (!isset($_SESSION['user'])) {
-	header("location: login.php");
-	exit();
+    header("location: login.php");
+    exit();
 }
 
 if (isset($_GET['logout'])) {
-	unset($_SESSION['user']);
-	header("location: login.php");
-	exit();
+    unset($_SESSION['user']);
+    header("location: login.php");
+    exit();
 }
 //FIN SESSION
 ?>
 <?php
 // dashboard/index.php
+//Classes et datas nécessaires
 // Inclure le fichier de la classe DatasJson
 require_once '../src/model/model_json.php';
 // Inclure les classes de vue
@@ -24,6 +25,27 @@ $datasJson = new DatasJson('../json/lastsrequests/');
 $jsonData = $datasJson->getJsonData();
 // Créer une instance de la classe JsonDataView en passant les données JSON
 $jsonDataView = new JsonDataView($jsonData);
+    $communes = [
+        "1000" => "Bruxelles",
+        "1030" => "Schaerbeek",
+        "1040" => "Etterbeek",
+        "1050" => "Ixelles",
+        "1060" => "Saint-Gilles",
+        "1070" => "Anderlecht",
+        "1080" => "Molenbeek-Saint-Jean",
+        "1081" => "Koekelberg",
+        "1082" => "Berchem-Sainte-Agathe",
+        "1083" => "Ganshoren",
+        "1090" => "Jette",
+        "1140" => "Evere",
+        "1150" => "Woluwe-Saint-Pierre",
+        "1160" => "Auderghem",
+        "1170" => "Watermael-Boitsfort",
+        "1180" => "Uccle",
+        "1190" => "Forest",
+        "1200" => "Woluwe-Saint-Lambert",
+        "1210" => "Saint-Josse-ten-Noode"
+    ];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,8 +59,31 @@ $jsonDataView = new JsonDataView($jsonData);
 </head>
 
 <body>
-    <!--filters are in the header-->
-    <?php require_once "../inc/header-dashboard.php" ?>
+
+
+    <h1>VrijetrottoirsLibres, Dashboard</h1>
+    <?php
+
+    // Récupérer la commune sélectionnée, ou initialiser une valeur vide
+    $selectedCommune = isset($_GET['commune']) ? $_GET['commune'] : ''; // Si la commune n'est pas définie, mettre une valeur vide
+    echo $selectedCommune ?>
+
+
+
+    <div class="filters">
+        <form method="GET" action="index.php">
+            <label for="filter-commune">Filtrer par commune :</label>
+            <select id="filter-commune" name="commune" onchange="this.form.submit()">
+                <option value="">Toutes les communes</option>
+                <?php foreach ($communes as $codePostal => $commune): ?>
+                    <option value="<?= $codePostal ?>" <?= ($codePostal == $selectedCommune) ? 'selected' : '' ?>>
+                        <?= $commune ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        </form>
+
+    </div>
     <section id="stats">
         <!-- Affichage du nombre total de mails pour la commune sélectionnée -->
         <div id="communeCount">Nombre de mails pour la commune: 0</div>
