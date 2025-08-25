@@ -1,0 +1,63 @@
+/* admin.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.admin-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.admin-nav li {
+    margin: 10px 0;
+}
+
+.admin-nav a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 18px;
+}
+
+.admin-nav a:hover {
+    text-decoration: underline;
+}
+
+.admin-content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="checkbox"][data-path="event.infospratiques.necessitedbook"] {
+    display: block;
+    margin: 1em 0 0.5em 0;
+}
+
+.admin-headers-btns {
+    padding:8px 16px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.admin-headers-btns:visited {
+    margin: 15px;
+    background-color: #007BFF;
+    color: #fff;
+}
