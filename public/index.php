@@ -23,6 +23,8 @@ $LexiqueView=new LexiqueView($lexique_datas);
 //Titre
 $titre=$LexiqueView->getSectionLexique("title")->$lang;
 //Fin titre
+//Consigne champs obligatoire
+$formrequiredfields=$LexiqueView->getSectionLexique("form-duty")->$lang;
 //adresse
 $addressView=$LexiqueView->getSectionLexique("address");
 $addressPlaceHolder=$addressView->$lang["address-place-holder"];
@@ -38,7 +40,9 @@ $adressStreetLabelsMunicipality=$adressStreetLabels["municipality"];
 $typeOfEncombrementView=$LexiqueView->getSectionLexique("encombrements")->$lang;
 $consigneEncombrements=$typeOfEncombrementView["consigne"];
 $objetsEncombrements=$typeOfEncombrementView["values-labels"];
-var_dump($objetsEncombrements);
+$autresEmcombrement=$typeOfEncombrementView["others"];
+//echo $autresEmcombrement;
+//var_dump($objetsEncombrements);
 $htmlContentObstacles= $LexiqueView->getObstaclesView($objetsEncombrements);
 //echo $htmlContentObstacles;
 //Fin type d'encombrements
@@ -101,80 +105,85 @@ $btnSendMail=$LexiqueView->getSectionLexique("send-mail")->$lang;
 <div class="container">
 <!--FORMULAIRE-->
     <form id="reportForm" enctype="multipart/form-data">
-    <h2><?=$titre?></h2>
- <!--Adresse-->
-    <!--<form action="#" method="post">-->
-            <div class="form-group" id="address" disabled>
-                <p class="consigne"><?=$adressConsigne?></p>
-                <label for="adresse"><?=$adressStreetLabelsStreet?></label>
-                <input-address><input type="text" name="adresse" id="adresse-id" placeholder="<?=$addressPlaceHolder?>" autocomplete="off"></input-address><br>
-                <label for="numero"><?=$adressStreetLabelsNumber?></label>
-                <input type="text" name="numero"  autocomplete="off" data-address="number">
-                <label><?=$adressStreetLabelsPostcode?></label>
-                <input type="text" autocomplete="off" data-address="post-code">
-                <label><?=$adressStreetLabelsMunicipality?></label>
-                <input type="text" autocomplete="off" data-address="municipality">
-                <input type="hidden" data-address="adnc" >
+        <h2><?=$titre?></h2>
+        <p class="consigne"><?=$formrequiredfields?>*</p>
+    <!--Adresse-->
+        <!--<form action="#" method="post">-->
+        <div class="form-group" id="address" disabled>
+            <p class="consigne"><?=$adressConsigne?></p>
+            <label for="adresse"><?=$adressStreetLabelsStreet?>*</label>
+            <input-address><input type="text" name="adresse" id="adresse-id" placeholder="<?=$addressPlaceHolder?>" autocomplete="off"></input-address><br>
+            <label for="numero"><?=$adressStreetLabelsNumber?>*</label>
+            <input type="text" name="numero"  autocomplete="off" data-address="number">
+            <label><?=$adressStreetLabelsPostcode?>*</label>
+            <input type="text" autocomplete="off" data-address="post-code">
+            <label><?=$adressStreetLabelsMunicipality?>*</label>
+            <input type="text" autocomplete="off" data-address="municipality">
+            <input type="hidden" data-address="adnc" >
+        </div>
+    <!--Fin adresse-->
+    <!--Type d'encombrement-->
+        <div class="form-group" id="type-encombrement-liste">
+            <p class="consigne"><?=$consigneEncombrements?></p>
+            <div class="obstaclesChoices">
+            <?=$htmlContentObstacles?>
             </div>
- <!--Fin adresse-->
- <!--Type d'encombrement-->
-            <div class="form-group" id="type-encombrement-liste">
-                <p class="consigne"><?=$consigneEncombrements?></p>
-                <div class="obstaclesChoices">
-                <?=$htmlContentObstacles?>
-                <!-- Ajout de la case à cocher "autres" -->
-                <div>
-                    <label for="autres">Autres</label>
-                    <input type="checkbox" id="autres" name="type-encombrement[]" value="autres">
-                </div>
-                <!-- Champ de saisie pour "autres" -->
-                <div id="autres-obstacle" class="hidden-saisie-autres">
-                    <label for="autres-obstacle-description">Description de l'obstacle</label>
-                    <input type="text" id="autres-obstacle-description" name="autres-obstacle-description">
-                </div>
-                </div>
+            <!-- case à cocher "autres" -->
+            <div>
+                
+                <input type="checkbox" id="autres" name="type-encombrement[]" value="autres">
+                <label for="autres"><?=$autresEmcombrement?></label>
             </div>
-<script src="js/type-encombrement-liste.js"></script>
- <!--Fin type d'encombrement-->
-<!--contact information-->
-            <div class="form-group" id="contact-information">
-                <p class="consigne"><?=$contactInformationConsigne?></p>
-                <label for="name"><?=$contactInformationName?> </label>
-                <input type="text" id="name" name="name" placeholder="<?=$contactInformationName?>" autocomplete="name">
-
-                <label for="first-name"><?=$contactInformationFirstName?> </label>
-                <input type="text" id="first-name" name="first-name" placeholder="<?=$contactInformationFirstName?>" autocomplete="given-name">
-
-                <label  for="email"><?=$contactInformationMail?> </label>
-                <input class=" " type="email" id="email" name="email" placeholder="<?=$contactInformationMail?>" autocomplete="email">
+            <!-- Champ de saisie pour "autres" -->
+            <div id="autres-obstacle" class="hidden-saisie-autres">
+                <label for="autres-obstacle-description">Description de l'obstacle</label>
+                <input type="text" id="autres-obstacle-description" name="autres-obstacle-description">
             </div>
-<!--Fin contact information-->
-<!--Autorisation conservation coordonnées-->
-            <div class="form-group" id="autorisation-contact">
-                <input type="checkbox" id="autorisation" name="autorisation">
-                <label for="autorisation"><?=$autorContactLabel?></label>
-            </div>
-            <div class="asterix"><?=$politiqueDatas?></div>
-<!--Fin autorisation conservation coordonnées-->
-<!--Autorisation réception newsletter-->
-            <div class="form-group" id="autorisation-newsletter">
-                <input type="checkbox" id="autorisation" name="recevoir-newsletter">
-                <label for="recevoir-newsletter"><?=$acceptNewsletterLabel?></label>
-            </div>
-<!--Fin autorisation réception newsletter-->
-<!--Récupération images-->
-            <div class="form-group" id="refs-imgs">
-            <label for="imageUpload"><?=$imgsLabel?> </label>
+        </div>
+    <script src="js/type-encombrement-liste.js"></script>
+    <!--Fin type d'encombrement-->
+        <!--Récupération images-->
+        <div class="form-group" id="refs-imgs">
+            <label for="imageUpload" ><img src="img/deco/apn.png" alt="<?=$imgsLabel?>"></label>
             <input type="file" id="imageUpload" name="image" accept="image/*">
             <img id="imagePreview" src="" alt="Aperçu de l'image" style="display:none; max-width: 100%; height: auto;">
-            </div>
-<!--Fin récupération images-->
+        </div>
+    <!--Fin récupération images-->
+    <!--contact information-->
+        <div class="form-group" id="contact-information">
+            <p class="consigne"><?=$contactInformationConsigne?></p>
+            <label for="name"><?=$contactInformationName?>*</label>
+            <input type="text" id="name" name="name" placeholder="<?=$contactInformationName?>" autocomplete="name">
+
+            <label for="first-name"><?=$contactInformationFirstName?>*</label>
+            <input type="text" id="first-name" name="first-name" placeholder="<?=$contactInformationFirstName?>" autocomplete="given-name">
+
+            <label  for="email"><?=$contactInformationMail?>*</label>
+            <input class=" " type="email" id="email" name="email" placeholder="<?=$contactInformationMail?>" autocomplete="email">
+        </div>
+    <!--Fin contact information-->
+    <!--Autorisation conservation coordonnées-->
+        <div class="form-group" id="autorisation-contact">
+            <input type="checkbox" id="autorisation" name="autorisation">
+            <label for="autorisation"><?=$autorContactLabel?></label>
+        </div>
+        <div class="asterix"><?=$politiqueDatas?></div>
+    <!--Fin autorisation conservation coordonnées-->
+    <!--Autorisation réception newsletter-->
+        <div class="form-group" id="autorisation-newsletter">
+            <input type="checkbox" id="autorisation" name="recevoir-newsletter">
+            <label for="recevoir-newsletter"><?=$acceptNewsletterLabel?></label>
+        </div>
+    <!--Fin autorisation réception newsletter-->
+
         <div class="btns-actions">
             <button class="submit" type="submit" id="btnEnvoyer"><?=$btnSubmitText?></button>
         </div>
-        </form>
+    </form>
 <!--FIN FORMULAIRE-->
-        <div><img class="logo" src="/public/img/deco/logo_blanc.svg" alt="lien vers le site walk"></div>
+        <div><img class="logo" src="img/deco/logo_blanc.svg" alt="lien vers le site walk">
+		<img class="logo" src="img/deco/logo-equal-blanc.png" alt="logo equal">
+		</div>
         <script src="js/reportform.js"></script>
     </div>
 
