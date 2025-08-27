@@ -28,7 +28,7 @@ h1 {
 
 .admin-nav a {
     text-decoration: none;
-    color: #007BFF;
+    color: var(--admin-blue);
     font-size: 18px;
 }
 
@@ -52,12 +52,17 @@ input[type="checkbox"][data-path="event.infospratiques.necessitedbook"] {
 .admin-headers-btns {
     padding:8px 16px;
     border-radius: 5px;
-    background-color: #007BFF;
+    background-color: var(--admin-blue);
+    color: #fff;
+}
+.admin-headers-btns a{
+
+    background-color: var(--admin-blue);
     color: #fff;
 }
 
 .admin-headers-btns:visited {
     margin: 15px;
-    background-color: #007BFF;
+    background-color: var(--admin-blue);
     color: #fff;
 }
