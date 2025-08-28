@@ -5,6 +5,16 @@ body {
     padding: 0;
     background-color: #f4f4f9;
 }
+:root{
+  --main-dark-color:#333;
+  --main-clear-color:#f5F5F5;
+  --first-color:#e65639;
+  --secondary-indigo:#2B254C;
+  --secondary-citron:#FFE475;
+  --grey-clear-color:#a8a9ad;
+  /*Admin css*/
+  --admin-blue:#007BFF;
+}
 
 .admin-container {
     max-width: 1200px;

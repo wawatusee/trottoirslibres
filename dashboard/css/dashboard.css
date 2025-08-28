@@ -60,4 +60,8 @@ header{
   background-color: var(--first-color);
   display: flex;
 }
+.filters{
+  background-color: white;
+  
+}
   
