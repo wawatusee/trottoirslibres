@@ -1,78 +1,127 @@
-/* admin.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-}
-:root{
-  --main-dark-color:#333;
-  --main-clear-color:#f5F5F5;
-  --first-color:#e65639;
-  --secondary-indigo:#2B254C;
-  --secondary-citron:#FFE475;
-  --grey-clear-color:#a8a9ad;
-  /*Admin css*/
-  --admin-blue:#007BFF;
+/* =====================
+   Variables & Base
+===================== */
+:root {
+  --main-dark-color: #333;
+  --main-clear-color: #f5f5f5;
+  --first-color: #e65639;
+  --secondary-indigo: #2B254C;
+  --secondary-citron: #FFE475;
+  --grey-clear-color: #a8a9ad;
+  --admin-blue: #007BFF;
+  --admin-blue-dark: #0056b3;
+  --admin-danger: #dc3545;
+  --admin-success: #28a745;
+  --bg-light: #f4f4f9;
+  --text-dark: #333;
 }
 
-.admin-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
 }
 
 h1 {
-    text-align: center;
-    color: #333;
+  text-align: center;
+  color: var(--main-dark-color);
+  margin: 20px 0;
 }
 
-.admin-nav ul {
-    list-style-type: none;
-    padding: 0;
+/* =====================
+   Header / Navigation
+===================== */
+header {
+  background: var(--admin-blue);
+  color: #fff;
+  padding: 15px 20px;
 }
 
-.admin-nav li {
-    margin: 10px 0;
-}
-
-.admin-nav a {
-    text-decoration: none;
-    color: var(--admin-blue);
-    font-size: 18px;
-}
-
-.admin-nav a:hover {
-    text-decoration: underline;
-}
-
-.admin-content {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-input[type="checkbox"][data-path="event.infospratiques.necessitedbook"] {
-    display: block;
-    margin: 1em 0 0.5em 0;
-}
-
+.admin-nav a,
 .admin-headers-btns {
-    padding:8px 16px;
-    border-radius: 5px;
-    background-color: var(--admin-blue);
-    color: #fff;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: var(--admin-blue);
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: bold;
 }
-.admin-headers-btns a{
-
-    background-color: var(--admin-blue);
-    color: #fff;
+.admin-nav a:hover,
+.admin-headers-btns:hover {
+  background-color: var(--secondary-citron);
+  color: var(--main-dark-color);
 }
 
-.admin-headers-btns:visited {
-    margin: 15px;
-    background-color: var(--admin-blue);
-    color: #fff;
+/* =====================
+   Table
+===================== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.table th {
+  background: var(--admin-blue);
+  color: #fff;
+  text-align: left;
+}
+.table tr:nth-child(even) {
+  background: var(--main-clear-color);
+}
+.table input[type="email"] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* =====================
+   Buttons
+===================== */
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background: var(--admin-blue);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: var(--admin-blue-dark);
+}
+.btn-danger {
+  background: var(--admin-danger);
+}
+.btn-success {
+  background: var(--admin-success);
+}
+
+/* =====================
+   Messages
+===================== */
+.message {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.message.success {
+  background: #d4edda;
+  color: #155724;
+}
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
 }

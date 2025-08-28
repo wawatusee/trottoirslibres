@@ -38,7 +38,8 @@ $array_destinataires = $destinataires->get_arrayDatas();
 </header>
 
 <main>
-    <table id="destinatairesTable">
+    <div id="message" class="message"></div>
+    <table id="destinatairesTable" class="table">
         <thead>
             <tr>
                 <th>Commune cible</th>
@@ -48,7 +49,7 @@ $array_destinataires = $destinataires->get_arrayDatas();
         </thead>
         <tbody></tbody>
     </table>
-    <div id="message"></div>
+    
 </main>
 
 <script>
