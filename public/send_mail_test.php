@@ -15,7 +15,8 @@ $body = $_POST['body'] ?? '';
 $formObject = json_decode($_POST['formObject'] ?? '{}', true);
 
 // Vérification du code postal
-$postcode = $formObject['address']['postcode'] ?? null;
+$postcode = $formObject['address']['postcode'] ?? $formObject['address']['postCode'] ?? '';
+
 
 if (!$postcode || !isset($destinataires[$postcode])) {
     echo json_encode([
