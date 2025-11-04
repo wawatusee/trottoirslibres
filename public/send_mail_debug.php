@@ -7,7 +7,7 @@ $logFile = __DIR__ . '/debug_mail.log';
 file_put_contents($logFile, "=== Nouvelle exécution : " . date('Y-m-d H:i:s') . " ===\n", FILE_APPEND);
 
 // 1️⃣ Chargement des destinataires
-require_once("../src/model/ArrayDatas.php");
+require_once("../src/model/arrayDatas.php");
 $destinatairesDatas = new ArrayDatas("../json/destinataires.json");
 $destinataires = $destinatairesDatas->get_arrayDatas();
 file_put_contents($logFile, "Destinataires chargés : " . print_r($destinataires, true) . "\n", FILE_APPEND);
@@ -62,7 +62,6 @@ if ($image && $image['error'] === UPLOAD_ERR_OK) {
 
 // 6️⃣ Détermination du destinataire
 $postcode = $formObject['address']['postcode'] ?? $formObject['address']['postCode'] ?? '';
-
 $to = $destinataires[$postcode] ?? 'info@walk.brussels';
 file_put_contents($logFile, "📬 Destinataire sélectionné : $to (postcode=$postcode)\n", FILE_APPEND);
 
@@ -83,9 +82,19 @@ $headers = 'From: info@vrijetrottoirslibres.be' . "\r\n" .
 
 file_put_contents($logFile, "✉️ Headers : " . print_r($headers, true) . "\n", FILE_APPEND);
 
-// 9️⃣ Envoi du mail
+// 9️⃣ Debug de l'envoi de mail
 $mailSent = mail($to, $objet, $body, $headers);
 file_put_contents($logFile, "Résultat mail(): " . ($mailSent ? "✅ OK" : "❌ Échec") . "\n", FILE_APPEND);
+
+// Informations supplémentaires pour le debug
+if (!$mailSent) {
+    $lastError = error_get_last();
+    if ($lastError) {
+        file_put_contents($logFile, "💥 Dernière erreur PHP : " . print_r($lastError, true) . "\n", FILE_APPEND);
+    } else {
+        file_put_contents($logFile, "💥 Pas d'erreur PHP remontée mais mail() a échoué.\n", FILE_APPEND);
+    }
+}
 
 // 🔟 Réponse JSON
 if ($mailSent) {

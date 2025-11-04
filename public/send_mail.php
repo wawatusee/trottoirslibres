@@ -1,4 +1,9 @@
 <?php
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+ini_set('error_log', __DIR__ . '/send_mail_error.log');
+error_reporting(E_ALL);
+
 // public/send_mail.php - version prod-ready
 header('Content-Type: application/json; charset=UTF-8');
 error_reporting(E_ALL);
@@ -21,7 +26,7 @@ function log_line($msg) {
 }
 
 // Charger la classe ArrayDatas et lire destinataires
-require_once("../src/model/ArrayDatas.php");
+require_once("../src/model/arrayDatas.php");
 $destinatairesDatas = new ArrayDatas("../json/destinataires.json");
 $destinataires = is_array($destinatairesDatas->get_arrayDatas()) ? $destinatairesDatas->get_arrayDatas() : [];
 
@@ -191,3 +196,4 @@ if ($mailSent) {
 }
 
 exit;
+?>

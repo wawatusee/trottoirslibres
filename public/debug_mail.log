@@ -652,3 +652,41 @@ Bcc: kieran1@hotmail.fr
 Content-Type: text/html; charset=UTF-8
 
 Résultat mail(): ❌ Échec
+=== Nouvelle exécution : 2025-11-04 20:42:11 ===
+Destinataires chargés : Array
+(
+    [1000] => cabinet.b.dhondt@brucity.be
+    [1030] => kieran1@hotmail.com
+    [1040] => caro.joway@etterbeek.brussels
+    [1050] => yves.rouyet@ixelles.brussels
+    [1060] => cmorenville@stgilles.brussels
+    [1070] => smullerhubsch@anderlecht.brussels
+    [1080] => aachaoui@molenbeek.irisnet.be
+    [1081] => mbijnens@koekelberg.brussels
+    [1082] => twauthier@berchem.brussels
+    [1083] => magalicornelissen@gmail.com
+    [1090] => ndeswaef@jette.brussels
+    [1140] => pfreson@evere.brussels
+    [1150] => apirson@woluwe1150.be
+    [1160] => mpillois@auderghem.brussels
+    [1170] => mnstassart@wb1170.brussels
+    [1180] => twyngaard@uccle.brussels
+    [1190] => amugabo@forest.brussels
+    [1200] => g.matgen@woluwe1200.be
+    [1210] => bgm@sjtn.brussels
+    [walk] => info@walk.brussels
+    [vrijetrottoirslibres] => info@vrijetrottoirslibres.be
+    [autreobstacle] => autre@vrijetrottoirslibres.be
+)
+
+POST brut : Array
+(
+)
+
+FILES brut : Array
+(
+)
+
+Objet: 
+FormObject décodé: 
+❌ Données invalides : bloc principal non exécuté.

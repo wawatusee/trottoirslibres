@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Test send_mail.php</title>
+<meta charset="UTF-8">
+<title>Test envoi mail</title>
 </head>
 <body>
-  <h1>Test manuel d’envoi de mail</h1>
-  <button id="send">Simuler l’envoi</button>
 
-  <pre id="result"></pre>
+<form id="testMailForm">
+    <input type="text" name="objet" placeholder="Objet du mail" value="Test local"><br>
+    <textarea name="body" placeholder="Corps du mail">Ceci est un test depuis le front</textarea><br>
+    <input type="file" name="image"><br>
+    <button type="submit">Envoyer</button>
+</form>
 
-  <script>
-    document.getElementById('send').addEventListener('click', async () => {
-      const fakeFormObject = {
+<script>
+document.getElementById('testMailForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    // On simule le formObject JSON
+    const formObject = {
         address: {
-          adresse: "Rue du Test",
-          numero: "42",
-          postCode: "1050",
-          municipality: "Schaerbeek",
-          adnc: "1050-Ixelles"
+            adresse: "Rue du Test",
+            numero: "42",
+            postcode: "1050",
+            municipality: "Ixelles",
+            adnc: "1050-Ixelles"
         },
         typeEncombrement: ["vélo", "panneau"],
         contactInformation: {
-          name: "Dupont",
-          "first-name": "Jean",
-          email: "jean.dupont@example.com"
+            name: "Dupont",
+            "first-name": "Jean",
+            email: "jean.dupont@example.com"
         },
         autorisationContact: true,
         autorisationNewsletter: false
-      };
+    };
 
-      const formData = new FormData();
-      formData.append("objet", "Test local d’envoi");
-      formData.append("body", "<p>Ceci est un test local de l’application Vrije Trottoirs Libres</p>");
-      formData.append("formObject", JSON.stringify(fakeFormObject));
+    formData.set('formObject', JSON.stringify(formObject));
 
-      // ⚠️ Mets ici ton script cible (send_mail.php ou send_mail_debug.php)
-      const response = await fetch("send_mail_debug.php", {
-        method: "POST",
+    const response = await fetch('send_mail_debug.php', {
+        method: 'POST',
         body: formData
-      });
-
-      const result = await response.text();
-      document.getElementById('result').textContent = result;
-      console.log("Réponse brute du serveur :", result);
     });
-  </script>
+
+    const data = await response.json();
+    console.log(data);
+    alert(JSON.stringify(data, null, 2));
+});
+</script>
+
 </body>
 </html>
