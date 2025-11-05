@@ -60,8 +60,26 @@ header{
   background-color: var(--first-color);
   display: flex;
 }
+
+.admin-headers-btns {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #4c92a3;
+  color: var(--main-dark-color);
+  text-decoration: none;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.admin-headers-btns:hover {
+  background-color: var(--main-clear-color);
+  color: var(--first-color);
+}
+/*Zone de filtres*/
 .filters{
   background-color: white;
+  color: black;
   
 }
   
