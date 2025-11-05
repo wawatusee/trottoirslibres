@@ -1,0 +1,15 @@
+.data-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Une colonne de 1 fraction et une colonne de 2 fractions */
+    grid-gap: 10px; /* Espacement entre les cellules de la grille */
+  }
+  
+  .data-item {
+    grid-column: span 1; /* L'élément s'étend sur 1 colonne */
+    grid-row: auto; /* L'élément s'aligne automatiquement sur une ligne */
+    border-style:solid,O.1em, var(--secondary-citron);
+    border-style: solid;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  

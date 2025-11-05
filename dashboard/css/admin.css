@@ -1,0 +1,127 @@
+/* =====================
+   Variables & Base
+===================== */
+:root {
+  --main-dark-color: #333;
+  --main-clear-color: #f5f5f5;
+  --first-color: #e65639;
+  --secondary-indigo: #2B254C;
+  --secondary-citron: #FFE475;
+  --grey-clear-color: #a8a9ad;
+  --admin-blue: #007BFF;
+  --admin-blue-dark: #0056b3;
+  --admin-danger: #dc3545;
+  --admin-success: #28a745;
+  --bg-light: #f4f4f9;
+  --text-dark: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+h1 {
+  text-align: center;
+  color: var(--main-dark-color);
+  margin: 20px 0;
+}
+
+/* =====================
+   Header / Navigation
+===================== */
+header {
+  background: var(--admin-blue);
+  color: #fff;
+  padding: 15px 20px;
+}
+
+.admin-nav a,
+.admin-headers-btns {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: var(--admin-blue);
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.admin-nav a:hover,
+.admin-headers-btns:hover {
+  background-color: var(--secondary-citron);
+  color: var(--main-dark-color);
+}
+
+/* =====================
+   Table
+===================== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.table th {
+  background: var(--admin-blue);
+  color: #fff;
+  text-align: left;
+}
+.table tr:nth-child(even) {
+  background: var(--main-clear-color);
+}
+.table input[type="email"] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* =====================
+   Buttons
+===================== */
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background: var(--admin-blue);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: var(--admin-blue-dark);
+}
+.btn-danger {
+  background: var(--admin-danger);
+}
+.btn-success {
+  background: var(--admin-success);
+}
+
+/* =====================
+   Messages
+===================== */
+.message {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.message.success {
+  background: #d4edda;
+  color: #155724;
+}
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+}

@@ -1,0 +1,692 @@
+=== Nouvelle exécution : 2025-11-04 19:14:57 ===
+Destinataires chargés : Array
+(
+    [1000] => cabinet.b.dhondt@brucity.be
+    [1030] => kieran1@hotmail.com
+    [1040] => caro.joway@etterbeek.brussels
+    [1050] => yves.rouyet@ixelles.brussels
+    [1060] => cmorenville@stgilles.brussels
+    [1070] => smullerhubsch@anderlecht.brussels
+    [1080] => aachaoui@molenbeek.irisnet.be
+    [1081] => mbijnens@koekelberg.brussels
+    [1082] => twauthier@berchem.brussels
+    [1083] => magalicornelissen@gmail.com
+    [1090] => ndeswaef@jette.brussels
+    [1140] => pfreson@evere.brussels
+    [1150] => apirson@woluwe1150.be
+    [1160] => mpillois@auderghem.brussels
+    [1170] => mnstassart@wb1170.brussels
+    [1180] => twyngaard@uccle.brussels
+    [1190] => amugabo@forest.brussels
+    [1200] => g.matgen@woluwe1200.be
+    [1210] => bgm@sjtn.brussels
+    [walk] => info@walk.brussels
+    [vrijetrottoirslibres] => info@vrijetrottoirslibres.be
+    [autreobstacle] => autre@vrijetrottoirslibres.be
+)
+
+POST brut : Array
+(
+)
+
+FILES brut : Array
+(
+)
+
+Objet: 
+FormObject décodé: 
+❌ Données invalides : bloc principal non exécuté.
+=== Nouvelle exécution : 2025-11-04 19:17:47 ===
+Destinataires chargés : Array
+(
+    [1000] => cabinet.b.dhondt@brucity.be
+    [1030] => kieran1@hotmail.com
+    [1040] => caro.joway@etterbeek.brussels
+    [1050] => yves.rouyet@ixelles.brussels
+    [1060] => cmorenville@stgilles.brussels
+    [1070] => smullerhubsch@anderlecht.brussels
+    [1080] => aachaoui@molenbeek.irisnet.be
+    [1081] => mbijnens@koekelberg.brussels
+    [1082] => twauthier@berchem.brussels
+    [1083] => magalicornelissen@gmail.com
+    [1090] => ndeswaef@jette.brussels
+    [1140] => pfreson@evere.brussels
+    [1150] => apirson@woluwe1150.be
+    [1160] => mpillois@auderghem.brussels
+    [1170] => mnstassart@wb1170.brussels
+    [1180] => twyngaard@uccle.brussels
+    [1190] => amugabo@forest.brussels
+    [1200] => g.matgen@woluwe1200.be
+    [1210] => bgm@sjtn.brussels
+    [walk] => info@walk.brussels
+    [vrijetrottoirslibres] => info@vrijetrottoirslibres.be
+    [autreobstacle] => autre@vrijetrottoirslibres.be
+)
+
+POST brut : Array
+(
+    [objet] => Test local d’envoi
+    [body] => <p>Ceci est un test local de l’application Vrije Trottoirs Libres</p>
+    [formObject] => {"address":{"adresse":"Rue du Test","numero":"42","postCode":"1030","municipality":"Schaerbeek","adnc":"1030-Schaerbeek"},"typeEncombrement":["vélo","panneau"],"contactInformation":{"name":"Dupont","first-name":"Jean","email":"jean.dupont@example.com"},"autorisationContact":true,"autorisationNewsletter":false}
+)
+
+FILES brut : Array
+(
+)
+
+Objet: Test local d’envoi
+FormObject décodé: Array
+(
+    [address] => Array
+        (
+            [adresse] => Rue du Test
+            [numero] => 42
+            [postCode] => 1030
+            [municipality] => Schaerbeek
+            [adnc] => 1030-Schaerbeek
+        )
+
+    [typeEncombrement] => Array
+        (
+            [0] => vélo
+            [1] => panneau
+        )
+
+    [contactInformation] => Array
+        (
+            [name] => Dupont
+            [first-name] => Jean
+            [email] => jean.dupont@example.com
+        )
+
+    [autorisationContact] => 1
+    [autorisationNewsletter] => 
+)
+
+✅ JSON enregistré : D:\Dev\Projets\walk-trottoirslibres\site\public/../json/lastsrequests/2025-11-04_19-17-47_1030-Schaerbeek.json
+⚠️ Pas d'image ou erreur upload.
+📬 Destinataire sélectionné : info@walk.brussels (postcode=)
+✉️ Headers : From: info@vrijetrottoirslibres.be
+Reply-To: info@vrijetrottoirslibres.be
+Cc: info@walk.brussels.com
+Bcc: kieran1@hotmail.fr
+Content-Type: text/html; charset=UTF-8
+
+Résultat mail(): ❌ Échec
+=== Nouvelle exécution : 2025-11-04 19:49:25 ===
+Destinataires chargés : Array
+(
+    [1000] => cabinet.b.dhondt@brucity.be
+    [1030] => kieran1@hotmail.com
+    [1040] => caro.joway@etterbeek.brussels
+    [1050] => yves.rouyet@ixelles.brussels
+    [1060] => cmorenville@stgilles.brussels
+    [1070] => smullerhubsch@anderlecht.brussels
+    [1080] => aachaoui@molenbeek.irisnet.be
+    [1081] => mbijnens@koekelberg.brussels
+    [1082] => twauthier@berchem.brussels
+    [1083] => magalicornelissen@gmail.com
+    [1090] => ndeswaef@jette.brussels
+    [1140] => pfreson@evere.brussels
+    [1150] => apirson@woluwe1150.be
+    [1160] => mpillois@auderghem.brussels
+    [1170] => mnstassart@wb1170.brussels
+    [1180] => twyngaard@uccle.brussels
+    [1190] => amugabo@forest.brussels
+    [1200] => g.matgen@woluwe1200.be
+    [1210] => bgm@sjtn.brussels
+    [walk] => info@walk.brussels
+    [vrijetrottoirslibres] => info@vrijetrottoirslibres.be
+    [autreobstacle] => autre@vrijetrottoirslibres.be
+)
+
+POST brut : Array
+(
+    [objet] => Test local d’envoi
+    [body] => <p>Ceci est un test local de l’application Vrije Trottoirs Libres</p>
+    [formObject] => {"address":{"adresse":"Rue du Test","numero":"42","postCode":"1030","municipality":"Schaerbeek","adnc":"1030-Schaerbeek"},"typeEncombrement":["vélo","panneau"],"contactInformation":{"name":"Dupont","first-name":"Jean","email":"jean.dupont@example.com"},"autorisationContact":true,"autorisationNewsletter":false}
+)
+
+FILES brut : Array
+(
+)
+
+Objet: Test local d’envoi
+FormObject décodé: Array
+(
+    [address] => Array
+        (
+            [adresse] => Rue du Test
+            [numero] => 42
+            [postCode] => 1030
+            [municipality] => Schaerbeek
+            [adnc] => 1030-Schaerbeek
+        )
+
+    [typeEncombrement] => Array
+        (
+            [0] => vélo
+            [1] => panneau
+        )
+
+    [contactInformation] => Array
+        (
+            [name] => Dupont
+            [first-name] => Jean
+            [email] => jean.dupont@example.com
+        )
+
+    [autorisationContact] => 1
+    [autorisationNewsletter] => 
+)
+
+✅ JSON enregistré : D:\Dev\Projets\walk-trottoirslibres\site\public/../json/lastsrequests/2025-11-04_19-49-25_1030-Schaerbeek.json
+⚠️ Pas d'image ou erreur upload.
+📬 Destinataire sélectionné : info@walk.brussels (postcode=)
+✉️ Headers : From: info@vrijetrottoirslibres.be
+Reply-To: info@vrijetrottoirslibres.be
+Cc: info@walk.brussels.com
+Bcc: kieran1@hotmail.fr
+Content-Type: text/html; charset=UTF-8
+
+Résultat mail(): ❌ Échec
+=== Nouvelle exécution : 2025-11-04 19:55:07 ===
+Destinataires chargés : Array
+(
+    [1000] => cabinet.b.dhondt@brucity.be
+    [1030] => kieran1@hotmail.com
+    [1040] => caro.joway@etterbeek.brussels
+    [1050] => yves.rouyet@ixelles.brussels
+    [1060] => cmorenville@stgilles.brussels
+    [1070] => smullerhubsch@anderlecht.brussels
+    [1080] => aachaoui@molenbeek.irisnet.be
+    [1081] => mbijnens@koekelberg.brussels
+    [1082] => twauthier@berchem.brussels
+    [1083] => magalicornelissen@gmail.com
+    [1090] => ndeswaef@jette.brussels
+    [1140] => pfreson@evere.brussels
+    [1150] => apirson@woluwe1150.be
+    [1160] => mpillois@auderghem.brussels
+    [1170] => mnstassart@wb1170.brussels
+    [1180] => twyngaard@uccle.brussels
+    [1190] => amugabo@forest.brussels
+    [1200] => g.matgen@woluwe1200.be
+    [1210] => bgm@sjtn.brussels
+    [walk] => info@walk.brussels
+    [vrijetrottoirslibres] => info@vrijetrottoirslibres.be
+    [autreobstacle] => autre@vrijetrottoirslibres.be
+)
+
+POST brut : Array
+(
+    [objet] => Test local d’envoi
+    [body] => <p>Ceci est un test local de l’application Vrije Trottoirs Libres</p>
+    [formObject] => {"address":{"adresse":"Rue du Test","numero":"42","postCode":"1030","municipality":"Schaerbeek","adnc":"1030-Schaerbeek"},"typeEncombrement":["vélo","panneau"],"contactInformation":{"name":"Dupont","first-name":"Jean","email":"jean.dupont@example.com"},"autorisationContact":true,"autorisationNewsletter":false}
+)
+
+FILES brut : Array
+(
+)
+
+Objet: Test local d’envoi
+FormObject décodé: Array
+(
+    [address] => Array
+        (
+            [adresse] => Rue du Test
+            [numero] => 42
+            [postCode] => 1030
+            [municipality] => Schaerbeek
+            [adnc] => 1030-Schaerbeek
+        )
+
+    [typeEncombrement] => Array
+        (
+            [0] => vélo
+            [1] => panneau
+        )
+
+    [contactInformation] => Array
+        (
+            [name] => Dupont
+            [first-name] => Jean
+            [email] => jean.dupont@example.com
+        )
+
+    [autorisationContact] => 1
+    [autorisationNewsletter] => 
+)
+
+✅ JSON enregistré : D:\Dev\Projets\walk-trottoirslibres\site\public/../json/lastsrequests/2025-11-04_19-55-07_1030-Schaerbeek.json
+⚠️ Pas d'image ou erreur upload.
+📬 Destinataire sélectionné : kieran1@hotmail.com (postcode=1030)
+✉️ Headers : From: info@vrijetrottoirslibres.be
+Reply-To: info@vrijetrottoirslibres.be
+Cc: info@walk.brussels.com
+Bcc: kieran1@hotmail.fr
+Content-Type: text/html; charset=UTF-8
+
+Résultat mail(): ❌ Échec
+=== Nouvelle exécution : 2025-11-04 20:10:29 ===
+Destinataires chargés : Array
+(
+    [1000] => cabinet.b.dhondt@brucity.be
+    [1030] => kieran1@hotmail.com
+    [1040] => caro.joway@etterbeek.brussels
+    [1050] => yves.rouyet@ixelles.brussels
+    [1060] => cmorenville@stgilles.brussels
+    [1070] => smullerhubsch@anderlecht.brussels
+    [1080] => aachaoui@molenbeek.irisnet.be
+    [1081] => mbijnens@koekelberg.brussels
+    [1082] => twauthier@berchem.brussels
+    [1083] => magalicornelissen@gmail.com
+    [1090] => ndeswaef@jette.brussels
+    [1140] => pfreson@evere.brussels
+    [1150] => apirson@woluwe1150.be
+    [1160] => mpillois@auderghem.brussels
+    [1170] => mnstassart@wb1170.brussels
+    [1180] => twyngaard@uccle.brussels
+    [1190] => amugabo@forest.brussels
+    [1200] => g.matgen@woluwe1200.be
+    [1210] => bgm@sjtn.brussels
+    [walk] => info@walk.brussels
+    [vrijetrottoirslibres] => info@vrijetrottoirslibres.be
+    [autreobstacle] => autre@vrijetrottoirslibres.be
+)
+
+POST brut : Array
+(
+    [objet] => Test local d’envoi
+    [body] => <p>Ceci est un test local de l’application Vrije Trottoirs Libres</p>
+    [formObject] => {"address":{"adresse":"Rue du Test","numero":"42","postCode":"1030","municipality":"Schaerbeek","adnc":"1030-Schaerbeek"},"typeEncombrement":["vélo","panneau"],"contactInformation":{"name":"Dupont","first-name":"Jean","email":"jean.dupont@example.com"},"autorisationContact":true,"autorisationNewsletter":false}
+)
+
+FILES brut : Array
+(
+)
+
+Objet: Test local d’envoi
+FormObject décodé: Array
+(
+    [address] => Array
+        (
+            [adresse] => Rue du Test
+            [numero] => 42
+            [postCode] => 1030
+            [municipality] => Schaerbeek
+            [adnc] => 1030-Schaerbeek
+        )
+
+    [typeEncombrement] => Array
+        (
+            [0] => vélo
+            [1] => panneau
+        )
+
+    [contactInformation] => Array
+        (
+            [name] => Dupont
+            [first-name] => Jean
+            [email] => jean.dupont@example.com
+        )
+
+    [autorisationContact] => 1
+    [autorisationNewsletter] => 
+)
+
+✅ JSON enregistré : D:\Dev\Projets\walk-trottoirslibres\site\public/../json/lastsrequests/2025-11-04_20-10-29_1030-Schaerbeek.json
+⚠️ Pas d'image ou erreur upload.
+📬 Destinataire sélectionné : kieran1@hotmail.com (postcode=1030)
+✉️ Headers : From: info@vrijetrottoirslibres.be
+Reply-To: info@vrijetrottoirslibres.be
+Cc: info@walk.brussels.com
+Bcc: kieran1@hotmail.fr
+Content-Type: text/html; charset=UTF-8
+
+Résultat mail(): ❌ Échec
+=== Nouvelle exécution : 2025-11-04 20:10:54 ===
+Destinataires chargés : Array
+(
+    [1000] => cabinet.b.dhondt@brucity.be
+    [1030] => kieran1@hotmail.com
+    [1040] => caro.joway@etterbeek.brussels
+    [1050] => yves.rouyet@ixelles.brussels
+    [1060] => cmorenville@stgilles.brussels
+    [1070] => smullerhubsch@anderlecht.brussels
+    [1080] => aachaoui@molenbeek.irisnet.be
+    [1081] => mbijnens@koekelberg.brussels
+    [1082] => twauthier@berchem.brussels
+    [1083] => magalicornelissen@gmail.com
+    [1090] => ndeswaef@jette.brussels
+    [1140] => pfreson@evere.brussels
+    [1150] => apirson@woluwe1150.be
+    [1160] => mpillois@auderghem.brussels
+    [1170] => mnstassart@wb1170.brussels
+    [1180] => twyngaard@uccle.brussels
+    [1190] => amugabo@forest.brussels
+    [1200] => g.matgen@woluwe1200.be
+    [1210] => bgm@sjtn.brussels
+    [walk] => info@walk.brussels
+    [vrijetrottoirslibres] => info@vrijetrottoirslibres.be
+    [autreobstacle] => autre@vrijetrottoirslibres.be
+)
+
+POST brut : Array
+(
+    [objet] => Test local d’envoi
+    [body] => <p>Ceci est un test local de l’application Vrije Trottoirs Libres</p>
+    [formObject] => {"address":{"adresse":"Rue du Test","numero":"42","postCode":"1030","municipality":"Schaerbeek","adnc":"1030-Schaerbeek"},"typeEncombrement":["vélo","panneau"],"contactInformation":{"name":"Dupont","first-name":"Jean","email":"jean.dupont@example.com"},"autorisationContact":true,"autorisationNewsletter":false}
+)
+
+FILES brut : Array
+(
+)
+
+Objet: Test local d’envoi
+FormObject décodé: Array
+(
+    [address] => Array
+        (
+            [adresse] => Rue du Test
+            [numero] => 42
+            [postCode] => 1030
+            [municipality] => Schaerbeek
+            [adnc] => 1030-Schaerbeek
+        )
+
+    [typeEncombrement] => Array
+        (
+            [0] => vélo
+            [1] => panneau
+        )
+
+    [contactInformation] => Array
+        (
+            [name] => Dupont
+            [first-name] => Jean
+            [email] => jean.dupont@example.com
+        )
+
+    [autorisationContact] => 1
+    [autorisationNewsletter] => 
+)
+
+✅ JSON enregistré : D:\Dev\Projets\walk-trottoirslibres\site\public/../json/lastsrequests/2025-11-04_20-10-54_1030-Schaerbeek.json
+⚠️ Pas d'image ou erreur upload.
+📬 Destinataire sélectionné : kieran1@hotmail.com (postcode=1030)
+✉️ Headers : From: info@vrijetrottoirslibres.be
+Reply-To: info@vrijetrottoirslibres.be
+Cc: info@walk.brussels.com
+Bcc: kieran1@hotmail.fr
+Content-Type: text/html; charset=UTF-8
+
+Résultat mail(): ❌ Échec
+=== Nouvelle exécution : 2025-11-04 20:11:21 ===
+Destinataires chargés : Array
+(
+    [1000] => cabinet.b.dhondt@brucity.be
+    [1030] => kieran1@hotmail.com
+    [1040] => caro.joway@etterbeek.brussels
+    [1050] => yves.rouyet@ixelles.brussels
+    [1060] => cmorenville@stgilles.brussels
+    [1070] => smullerhubsch@anderlecht.brussels
+    [1080] => aachaoui@molenbeek.irisnet.be
+    [1081] => mbijnens@koekelberg.brussels
+    [1082] => twauthier@berchem.brussels
+    [1083] => magalicornelissen@gmail.com
+    [1090] => ndeswaef@jette.brussels
+    [1140] => pfreson@evere.brussels
+    [1150] => apirson@woluwe1150.be
+    [1160] => mpillois@auderghem.brussels
+    [1170] => mnstassart@wb1170.brussels
+    [1180] => twyngaard@uccle.brussels
+    [1190] => amugabo@forest.brussels
+    [1200] => g.matgen@woluwe1200.be
+    [1210] => bgm@sjtn.brussels
+    [walk] => info@walk.brussels
+    [vrijetrottoirslibres] => info@vrijetrottoirslibres.be
+    [autreobstacle] => autre@vrijetrottoirslibres.be
+)
+
+POST brut : Array
+(
+    [objet] => Test local d’envoi
+    [body] => <p>Ceci est un test local de l’application Vrije Trottoirs Libres</p>
+    [formObject] => {"address":{"adresse":"Rue du Test","numero":"42","postCode":"1030","municipality":"Schaerbeek","adnc":"1030-Schaerbeek"},"typeEncombrement":["vélo","panneau"],"contactInformation":{"name":"Dupont","first-name":"Jean","email":"jean.dupont@example.com"},"autorisationContact":true,"autorisationNewsletter":false}
+)
+
+FILES brut : Array
+(
+)
+
+Objet: Test local d’envoi
+FormObject décodé: Array
+(
+    [address] => Array
+        (
+            [adresse] => Rue du Test
+            [numero] => 42
+            [postCode] => 1030
+            [municipality] => Schaerbeek
+            [adnc] => 1030-Schaerbeek
+        )
+
+    [typeEncombrement] => Array
+        (
+            [0] => vélo
+            [1] => panneau
+        )
+
+    [contactInformation] => Array
+        (
+            [name] => Dupont
+            [first-name] => Jean
+            [email] => jean.dupont@example.com
+        )
+
+    [autorisationContact] => 1
+    [autorisationNewsletter] => 
+)
+
+✅ JSON enregistré : D:\Dev\Projets\walk-trottoirslibres\site\public/../json/lastsrequests/2025-11-04_20-11-21_1030-Schaerbeek.json
+⚠️ Pas d'image ou erreur upload.
+📬 Destinataire sélectionné : kieran1@hotmail.com (postcode=1030)
+✉️ Headers : From: info@vrijetrottoirslibres.be
+Reply-To: info@vrijetrottoirslibres.be
+Cc: info@walk.brussels.com
+Bcc: kieran1@hotmail.fr
+Content-Type: text/html; charset=UTF-8
+
+Résultat mail(): ❌ Échec
+=== Nouvelle exécution : 2025-11-04 20:11:34 ===
+Destinataires chargés : Array
+(
+    [1000] => cabinet.b.dhondt@brucity.be
+    [1030] => kieran1@hotmail.com
+    [1040] => caro.joway@etterbeek.brussels
+    [1050] => yves.rouyet@ixelles.brussels
+    [1060] => cmorenville@stgilles.brussels
+    [1070] => smullerhubsch@anderlecht.brussels
+    [1080] => aachaoui@molenbeek.irisnet.be
+    [1081] => mbijnens@koekelberg.brussels
+    [1082] => twauthier@berchem.brussels
+    [1083] => magalicornelissen@gmail.com
+    [1090] => ndeswaef@jette.brussels
+    [1140] => pfreson@evere.brussels
+    [1150] => apirson@woluwe1150.be
+    [1160] => mpillois@auderghem.brussels
+    [1170] => mnstassart@wb1170.brussels
+    [1180] => twyngaard@uccle.brussels
+    [1190] => amugabo@forest.brussels
+    [1200] => g.matgen@woluwe1200.be
+    [1210] => bgm@sjtn.brussels
+    [walk] => info@walk.brussels
+    [vrijetrottoirslibres] => info@vrijetrottoirslibres.be
+    [autreobstacle] => autre@vrijetrottoirslibres.be
+)
+
+POST brut : Array
+(
+    [objet] => Test local d’envoi
+    [body] => <p>Ceci est un test local de l’application Vrije Trottoirs Libres</p>
+    [formObject] => {"address":{"adresse":"Rue du Test","numero":"42","postCode":"1030","municipality":"Schaerbeek","adnc":"1030-Schaerbeek"},"typeEncombrement":["vélo","panneau"],"contactInformation":{"name":"Dupont","first-name":"Jean","email":"jean.dupont@example.com"},"autorisationContact":true,"autorisationNewsletter":false}
+)
+
+FILES brut : Array
+(
+)
+
+Objet: Test local d’envoi
+FormObject décodé: Array
+(
+    [address] => Array
+        (
+            [adresse] => Rue du Test
+            [numero] => 42
+            [postCode] => 1030
+            [municipality] => Schaerbeek
+            [adnc] => 1030-Schaerbeek
+        )
+
+    [typeEncombrement] => Array
+        (
+            [0] => vélo
+            [1] => panneau
+        )
+
+    [contactInformation] => Array
+        (
+            [name] => Dupont
+            [first-name] => Jean
+            [email] => jean.dupont@example.com
+        )
+
+    [autorisationContact] => 1
+    [autorisationNewsletter] => 
+)
+
+✅ JSON enregistré : D:\Dev\Projets\walk-trottoirslibres\site\public/../json/lastsrequests/2025-11-04_20-11-34_1030-Schaerbeek.json
+⚠️ Pas d'image ou erreur upload.
+📬 Destinataire sélectionné : kieran1@hotmail.com (postcode=1030)
+✉️ Headers : From: info@vrijetrottoirslibres.be
+Reply-To: info@vrijetrottoirslibres.be
+Cc: info@walk.brussels.com
+Bcc: kieran1@hotmail.fr
+Content-Type: text/html; charset=UTF-8
+
+Résultat mail(): ❌ Échec
+=== Nouvelle exécution : 2025-11-04 20:12:15 ===
+Destinataires chargés : Array
+(
+    [1000] => cabinet.b.dhondt@brucity.be
+    [1030] => kieran1@hotmail.com
+    [1040] => caro.joway@etterbeek.brussels
+    [1050] => yves.rouyet@ixelles.brussels
+    [1060] => cmorenville@stgilles.brussels
+    [1070] => smullerhubsch@anderlecht.brussels
+    [1080] => aachaoui@molenbeek.irisnet.be
+    [1081] => mbijnens@koekelberg.brussels
+    [1082] => twauthier@berchem.brussels
+    [1083] => magalicornelissen@gmail.com
+    [1090] => ndeswaef@jette.brussels
+    [1140] => pfreson@evere.brussels
+    [1150] => apirson@woluwe1150.be
+    [1160] => mpillois@auderghem.brussels
+    [1170] => mnstassart@wb1170.brussels
+    [1180] => twyngaard@uccle.brussels
+    [1190] => amugabo@forest.brussels
+    [1200] => g.matgen@woluwe1200.be
+    [1210] => bgm@sjtn.brussels
+    [walk] => info@walk.brussels
+    [vrijetrottoirslibres] => info@vrijetrottoirslibres.be
+    [autreobstacle] => autre@vrijetrottoirslibres.be
+)
+
+POST brut : Array
+(
+    [objet] => Test local d’envoi
+    [body] => <p>Ceci est un test local de l’application Vrije Trottoirs Libres</p>
+    [formObject] => {"address":{"adresse":"Rue du Test","numero":"42","postCode":"1050","municipality":"Schaerbeek","adnc":"1050-Ixelles"},"typeEncombrement":["vélo","panneau"],"contactInformation":{"name":"Dupont","first-name":"Jean","email":"jean.dupont@example.com"},"autorisationContact":true,"autorisationNewsletter":false}
+)
+
+FILES brut : Array
+(
+)
+
+Objet: Test local d’envoi
+FormObject décodé: Array
+(
+    [address] => Array
+        (
+            [adresse] => Rue du Test
+            [numero] => 42
+            [postCode] => 1050
+            [municipality] => Schaerbeek
+            [adnc] => 1050-Ixelles
+        )
+
+    [typeEncombrement] => Array
+        (
+            [0] => vélo
+            [1] => panneau
+        )
+
+    [contactInformation] => Array
+        (
+            [name] => Dupont
+            [first-name] => Jean
+            [email] => jean.dupont@example.com
+        )
+
+    [autorisationContact] => 1
+    [autorisationNewsletter] => 
+)
+
+✅ JSON enregistré : D:\Dev\Projets\walk-trottoirslibres\site\public/../json/lastsrequests/2025-11-04_20-12-15_1050-Ixelles.json
+⚠️ Pas d'image ou erreur upload.
+📬 Destinataire sélectionné : yves.rouyet@ixelles.brussels (postcode=1050)
+✉️ Headers : From: info@vrijetrottoirslibres.be
+Reply-To: info@vrijetrottoirslibres.be
+Cc: info@walk.brussels.com
+Bcc: kieran1@hotmail.fr
+Content-Type: text/html; charset=UTF-8
+
+Résultat mail(): ❌ Échec
+=== Nouvelle exécution : 2025-11-04 20:42:11 ===
+Destinataires chargés : Array
+(
+    [1000] => cabinet.b.dhondt@brucity.be
+    [1030] => kieran1@hotmail.com
+    [1040] => caro.joway@etterbeek.brussels
+    [1050] => yves.rouyet@ixelles.brussels
+    [1060] => cmorenville@stgilles.brussels
+    [1070] => smullerhubsch@anderlecht.brussels
+    [1080] => aachaoui@molenbeek.irisnet.be
+    [1081] => mbijnens@koekelberg.brussels
+    [1082] => twauthier@berchem.brussels
+    [1083] => magalicornelissen@gmail.com
+    [1090] => ndeswaef@jette.brussels
+    [1140] => pfreson@evere.brussels
+    [1150] => apirson@woluwe1150.be
+    [1160] => mpillois@auderghem.brussels
+    [1170] => mnstassart@wb1170.brussels
+    [1180] => twyngaard@uccle.brussels
+    [1190] => amugabo@forest.brussels
+    [1200] => g.matgen@woluwe1200.be
+    [1210] => bgm@sjtn.brussels
+    [walk] => info@walk.brussels
+    [vrijetrottoirslibres] => info@vrijetrottoirslibres.be
+    [autreobstacle] => autre@vrijetrottoirslibres.be
+)
+
+POST brut : Array
+(
+)
+
+FILES brut : Array
+(
+)
+
+Objet: 
+FormObject décodé: 
+❌ Données invalides : bloc principal non exécuté.

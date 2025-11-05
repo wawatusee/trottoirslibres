@@ -1,0 +1,204 @@
+/*Liste déroulante Langues*/
+/* Style pour la liste déroulante */
+
+select#lang {
+  margin-left:20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 4px;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+  background-color:var(--first-color); /* Fond blanc */
+  color: var(--secondary-citron); /* Couleur du texte */
+}
+
+/* Style pour les options de la liste déroulante */
+select#lang option {
+  border: none;
+  background-color:var(--first-color); /* Corail */
+  color: var(--main-dark-color); /* Couleur du texte */
+  font-size:smaller;
+}
+
+
+
+/* Style pour le bouton de soumission (peut être personnalisé selon vos besoins) */
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color:var(--secondary-indigo);
+  color: var(--secondary-citron);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/*Fin liste déroulante langues*/
+.container {
+    color: var(--main-clear-color);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+    .form {
+      padding: 2rem;
+    }
+
+    form {
+      max-width: 500px;
+    }
+
+    .form-group {
+        line-height: 250%
+    }
+    .consigne{
+      margin-top: 1em;
+      margin-bottom: 1em;
+      font-weight: bold;
+      display: block;
+      padding-top: 10px;
+    }
+    .element {
+      margin-top: 2rem;
+      position: relative;
+    }
+    input[type="email"],
+     input[type="text"] {
+      width: 100%;
+      height: 34px;
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: var(--main-dark-color);
+      background-color:var(--secondary-citron);
+      background-image: none;
+      border-radius: 0;
+    }
+
+    .select {
+      cursor: pointer;
+      position: absolute;
+      width: 100%;
+      padding: 5px 0;
+      margin: 2px 0 0;
+      font-size: 14px;
+      background-color: var(--main-clear-color);
+      border: 1px solid #ccc;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    }
+    /*type-encombrement-liste*/
+    /*Essai pictos*/
+    .checkbox-container {
+      width: 80px; /* Taille du bouton cliquable */
+      height: 90px;
+       margin-bottom: 10px;
+       margin-right: 0;
+  }
+  
+  
+    /*span cases*/
+    .obstaclesChoices{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 13px;
+ 
+    }
+      /*Fin essai pictos*/
+    /*Champs autres*/
+    .hidden-saisie-autres{
+      visibility: hidden;
+    }
+    .asterix{
+      /*Pour politique de confidentialié*/
+      font-size: small;
+    }
+    .logo{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width:150px;
+      margin-top: 70px;
+    }
+    /*Aperçu mail*/
+    .hidden {
+      visibility: hidden;
+  }
+  /*Bouton parcourir et label prendre une photo*/
+  #refs-imgs{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #refs-imgs>label>img{
+  width: 50px;
+  }
+
+  .btns-mail{
+     margin-left: 50vw; 
+  }
+  /*BOUTONS*/
+  /*Boutons d'action*/
+  .btns-actions{
+    text-align: center; /* Centre horizontalement les éléments en ligne (inline) ou inline-block */
+  }
+  .modify,
+  .submit{
+    display: block; /* S'assurer que le bouton est un élément de bloc pour que margin auto fonctionne */
+    margin:10px  auto; /* Centre horizontalement */
+    width: 130px;
+    height: 35px;
+    background-color: var(--first-color);
+    color: var(--main-clear-color);
+    border-style: none;
+    border-radius: 5%;
+  }
+  /*FIN BOUTONS*/
+  /*PREVIEW*/
+
+  #mailPreviewContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--secondary-indigo);
+      color: var(--main-clear-color);
+      z-index: 1000;
+  }
+  .mailPreview>span{
+    display: inline;
+    color: var(--secondary-citron);
+  }
+  .mailPreview {
+    max-width: 600px;
+    max-height: 70%;
+    overflow: auto;
+    text-align: justify;
+    margin:auto;
+
+  }
+  .mailObstacles{
+    color: var(--secondary-citron);
+    display: inline;
+  }
+  #body-mail{
+    margin: 20px;
+    padding: 20px;
+  }
+  #body-mail>p, h3{
+  line-height: 1.8;
+  }
+  
+  #maildraft h3, #maildraft p, #maildraft button {
+      margin: 10px;
+  }
+  

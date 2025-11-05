@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 466.75 135.77"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="logo_citron.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.740225"
+     inkscape:cx="347.23427"
+     inkscape:cy="67.877639"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Calque_1-2" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill:#ffe475;}</style>
+  </defs>
+  <g
+     id="Calque_2"
+     data-name="Calque 2">
+    <g
+       id="Calque_1-2"
+       data-name="Calque 1">
+      <path
+         class="cls-1"
+         d="M116.86,26.77l30.72-10.44-3.46,90.12-26.59,9-30-33.9L84.22,126.8l-26.41,9L0,66.46,30.72,56,57.78,89.76l1.77-43.53L88.2,36.5,116.12,70Z"
+         id="path6"
+         style="fill:#ffffff;fill-opacity:1" />
+      <path
+         class="cls-1"
+         d="M163.83,60.72C171,30.94,192.34,21.44,213.09,26.4c12.94,3.1,20,10.41,23.09,19.4l.36.08L239,35.42l32.8,7.85-19.6,81.9-32.8-7.84L222,106.87l-.36-.09c-6.83,6.61-16.43,9.94-29.38,6.84C171.47,108.66,156.7,90.5,163.83,60.72ZM227.65,76c2.24-9.39-3-16.64-11.47-18.67s-16.42,2.06-18.67,11.46,3,16.64,11.46,18.67S225.4,85.39,227.65,76Z"
+         id="path8"
+         style="fill:#ffffff;fill-opacity:1" />
+      <path
+         class="cls-1"
+         d="M321.3,6.35,321.42,134l-33.73,0L287.58,6.38Z"
+         id="path10"
+         style="fill:#ffffff;fill-opacity:1" />
+      <path
+         class="cls-1"
+         d="M466.75,104.76,425.1,116.22,390.55,87.53,400.31,123,367.8,132,334,8.94,366.47,0l19.78,71.89,12.47-35.76,39.2-10.78L417.84,70.57Z"
+         id="path12"
+         style="fill:#ffffff;fill-opacity:1" />
+    </g>
+  </g>
+</svg>
